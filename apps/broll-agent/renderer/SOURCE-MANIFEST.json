@@ -1,0 +1,102 @@
+[
+  {
+    "file": "kimi/remotion/composition.tsx",
+    "source": "publications/ljq-broll-video-generator/examples/kimi-k3-000-011/remotion/composition.tsx",
+    "sha256": "b1df2d32075312f5f707d46aef37694a434178837dab0107164a2d4fa6d2af66"
+  },
+  {
+    "file": "kimi/remotion/schema.ts",
+    "source": "publications/ljq-broll-video-generator/examples/kimi-k3-000-011/remotion/schema.ts",
+    "sha256": "5d29e0068a524064070b1b763ac0688301b06933a9c4e7ce38dc0d7a7feb4131"
+  },
+  {
+    "file": "kimi/remotion/motion-state.tsx",
+    "source": "publications/ljq-broll-video-generator/examples/kimi-k3-000-011/remotion/motion-state.tsx",
+    "sha256": "c774fe9cbcb9f2dadbb86981e71f061f12d9ce4569db7450bd7caa8d289d057f"
+  },
+  {
+    "file": "kimi/specs/motion.json",
+    "source": "publications/ljq-broll-video-generator/examples/kimi-k3-000-011/specs/motion.json",
+    "sha256": "88a5819c66e1ea25b896acb4777953ab58e0b239ca08ccf9de9e3ed1dbb69578"
+  },
+  {
+    "file": "kimi/remotion/public/moon/SOURCES.md",
+    "source": "publications/ljq-broll-video-generator/examples/kimi-k3-000-011/remotion/public/moon/SOURCES.md",
+    "sha256": "04184f8fbafe5869e1b36688ea5e7840a7d04ecbbea77d5c2adc5a094d79555e"
+  },
+  {
+    "file": "kimi/remotion/public/moon/nasa-lroc-color-2k.jpg",
+    "source": "publications/ljq-broll-video-generator/examples/kimi-k3-000-011/remotion/public/moon/nasa-lroc-color-2k.jpg",
+    "sha256": "f7130a1822681fa7512d7dcfd40db8c10b9ba4f06777910348698260ed7a2170"
+  },
+  {
+    "file": "kimi/remotion/public/moon/nasa-lro-farside-1920.jpg",
+    "source": "publications/ljq-broll-video-generator/examples/kimi-k3-000-011/remotion/public/moon/nasa-lro-farside-1920.jpg",
+    "sha256": "98858870f7068d6e71b6803331ffa995eae52453077a3470c274ff42fbc6c9ef"
+  },
+  {
+    "file": "problem/remotion/composition.tsx",
+    "source": "cases/my-broll-case-motion/remotion/composition.tsx",
+    "sha256": "5080e5084eb781507b634a97aa1bf75a9b02a0b49dcaeeaa52933025b1378dc2"
+  },
+  {
+    "file": "problem/remotion/schema.ts",
+    "source": "cases/my-broll-case-motion/remotion/schema.ts",
+    "sha256": "e13da927276546fb0bb59abf09df2956dc1d86a4f1c2eb048723f1616dc47517"
+  },
+  {
+    "file": "problem/remotion/editable-case.tsx",
+    "source": "cases/my-broll-case-motion/remotion/editable-case.tsx",
+    "sha256": "18212c676b48b2f27c073e61ce52571c547251b1fb200b452cb3c5d9748225a2"
+  },
+  {
+    "file": "problem/remotion/motion-runtime.tsx",
+    "source": "cases/my-broll-case-motion/remotion/motion-runtime.tsx",
+    "sha256": "6d7c9efda309f63773a624304de8c3f873c4d3b66493191528dac38439ac71f3"
+  },
+  {
+    "file": "problem/specs/layout.json",
+    "source": "cases/my-broll-case-motion/specs/layout.json",
+    "sha256": "67394e475968beb74efe132bff015bc0c41a013899c19b5cda9a8a54b47b93c3"
+  },
+  {
+    "file": "problem/specs/motion.json",
+    "source": "cases/my-broll-case-motion/specs/motion.json",
+    "sha256": "1110c3c176b6272ee765495ee031c32880a9a35b6b4e32a1eb8f867d275de7bd"
+  },
+  {
+    "file": "problem/specs/motion-bindings.json",
+    "source": "cases/my-broll-case-motion/specs/motion-bindings.json",
+    "sha256": "ed04362d67d3c35f1c6e296f79b32c3aee80cca3e676ebdfe2a8c523970654f0"
+  },
+  {
+    "file": "problem/remotion/public/assets/recreated/replacement-square.svg",
+    "source": "cases/my-broll-case-motion/remotion/public/assets/recreated/replacement-square.svg",
+    "sha256": "3bd90c6facc852d4ff148cb877b555dd9d2cf89fe49209c8cfda348a517674dc"
+  },
+  {
+    "file": "problem/remotion/public/assets/fonts/Carlito-Italic.ttf",
+    "source": "cases/my-broll-case-motion/remotion/public/assets/fonts/Carlito-Italic.ttf",
+    "sha256": "0b019225e58d702bfedcbd35c21696769f8ee115cb6343f84c2f240312450d1c"
+  },
+  {
+    "file": "problem/remotion/public/assets/fonts/README.md",
+    "source": "cases/my-broll-case-motion/remotion/public/assets/fonts/README.md",
+    "sha256": "89e96320abd018b70427f1f2221c127bffad1e44a2f9f729d873f30cff4f8174"
+  },
+  {
+    "file": "problem/remotion/public/assets/fonts/YouSheBiaoTiHei.ttf",
+    "source": "cases/my-broll-case-motion/remotion/public/assets/fonts/YouSheBiaoTiHei.ttf",
+    "sha256": "9ccc3ac23fb3b1e1146d07a8cd5bfe1bfa1f201f80462b0d251297cb105519b0"
+  },
+  {
+    "file": "problem/remotion/public/assets/fonts/Carlito-OFL.txt",
+    "source": "cases/my-broll-case-motion/remotion/public/assets/fonts/Carlito-OFL.txt",
+    "sha256": "58402f82a7c332a700294988fe7554fbb0a63a8d27ccc1ee3bbc640311990a00"
+  },
+  {
+    "file": "problem/remotion/public/assets/found/problem-technology-workspace-unsplash-p-xSl33Wxyc.jpg",
+    "source": "cases/my-broll-case-motion/remotion/public/assets/found/problem-technology-workspace-unsplash-p-xSl33Wxyc.jpg",
+    "sha256": "a4c8eec63126ef4adf2dd30f5128a58c764a4b5271b708f13e665bf4ecf20620"
+  }
+]

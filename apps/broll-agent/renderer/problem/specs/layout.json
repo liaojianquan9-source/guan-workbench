@@ -1,0 +1,4122 @@
+{
+  "schemaVersion": "1.2",
+  "caseId": "my-broll-case",
+  "canvas": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "durationInFrames": 428,
+    "backgroundColor": "#ffffff"
+  },
+  "scenes": [
+    {
+      "id": "aroll",
+      "startFrame": 0,
+      "endFrame": 3,
+      "settledFrame": {
+        "frame": 0,
+        "timeSeconds": 0,
+        "evidenceType": "observed",
+        "evidence": "evidence/scene-audit/local-0000.png",
+        "confidence": "high"
+      },
+      "sourceStill": "evidence/layout-r3/aroll-source.png",
+      "renderStill": "evidence/layout-r3/aroll-render.png",
+      "comparisonStill": "evidence/layout-r3/aroll-comparison.png",
+      "status": "passed",
+      "observation": "开头A-roll仍按范围合同置白；左上角署名、平台水印及底部字幕已移除。 证据：evidence/layout-r3/aroll-comparison.png。已人工查看默认及替换图；等待用户静帧确认，不将近似项自动标为保真通过。 用户已确认r3静态结果。"
+    },
+    {
+      "id": "problem",
+      "startFrame": 4,
+      "endFrame": 79,
+      "settledFrame": {
+        "frame": 20,
+        "timeSeconds": 0.6666666666666666,
+        "evidenceType": "observed",
+        "evidence": "evidence/scene-audit/local-0020.png",
+        "confidence": "high"
+      },
+      "sourceStill": "evidence/layout-r3/problem-source.png",
+      "renderStill": "evidence/layout-r3/problem-render.png",
+      "comparisonStill": "evidence/layout-r3/problem-comparison.png",
+      "status": "passed",
+      "observation": "02使用一张无人物的电脑工作台照片铺满1280×720画面，已撤销白色轮廓与留空。背景只有一个图片替换入口，标题和说明文字保持可编辑。该图是用户允许的相似素材，来源及许可已登记，非原视频帧或截图。 证据：evidence/layout-r3/problem-comparison.png。已人工查看默认及替换图；等待用户静帧确认，不将近似项自动标为保真通过。 用户已确认r3静态结果。"
+    },
+    {
+      "id": "article-one",
+      "startFrame": 80,
+      "endFrame": 126,
+      "settledFrame": {
+        "frame": 126,
+        "timeSeconds": 4.2,
+        "evidenceType": "observed",
+        "evidence": "evidence/scene-audit/local-0126.png",
+        "confidence": "medium"
+      },
+      "sourceStill": "evidence/layout-r3/article-one-source.png",
+      "renderStill": "evidence/layout-r3/article-one-render.png",
+      "comparisonStill": "evidence/layout-r3/article-one-comparison.png",
+      "status": "passed",
+      "observation": "完整主标题共用字号、字重和基线，差值混合与下方高亮产生反色；正文两字缩进保持。水印和底部字幕已移除。其余布局沿用已确认方向，末行未知字词仍留白。 证据：evidence/layout-r3/article-one-comparison.png。已人工查看默认及替换图；等待用户静帧确认，不将近似项自动标为保真通过。 用户已确认r3静态结果。"
+    },
+    {
+      "id": "article-overlap",
+      "startFrame": 127,
+      "endFrame": 156,
+      "settledFrame": {
+        "frame": 144,
+        "timeSeconds": 4.8,
+        "evidenceType": "observed",
+        "evidence": "evidence/scene-audit/local-0144.png",
+        "confidence": "high"
+      },
+      "sourceStill": "evidence/layout-r3/article-overlap-source.png",
+      "renderStill": "evidence/layout-r3/article-overlap-render.png",
+      "comparisonStill": "evidence/layout-r3/article-overlap-comparison.png",
+      "status": "passed",
+      "observation": "04只作转场截面取证，保留144帧的裁切、放大和重叠；不是独立落定布局，本轮未制作连续运动。 证据：evidence/layout-r3/article-overlap-comparison.png。已人工查看默认及替换图；等待用户静帧确认，不将近似项自动标为保真通过。 用户已确认r3静态结果。"
+    },
+    {
+      "id": "article-two",
+      "startFrame": 157,
+      "endFrame": 176,
+      "settledFrame": {
+        "frame": 176,
+        "timeSeconds": 5.866666666666666,
+        "evidenceType": "observed",
+        "evidence": "evidence/scene-audit/local-0176.png",
+        "confidence": "high"
+      },
+      "sourceStill": "evidence/layout-r3/article-two-source.png",
+      "renderStill": "evidence/layout-r3/article-two-render.png",
+      "comparisonStill": "evidence/layout-r3/article-two-comparison.png",
+      "status": "passed",
+      "observation": "完整主标题共用字形参数及差值混合，正文缩进保持；左上角水印和底部字幕已移除。 证据：evidence/layout-r3/article-two-comparison.png。已人工查看默认及替换图；等待用户静帧确认，不将近似项自动标为保真通过。 用户已确认r3静态结果。"
+    },
+    {
+      "id": "prompt-large",
+      "startFrame": 177,
+      "endFrame": 206,
+      "settledFrame": {
+        "frame": 206,
+        "timeSeconds": 6.866666666666666,
+        "evidenceType": "observed",
+        "evidence": "evidence/scene-audit/local-0206.png",
+        "confidence": "medium"
+      },
+      "sourceStill": "evidence/layout-r3/prompt-large-source.png",
+      "renderStill": "evidence/layout-r3/prompt-large-render.png",
+      "comparisonStill": "evidence/layout-r3/prompt-large-comparison.png",
+      "status": "passed",
+      "observation": "保留放大裁切态和未完整输入的文字，采用羽化光罩的静态截面，没有扫光时间函数。水印和字幕已移除。 证据：evidence/layout-r3/prompt-large-comparison.png。已人工查看默认及替换图；等待用户静帧确认，不将近似项自动标为保真通过。 用户已确认r3静态结果。"
+    },
+    {
+      "id": "prompt-card",
+      "startFrame": 207,
+      "endFrame": 288,
+      "settledFrame": {
+        "frame": 252,
+        "timeSeconds": 8.4,
+        "evidenceType": "observed",
+        "evidence": "evidence/scene-audit/local-0252.png",
+        "confidence": "high"
+      },
+      "sourceStill": "evidence/layout-r3/prompt-card-source.png",
+      "renderStill": "evidence/layout-r3/prompt-card-render.png",
+      "comparisonStill": "evidence/layout-r3/prompt-card-comparison.png",
+      "status": "passed",
+      "observation": "上下行共享二维羽化光罩，绿字上渐进叠加白光；框线与排版保持，冻结252帧的光心。水印和字幕已移除。 证据：evidence/layout-r3/prompt-card-comparison.png。已人工查看默认及替换图；等待用户静帧确认，不将近似项自动标为保真通过。 用户已确认r3静态结果。"
+    },
+    {
+      "id": "prompt-plain",
+      "startFrame": 289,
+      "endFrame": 338,
+      "settledFrame": {
+        "frame": 318,
+        "timeSeconds": 10.6,
+        "evidenceType": "observed",
+        "evidence": "evidence/scene-audit/local-0318.png",
+        "confidence": "high"
+      },
+      "sourceStill": "evidence/layout-r3/prompt-plain-source.png",
+      "renderStill": "evidence/layout-r3/prompt-plain-render.png",
+      "comparisonStill": "evidence/layout-r3/prompt-plain-comparison.png",
+      "status": "passed",
+      "observation": "保留无框两行文字及共享羽化光罩，冻结318帧的光心。水印和底部字幕已移除。 证据：evidence/layout-r3/prompt-plain-comparison.png。已人工查看默认及替换图；等待用户静帧确认，不将近似项自动标为保真通过。 用户已确认r3静态结果。"
+    },
+    {
+      "id": "comparison",
+      "startFrame": 339,
+      "endFrame": 427,
+      "settledFrame": {
+        "frame": 410,
+        "timeSeconds": 13.666666666666666,
+        "evidenceType": "observed",
+        "evidence": "evidence/scene-audit/local-0410.png",
+        "confidence": "high"
+      },
+      "sourceStill": "evidence/layout-r3/comparison-source.png",
+      "renderStill": "evidence/layout-r3/comparison-render.png",
+      "comparisonStill": "evidence/layout-r3/comparison-comparison.png",
+      "status": "passed",
+      "observation": "表内评测平台、数字、箭头和脚注均保留；左上角平台水印及底部口播字幕移除。其余排版沿用用户认可的方向。 证据：evidence/layout-r3/comparison-comparison.png。已人工查看默认及替换图；等待用户静帧确认，不将近似项自动标为保真通过。 用户已确认r3静态结果。"
+    }
+  ],
+  "replacementTests": [
+    {
+      "elementId": "article-one-background",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-one-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    },
+    {
+      "elementId": "article-two-background",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    },
+    {
+      "elementId": "prompt-large-background",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/prompt-large-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    },
+    {
+      "elementId": "prompt-card-background",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/prompt-card-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    },
+    {
+      "elementId": "prompt-plain-background",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/prompt-plain-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    },
+    {
+      "elementId": "comparison-background",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    },
+    {
+      "elementId": "problem-background",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/problem-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 整张背景通过唯一图片入口替换并保持cover铺满，默认与替换图均没有白色留空。"
+    },
+    {
+      "elementId": "problem-kicker",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/problem-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "problem-title",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/problem-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "problem-english",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/problem-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-one-headline-main",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-one-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-one-headline-highlight",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-one-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    },
+    {
+      "elementId": "article-one-english",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-one-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-one-body-1",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-one-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-one-body-2",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-one-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-one-body-3",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-one-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-one-body-4",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-one-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-one-body-5",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-one-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-one-body-6",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-one-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-two-headline-main",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-two-headline-highlight",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    },
+    {
+      "elementId": "article-two-english",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-two-body-1",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-two-body-2",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-two-body-3",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-two-body-4",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-two-body-5",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-two-body-6",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-two-ghost-title",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "article-two-ghost-copy",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/article-two-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "prompt-large-input",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/prompt-large-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "prompt-card-line-one",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/prompt-card-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "prompt-card-line-two",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/prompt-card-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "prompt-card-note",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/prompt-card-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "prompt-plain-line-one",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/prompt-plain-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "prompt-plain-line-two",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/prompt-plain-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "prompt-plain-note",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/prompt-plain-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-label",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-model-kimi",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-model-claude",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-platform-label",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-score-label",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-rate-label",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-kimi-platform",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-claude-platform",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-kimi-score",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-claude-score",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-kimi-rate",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-claude-rate",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-note-one",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-note-two",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。 不同长度按原容器缩放；很长文案会缩小字号，仍需按具体用途复核阅读尺度。"
+    },
+    {
+      "elementId": "comparison-kimi-score-arrow",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    },
+    {
+      "elementId": "comparison-claude-score-arrow",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    },
+    {
+      "elementId": "comparison-kimi-rate-arrow",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    },
+    {
+      "elementId": "comparison-claude-rate-arrow",
+      "variant": "evidence/replacement-props.json",
+      "renderStill": "evidence/layout-r3/comparison-replacement.png",
+      "status": "passed",
+      "observation": "已实际查看替换still：新内容/数字/图片或主题值生效，无旧字形、旧数字或原素材像素残留。此项仅检验props机制，不代表默认画面保真通过。"
+    }
+  ],
+  "elements": [
+    {
+      "id": "article-one-background",
+      "sceneId": "article-one",
+      "type": "background",
+      "name": "article-one-background",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 9,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "默认主题继承参考蓝黑/深绿主色；通过theme props替换。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "article-one-texture",
+      "sceneId": "article-one",
+      "type": "effect",
+      "name": "article-one-texture",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 10,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "CSS交叉细纹，近似源画面深蓝网纹，非源图贴片。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "article-one-vignette",
+      "sceneId": "article-one",
+      "type": "effect",
+      "name": "article-one-vignette",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 11,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "CSS径向暗角，静态近似。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "article-two-background",
+      "sceneId": "article-two",
+      "type": "background",
+      "name": "article-two-background",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 15,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "默认主题继承参考蓝黑/深绿主色；通过theme props替换。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "article-two-texture",
+      "sceneId": "article-two",
+      "type": "effect",
+      "name": "article-two-texture",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 16,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "CSS交叉细纹，近似源画面深蓝网纹，非源图贴片。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "article-two-vignette",
+      "sceneId": "article-two",
+      "type": "effect",
+      "name": "article-two-vignette",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 17,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "CSS径向暗角，静态近似。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "prompt-large-background",
+      "sceneId": "prompt-large",
+      "type": "background",
+      "name": "prompt-large-background",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 21,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 206,
+          "detail": "默认主题继承参考蓝黑/深绿主色；通过theme props替换。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "prompt-card-background",
+      "sceneId": "prompt-card",
+      "type": "background",
+      "name": "prompt-card-background",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 25,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 252,
+          "detail": "默认主题继承参考蓝黑/深绿主色；通过theme props替换。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "prompt-plain-background",
+      "sceneId": "prompt-plain",
+      "type": "background",
+      "name": "prompt-plain-background",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 29,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 318,
+          "detail": "默认主题继承参考蓝黑/深绿主色；通过theme props替换。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "comparison-background",
+      "sceneId": "comparison",
+      "type": "background",
+      "name": "comparison-background",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 33,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "默认主题继承参考蓝黑/深绿主色；通过theme props替换。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "aroll-person-exclusion",
+      "sceneId": "aroll",
+      "type": "shape",
+      "name": "aroll-person-exclusion",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 34,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 0,
+          "detail": "开头4帧口播实拍全部排除，画面纯白；字幕角标保留。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "problem-background",
+      "sceneId": "problem",
+      "type": "image",
+      "name": "problem-background",
+      "content": null,
+      "asset": "assets/found/problem-technology-workspace-unsplash-p-xSl33Wxyc.jpg",
+      "assetSource": "found",
+      "completeness": "complete",
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "asset-crop",
+      "zIndex": 35,
+      "parentId": null,
+      "appearance": {
+        "objectFit": "cover",
+        "objectPosition": "center center",
+        "filter": "brightness(.31) saturate(.48) sepia(.22) hue-rotate(-8deg) blur(1.4px)"
+      },
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 20,
+          "detail": "用户确认“解决问题”页的实拍环境是一个整体背景图，不拆显示器、桌面或手机。"
+        },
+        {
+          "type": "inferred",
+          "frame": 20,
+          "detail": "项目内无合规的同类背景素材；使用 Farzad 在 Unsplash 发布的无人编码工作台照片作为相关背景，来源与许可见 evidence/asset-sources/problem-background.json。该图片不是原片帧或截图。"
+        },
+        {
+          "type": "observed",
+          "frame": 20,
+          "detail": "用户本轮确认：相似电脑操作图片满画幅，不留白。使用既有无人物的独立工作台照片，撤销白色人物轮廓蒙版。"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "problem-kicker",
+      "sceneId": "problem",
+      "type": "text",
+      "name": "problem-kicker",
+      "content": "真 正 困 难",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        42.421875,
+        31.666666666666664,
+        15.9375,
+        3.888888888888889
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 40,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 20,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/hero-small-chinese-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Light",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/hero-small-chinese-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/hero-small-chinese-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "problem-title",
+      "sceneId": "problem",
+      "type": "text",
+      "name": "problem-title",
+      "content": "解决问题",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        21.640625,
+        39.166666666666664,
+        56.953125,
+        20.416666666666668
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 41,
+      "parentId": null,
+      "appearance": {
+        "fontSizePx": 202,
+        "fontFamily": "YouSheBiaoTiHei",
+        "textGradient": "silver vertical gradient",
+        "filter": "SVG procedural grain clipped by live glyphs"
+      },
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 20,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "YouSheBiaoTiHei Regular",
+          "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case/evidence/font-research/downloads/YouSheBiaoTiHei-official-preview.ttf",
+          "license": "Official UISDC free commercial-use statement, including film/video titles; obtained from joint publisher HelloFont official preview endpoint. This is a limited glyph subset: specified reference and replacement text plus ASCII letters/numerals.",
+          "evidence": "evidence/font-research/hero-heavy-chinese-top3.png",
+          "confidence": "high",
+          "exact": false
+        },
+        {
+          "family": "Lantinghei SC Heavy",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/f14049099a04e570b893c01d9a4cd71f87c9e8d8.asset/AssetData/Lantinghei.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/hero-heavy-chinese-top3.png",
+          "confidence": "low",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W6",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/hero-heavy-chinese-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "problem-english",
+      "sceneId": "problem",
+      "type": "text",
+      "name": "problem-english",
+      "content": "Truly difficult",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        36.40625,
+        64.86111111111111,
+        26.40625,
+        3.194444444444444
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 42,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 20,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Monaco Regular",
+          "source": "/System/Library/Fonts/Monaco.ttf",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/hero-small-latin-top3.png",
+          "confidence": "low",
+          "exact": false
+        },
+        {
+          "family": "Andale Mono Regular",
+          "source": "/System/Library/Fonts/Supplemental/Andale Mono.ttf",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/hero-small-latin-top3.png",
+          "confidence": "low",
+          "exact": false
+        },
+        {
+          "family": "Menlo Regular",
+          "source": "/System/Library/Fonts/Menlo.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/hero-small-latin-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-one-headline-main",
+      "sceneId": "article-one",
+      "type": "text",
+      "name": "article-one-headline-main",
+      "content": "冲击全球市场的Kimi K3, 到底有多强?",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        13.28125,
+        25,
+        72.734375,
+        8.194444444444445
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 44,
+      "parentId": null,
+      "appearance": {
+        "fontFamily": "Songti SC",
+        "fontSizePx": 59,
+        "fontWeight": 400,
+        "fill": "#f0f3e9",
+        "mixBlendMode": "difference",
+        "filter": "drop-shadow(-1.3px 0px .6px #96592270) drop-shadow(1.3px 0px .6px #12638380) blur(.1px)"
+      },
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        },
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "用户确认标题前后两段使用完全相同的字体、59px字号、400字重、填色与滤镜；颜色变化仅由 CSS mix-blend-mode:difference 与下方高亮矩形合成产生。"
+        },
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "保留前轮用户确认的整句live text统一字形参数与差值混合，不拆色段。"
+        }
+      ],
+      "confidence": "high",
+      "fontCandidates": [
+        {
+          "family": "Songti SC Bold",
+          "source": "/System/Library/Fonts/Supplemental/Songti.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/news-serif-headline-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Songti SC Regular",
+          "source": "/System/Library/Fonts/Supplemental/Songti.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/news-serif-headline-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "STSong Regular",
+          "source": "/System/Library/Fonts/Supplemental/Songti.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/news-serif-headline-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-one-headline-highlight",
+      "sceneId": "article-one",
+      "type": "shape",
+      "name": "article-one-headline-highlight",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        42.578125,
+        24.86111111111111,
+        43.4375,
+        9.027777777777777
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 43,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "文字后独立高亮矩形，通过theme.paper替换，不使用带字图片。"
+        },
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "高亮矩形位于标题下方；标题本身保持同一组参数，通过 difference 混合在高亮区域内反相。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "article-one-english",
+      "sceneId": "article-one",
+      "type": "text",
+      "name": "article-one-english",
+      "content": "How strong is the Kimi K3, which is impacting the global market?",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        13.28125,
+        37.22222222222222,
+        54.375,
+        2.9166666666666665
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 46,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "原文虚焦，英文副标题字词为推断；详见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-one-body-1",
+      "sceneId": "article-one",
+      "type": "text",
+      "name": "article-one-body-1",
+      "content": "震动美股的Kimi K3，到底有多强？实测的这几天，我们用K3复现了券商研报、搭建了",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        16.40625,
+        45.27777777777778,
+        72.265625,
+        3.4722222222222223
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 47,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-one-body-2",
+      "sceneId": "article-one",
+      "type": "text",
+      "name": "article-one-body-2",
+      "content": "实时选题监控系统，甚至用一段提示词和一张参考截图做出了一个有六种3D鱼类的“大鱼",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        12.578125,
+        51.80555555555556,
+        72.265625,
+        3.4722222222222223
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 48,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-one-body-3",
+      "sceneId": "article-one",
+      "type": "text",
+      "name": "article-one-body-3",
+      "content": "吃小鱼”游戏。但这些，可能还没发挥出K3真正的水平——有人用它在2小时内完成了一项",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        12.578125,
+        58.33333333333333,
+        72.265625,
+        3.4722222222222223
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 49,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-one-body-4",
+      "sceneId": "article-one",
+      "type": "text",
+      "name": "article-one-body-4",
+      "content": "通常需要天体物理研究员两周的计算，期间还发现了已发表论文中的公式问题。",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        12.578125,
+        64.86111111111111,
+        63.515625,
+        3.4722222222222223
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 50,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-one-body-5",
+      "sceneId": "article-one",
+      "type": "text",
+      "name": "article-one-body-5",
+      "content": "有人让它连续自主运行48小时，用开源EDA工具独立完成了一颗芯片的设计和验证。",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        16.40625,
+        71.38888888888889,
+        68.359375,
+        3.4722222222222223
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 51,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-one-body-6",
+      "sceneId": "article-one",
+      "type": "text",
+      "name": "article-one-body-6",
+      "content": "     三轮对话做出了一个可玩的CS:GO      ，总成本只花了      ",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        12.578125,
+        77.91666666666667,
+        66.796875,
+        3.4722222222222223
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 52,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 126,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-two-headline-main",
+      "sceneId": "article-two",
+      "type": "text",
+      "name": "article-two-headline-main",
+      "content": "Kimi K3:前端竞技场第一碾压Fable 5",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        17.03125,
+        21.944444444444443,
+        66.40625,
+        8.194444444444445
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 54,
+      "parentId": null,
+      "appearance": {
+        "fontFamily": "Songti SC",
+        "fontWeight": 400,
+        "fontSizePx": 59,
+        "mixBlendMode": "difference"
+      },
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        },
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "保留前轮用户确认的整句live text统一字形参数与差值混合，不拆色段。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Songti SC Bold",
+          "source": "/System/Library/Fonts/Supplemental/Songti.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/news-serif-headline-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Songti SC Regular",
+          "source": "/System/Library/Fonts/Supplemental/Songti.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/news-serif-headline-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "STSong Regular",
+          "source": "/System/Library/Fonts/Supplemental/Songti.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/news-serif-headline-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-two-headline-highlight",
+      "sceneId": "article-two",
+      "type": "shape",
+      "name": "article-two-headline-highlight",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        34.375,
+        21.805555555555554,
+        49.0625,
+        9.027777777777777
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 55,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "文字后独立高亮矩形，通过theme.paper替换，不使用带字图片。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "article-two-english",
+      "sceneId": "article-two",
+      "type": "text",
+      "name": "article-two-english",
+      "content": "Kimi K3 has gone crazy: the front-end arena first crushes Fable 5",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        17.03125,
+        34.166666666666664,
+        50.78125,
+        2.9166666666666665
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 56,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "原文虚焦，英文副标题字词为推断；详见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-two-body-1",
+      "sceneId": "article-two",
+      "type": "text",
+      "name": "article-two-body-1",
+      "content": "在七个细分领域中，K3拿下了品牌营销、参考图设计、数据分析、消费产品、模拟",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        19.84375,
+        40.69444444444444,
+        60.46875,
+        3.333333333333333
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 57,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-two-body-2",
+      "sceneId": "article-two",
+      "type": "text",
+      "name": "article-two-body-2",
+      "content": "和内容创作工具六项第一，仅在游戏类排名第二。有人用Agent集群模式复刻MacOS 27",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        16.71875,
+        46.666666666666664,
+        63.671875,
+        3.333333333333333
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 58,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-two-body-3",
+      "sceneId": "article-two",
+      "type": "text",
+      "name": "article-two-body-3",
+      "content": "界面，花了约6个小时完成。得到的不仅是一个界面，而是除了浏览器和电话等其他功",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        16.71875,
+        52.638888888888886,
+        63.671875,
+        3.333333333333333
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 59,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-two-body-4",
+      "sceneId": "article-two",
+      "type": "text",
+      "name": "article-two-body-4",
+      "content": "能都能用的网页版操作系统。",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        16.71875,
+        58.61111111111111,
+        21.09375,
+        3.333333333333333
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 60,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-two-body-5",
+      "sceneId": "article-two",
+      "type": "text",
+      "name": "article-two-body-5",
+      "content": "设计机械手模拟器与Fable 5对比，画面更精美，功能也更全。可以基于Three.js和",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        19.84375,
+        64.58333333333333,
+        59.53125,
+        3.333333333333333
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 61,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-two-body-6",
+      "sceneId": "article-two",
+      "type": "text",
+      "name": "article-two-body-6",
+      "content": "Web GPU计算构建一个完全程序化的基于浏览器的3D游戏。",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        16.71875,
+        70.55555555555556,
+        42.96875,
+        3.333333333333333
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 62,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "按参考原换行，不润色；第一篇第六行仅恢复可读片段，未知片段用空白保留，不臆造。详细置信度见evidence/copy-audit/transcription.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-two-ghost-group",
+      "sceneId": "article-two",
+      "type": "group",
+      "name": "article-two-ghost-group",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        28.90625,
+        36.666666666666664,
+        41.40625,
+        26.38888888888889
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 63,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "前一文章的淡化残影分组，仍使用live text；无法反推原始图层顺序。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "article-two-ghost-title",
+      "sceneId": "article-two",
+      "type": "text",
+      "name": "article-two-ghost-title",
+      "content": "冲击全球市场的Kimi K3, 到底有多强?",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        30.859375,
+        36.666666666666664,
+        39.453125,
+        4.027777777777778
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 64,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Songti SC Bold",
+          "source": "/System/Library/Fonts/Supplemental/Songti.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/news-serif-headline-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Songti SC Regular",
+          "source": "/System/Library/Fonts/Supplemental/Songti.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/news-serif-headline-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "STSong Regular",
+          "source": "/System/Library/Fonts/Supplemental/Songti.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/news-serif-headline-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "article-two-ghost-copy",
+      "sceneId": "article-two",
+      "type": "text",
+      "name": "article-two-ghost-copy",
+      "content": "震动美股的Kimi K3，到底有多强？实测的这几天，我们用K3复现了券商研报、搭建了\n实时选题监控系统，甚至用一段提示词和一张参考截图做出了一个有六种3D鱼类的“大鱼\n吃小鱼”游戏。但这些，可能还没发挥出K3真正的水平——有人用它在2小时内完成了一项\n通常需要天体物理研究员两周的计算，期间还发现了已发表论文中的公式问题。",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        29.0625,
+        50.138888888888886,
+        38.046875,
+        13.055555555555555
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 65,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 176,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "prompt-large-input",
+      "sceneId": "prompt-large",
+      "type": "text",
+      "name": "prompt-large-input",
+      "content": "帮我做一个购物车页面",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        25.15625,
+        31.666666666666664,
+        84.375,
+        15
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "viewport-clip",
+      "zIndex": 66,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 206,
+          "detail": "只恢复已出现的首行；右侧保留画布裁切，不补成完整输入态。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "PingFang SC Medium",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Lantinghei SC Demibold",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/f14049099a04e570b893c01d9a4cd71f87c9e8d8.asset/AssetData/Lantinghei.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W6",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "prompt-large-outline",
+      "sceneId": "prompt-large",
+      "type": "line",
+      "name": "prompt-large-outline",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        17.890625,
+        15.13888888888889,
+        85.9375,
+        73.47222222222221
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "viewport-clip",
+      "zIndex": 67,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 206,
+          "detail": "准确保留参考中未闭合、仅部分可见的上边/右弧/下边SVG路径；不补为完整圆角框。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "prompt-card-line-one",
+      "sceneId": "prompt-card",
+      "type": "text",
+      "name": "prompt-card-line-one",
+      "content": "帮我做一个购物车页面，要求响应式布局，",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        20.78125,
+        41.94444444444444,
+        67.1875,
+        6.388888888888888
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 68,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 252,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "PingFang SC Medium",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Lantinghei SC Demibold",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/f14049099a04e570b893c01d9a4cd71f87c9e8d8.asset/AssetData/Lantinghei.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W6",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "prompt-card-line-two",
+      "sceneId": "prompt-card",
+      "type": "text",
+      "name": "prompt-card-line-two",
+      "content": "有商品列表和结算按钮。",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        20.78125,
+        55.27777777777778,
+        37.734375,
+        6.388888888888888
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 69,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 252,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "PingFang SC Medium",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Lantinghei SC Demibold",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/f14049099a04e570b893c01d9a4cd71f87c9e8d8.asset/AssetData/Lantinghei.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W6",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "prompt-card-note",
+      "sceneId": "prompt-card",
+      "type": "text",
+      "name": "prompt-card-note",
+      "content": "*相同需求 不同模型 各做比较",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        60.78125,
+        58.05555555555556,
+        21.640625,
+        3.333333333333333
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 70,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 252,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "PingFang SC Medium",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Lantinghei SC Demibold",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/f14049099a04e570b893c01d9a4cd71f87c9e8d8.asset/AssetData/Lantinghei.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W6",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "prompt-card-outline",
+      "sceneId": "prompt-card",
+      "type": "line",
+      "name": "prompt-card-outline",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        42.96875,
+        34.44444444444444,
+        48.28125,
+        32.638888888888886
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 71,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 252,
+          "detail": "准确保留参考中未闭合、仅部分可见的上边/右弧/下边SVG路径；不补为完整圆角框。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "prompt-plain-line-one",
+      "sceneId": "prompt-plain",
+      "type": "text",
+      "name": "prompt-plain-line-one",
+      "content": "帮我做一个购物车页面，要求响应式布局，",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        17.5,
+        41.94444444444444,
+        64.453125,
+        6.388888888888888
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 72,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 318,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "PingFang SC Medium",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Lantinghei SC Demibold",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/f14049099a04e570b893c01d9a4cd71f87c9e8d8.asset/AssetData/Lantinghei.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W6",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "prompt-plain-line-two",
+      "sceneId": "prompt-plain",
+      "type": "text",
+      "name": "prompt-plain-line-two",
+      "content": "有商品列表和结算按钮。",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        17.5,
+        55.27777777777778,
+        36.328125,
+        6.388888888888888
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 73,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 318,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "PingFang SC Medium",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Lantinghei SC Demibold",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/f14049099a04e570b893c01d9a4cd71f87c9e8d8.asset/AssetData/Lantinghei.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W6",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "prompt-plain-note",
+      "sceneId": "prompt-plain",
+      "type": "text",
+      "name": "prompt-plain-note",
+      "content": "*相同需求 不同模型 各做比较",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        56.171875,
+        58.05555555555556,
+        21.09375,
+        3.333333333333333
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 74,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 318,
+          "detail": "原尺寸source still与源码同名data-element-id；bounds为近似可见边界/容器，详细口径见evidence/layout-measurements.md。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "PingFang SC Medium",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Lantinghei SC Demibold",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/f14049099a04e570b893c01d9a4cd71f87c9e8d8.asset/AssetData/Lantinghei.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W6",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/green-prompt-top3.png",
+          "confidence": "medium",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-label",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-label",
+      "content": "对比项",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        9.609375,
+        22.36111111111111,
+        15.390625,
+        8.75
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 75,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-model-kimi",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-model-kimi",
+      "content": "Kimi K3",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        36.71875,
+        22.77777777777778,
+        17.34375,
+        9.444444444444445
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 76,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Carlito Italic",
+          "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case/evidence/font-research/downloads/Carlito-Italic.ttf",
+          "license": "SIL Open Font License 1.1; official Google Fonts repository. License saved at evidence/font-research/downloads/Carlito-OFL.txt.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "high",
+          "exact": false
+        },
+        {
+          "family": "Arial Italic",
+          "source": "/System/Library/Fonts/Supplemental/Arial Italic.ttf",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "low",
+          "exact": false
+        },
+        {
+          "family": "Helvetica Neue Italic",
+          "source": "/System/Library/Fonts/HelveticaNeue.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-model-claude",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-model-claude",
+      "content": "Claude Fable 5",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        59.6875,
+        22.77777777777778,
+        34.296875,
+        9.444444444444445
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 77,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Carlito Italic",
+          "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case/evidence/font-research/downloads/Carlito-Italic.ttf",
+          "license": "SIL Open Font License 1.1; official Google Fonts repository. License saved at evidence/font-research/downloads/Carlito-OFL.txt.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "high",
+          "exact": false
+        },
+        {
+          "family": "Arial Italic",
+          "source": "/System/Library/Fonts/Supplemental/Arial Italic.ttf",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "low",
+          "exact": false
+        },
+        {
+          "family": "Helvetica Neue Italic",
+          "source": "/System/Library/Fonts/HelveticaNeue.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-platform-label",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-platform-label",
+      "content": "评测平台",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        9.84375,
+        40.27777777777778,
+        10.703125,
+        4.861111111111111
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 78,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-score-label",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-score-label",
+      "content": "竞技场得分",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        9.84375,
+        49.86111111111111,
+        12.734375,
+        4.861111111111111
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 79,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-rate-label",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-rate-label",
+      "content": "竞技场得分",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        9.84375,
+        59.166666666666664,
+        12.734375,
+        4.861111111111111
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 80,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-kimi-platform",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-kimi-platform",
+      "content": "Frontend Code Arena",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        32.734375,
+        40.138888888888886,
+        24.609375,
+        5
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 81,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Carlito Italic",
+          "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case/evidence/font-research/downloads/Carlito-Italic.ttf",
+          "license": "SIL Open Font License 1.1; official Google Fonts repository. License saved at evidence/font-research/downloads/Carlito-OFL.txt.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "high",
+          "exact": false
+        },
+        {
+          "family": "Arial Italic",
+          "source": "/System/Library/Fonts/Supplemental/Arial Italic.ttf",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "low",
+          "exact": false
+        },
+        {
+          "family": "Helvetica Neue Italic",
+          "source": "/System/Library/Fonts/HelveticaNeue.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-claude-platform",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-claude-platform",
+      "content": "Frontend Code Arena",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        64.140625,
+        40.138888888888886,
+        24.84375,
+        5
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 82,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Carlito Italic",
+          "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case/evidence/font-research/downloads/Carlito-Italic.ttf",
+          "license": "SIL Open Font License 1.1; official Google Fonts repository. License saved at evidence/font-research/downloads/Carlito-OFL.txt.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "high",
+          "exact": false
+        },
+        {
+          "family": "Arial Italic",
+          "source": "/System/Library/Fonts/Supplemental/Arial Italic.ttf",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "low",
+          "exact": false
+        },
+        {
+          "family": "Helvetica Neue Italic",
+          "source": "/System/Library/Fonts/HelveticaNeue.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-italic-latin-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-kimi-score",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-kimi-score",
+      "content": "1679 分",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        32.734375,
+        50.416666666666664,
+        7.734375,
+        4.861111111111111
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 83,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Carlito Italic",
+          "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case/evidence/font-research/downloads/Carlito-Italic.ttf",
+          "license": "SIL Open Font License 1.1; official Google Fonts repository. License saved at evidence/font-research/downloads/Carlito-OFL.txt.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "high",
+          "exact": false
+        },
+        {
+          "family": "Arial Italic",
+          "source": "/System/Library/Fonts/Supplemental/Arial Italic.ttf",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Helvetica Neue Italic",
+          "source": "/System/Library/Fonts/HelveticaNeue.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-claude-score",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-claude-score",
+      "content": "1631 分",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        64.453125,
+        50.416666666666664,
+        7.734375,
+        4.861111111111111
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 84,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Carlito Italic",
+          "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case/evidence/font-research/downloads/Carlito-Italic.ttf",
+          "license": "SIL Open Font License 1.1; official Google Fonts repository. License saved at evidence/font-research/downloads/Carlito-OFL.txt.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "high",
+          "exact": false
+        },
+        {
+          "family": "Arial Italic",
+          "source": "/System/Library/Fonts/Supplemental/Arial Italic.ttf",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Helvetica Neue Italic",
+          "source": "/System/Library/Fonts/HelveticaNeue.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-kimi-rate",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-kimi-rate",
+      "content": "76%",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        32.734375,
+        59.58333333333333,
+        4.6875,
+        4.861111111111111
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 85,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Carlito Italic",
+          "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case/evidence/font-research/downloads/Carlito-Italic.ttf",
+          "license": "SIL Open Font License 1.1; official Google Fonts repository. License saved at evidence/font-research/downloads/Carlito-OFL.txt.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "high",
+          "exact": false
+        },
+        {
+          "family": "Arial Italic",
+          "source": "/System/Library/Fonts/Supplemental/Arial Italic.ttf",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Helvetica Neue Italic",
+          "source": "/System/Library/Fonts/HelveticaNeue.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-claude-rate",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-claude-rate",
+      "content": "63%",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        64.609375,
+        59.58333333333333,
+        4.765625,
+        4.861111111111111
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 86,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Carlito Italic",
+          "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case/evidence/font-research/downloads/Carlito-Italic.ttf",
+          "license": "SIL Open Font License 1.1; official Google Fonts repository. License saved at evidence/font-research/downloads/Carlito-OFL.txt.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "high",
+          "exact": false
+        },
+        {
+          "family": "Arial Italic",
+          "source": "/System/Library/Fonts/Supplemental/Arial Italic.ttf",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Helvetica Neue Italic",
+          "source": "/System/Library/Fonts/HelveticaNeue.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/table-numerals-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-note-one",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-note-one",
+      "content": "在 Program Bench（多步骤编程任务）和 Terminal-Bench 2.1（终端编程与Agent工作流）等测试中，",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        9.609375,
+        68.47222222222221,
+        81.015625,
+        3.333333333333333
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 87,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-note-two",
+      "sceneId": "comparison",
+      "type": "text",
+      "name": "comparison-note-two",
+      "content": "K3 也以 77.8% 和 88.3% 的得分超过了 Fable 5 的 76.8% 和 84.6%",
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        9.609375,
+        74.44444444444444,
+        54.0625,
+        3.333333333333333
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 88,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "照参考保留第三行仍写“竞技场得分”，不改为胜率。脚注左端有未决字样，见copy-audit。"
+        }
+      ],
+      "confidence": "medium",
+      "fontCandidates": [
+        {
+          "family": "Heiti SC Light",
+          "source": "/System/Library/Fonts/STHeiti Light.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "PingFang SC Regular",
+          "source": "/System/Library/AssetsV2/com_apple_MobileAsset_Font8/86ba2c91f017a3749571a82f2c6d890ac7ffb2fb.asset/AssetData/PingFang.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "medium",
+          "exact": false
+        },
+        {
+          "family": "Hiragino Sans GB W3",
+          "source": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+          "license": "macOS bundled font; copyright/name metadata recorded. Local rendering only; redistribution/embedding rights not verified.",
+          "evidence": "evidence/font-research/subtitle-body-top3.png",
+          "confidence": "low",
+          "exact": false
+        }
+      ]
+    },
+    {
+      "id": "comparison-kimi-score-arrow",
+      "sceneId": "comparison",
+      "type": "shape",
+      "name": "comparison-kimi-score-arrow",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        41.328125,
+        47.77777777777778,
+        2.34375,
+        7.777777777777778
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 89,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "SVG箭头颜色由theme.positive/negative替换。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "comparison-claude-score-arrow",
+      "sceneId": "comparison",
+      "type": "shape",
+      "name": "comparison-claude-score-arrow",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        72.890625,
+        47.77777777777778,
+        2.34375,
+        7.777777777777778
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 90,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "SVG箭头颜色由theme.positive/negative替换。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "comparison-kimi-rate-arrow",
+      "sceneId": "comparison",
+      "type": "shape",
+      "name": "comparison-kimi-rate-arrow",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        38.046875,
+        56.94444444444444,
+        2.34375,
+        7.777777777777778
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 91,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "SVG箭头颜色由theme.positive/negative替换。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "comparison-claude-rate-arrow",
+      "sceneId": "comparison",
+      "type": "shape",
+      "name": "comparison-claude-rate-arrow",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        70.390625,
+        57.36111111111111,
+        2.34375,
+        7.777777777777778
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 92,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": true,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "SVG箭头颜色由theme.positive/negative替换。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "comparison-heading-glow",
+      "sceneId": "comparison",
+      "type": "effect",
+      "name": "comparison-heading-glow",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        7.8125,
+        21.38888888888889,
+        87.5,
+        13.88888888888889
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 93,
+      "parentId": null,
+      "appearance": {},
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 410,
+          "detail": "CSS低强度模糊光团，静态材质近似。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "article-one-optics",
+      "sceneId": "article-one",
+      "type": "effect",
+      "name": "article-one-optics",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 500,
+      "parentId": null,
+      "appearance": {
+        "blurPx": 1.2
+      },
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "inferred",
+          "detail": "最终使用同一live子元素的径向清晰区与1.2px柔化底层；各Text保留轻微彩边阴影。红蓝通道叠加试验偏粉，已撤回以保护源主色。所有副本同步消费props，无位图覆盖。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "article-two-optics",
+      "sceneId": "article-two",
+      "type": "effect",
+      "name": "article-two-optics",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 500,
+      "parentId": null,
+      "appearance": {
+        "blurPx": 1.2
+      },
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "inferred",
+          "detail": "最终使用同一live子元素的径向清晰区与1.2px柔化底层；各Text保留轻微彩边阴影。红蓝通道叠加试验偏粉，已撤回以保护源主色。所有副本同步消费props，无位图覆盖。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "prompt-large-optics",
+      "sceneId": "prompt-large",
+      "type": "effect",
+      "name": "prompt-large-optics",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 500,
+      "parentId": null,
+      "appearance": {
+        "blurPx": 1.2
+      },
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "inferred",
+          "detail": "最终使用同一live子元素的径向清晰区与1.2px柔化底层；各Text保留轻微彩边阴影。红蓝通道叠加试验偏粉，已撤回以保护源主色。所有副本同步消费props，无位图覆盖。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "prompt-card-optics",
+      "sceneId": "prompt-card",
+      "type": "effect",
+      "name": "prompt-card-optics",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 500,
+      "parentId": null,
+      "appearance": {
+        "blurPx": 1.2
+      },
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "inferred",
+          "detail": "最终使用同一live子元素的径向清晰区与1.2px柔化底层；各Text保留轻微彩边阴影。红蓝通道叠加试验偏粉，已撤回以保护源主色。所有副本同步消费props，无位图覆盖。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "prompt-plain-optics",
+      "sceneId": "prompt-plain",
+      "type": "effect",
+      "name": "prompt-plain-optics",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 500,
+      "parentId": null,
+      "appearance": {
+        "blurPx": 1.2
+      },
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "inferred",
+          "detail": "最终使用同一live子元素的径向清晰区与1.2px柔化底层；各Text保留轻微彩边阴影。红蓝通道叠加试验偏粉，已撤回以保护源主色。所有副本同步消费props，无位图覆盖。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "comparison-optics",
+      "sceneId": "comparison",
+      "type": "effect",
+      "name": "comparison-optics",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 500,
+      "parentId": null,
+      "appearance": {
+        "blurPx": 1.2
+      },
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "inferred",
+          "detail": "最终使用同一live子元素的径向清晰区与1.2px柔化底层；各Text保留轻微彩边阴影。红蓝通道叠加试验偏粉，已撤回以保护源主色。所有副本同步消费props，无位图覆盖。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "prompt-large-light-mask",
+      "sceneId": "prompt-large",
+      "type": "effect",
+      "name": "共享二维羽化光带",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 500,
+      "parentId": null,
+      "appearance": {
+        "maskImage": "SVG radial luminance mask; shared canvas coordinates {\"centerX\": 970, \"centerY\": 275, \"radiusX\": 1400, \"radiusY\": 1100}",
+        "fill": "theme.ink over theme.accent"
+      },
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 206,
+          "detail": "延续前轮已确认的羽化光罩，冻结取证帧，不接入时间函数。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "prompt-card-light-mask",
+      "sceneId": "prompt-card",
+      "type": "effect",
+      "name": "共享二维羽化光带",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 500,
+      "parentId": null,
+      "appearance": {
+        "maskImage": "SVG radial luminance mask; shared canvas coordinates {\"centerX\": 650, \"centerY\": 320, \"radiusX\": 690, \"radiusY\": 600}",
+        "fill": "theme.ink over theme.accent"
+      },
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 252,
+          "detail": "延续前轮已确认的羽化光罩，冻结取证帧，不接入时间函数。"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "prompt-plain-light-mask",
+      "sceneId": "prompt-plain",
+      "type": "effect",
+      "name": "共享二维羽化光带",
+      "content": null,
+      "asset": null,
+      "assetSource": "recreated",
+      "completeness": null,
+      "bounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "cropMode": "none",
+      "zIndex": 500,
+      "parentId": null,
+      "appearance": {
+        "maskImage": "SVG radial luminance mask; shared canvas coordinates {\"centerX\": 610, \"centerY\": 320, \"radiusX\": 660, \"radiusY\": 600}",
+        "fill": "theme.ink over theme.accent"
+      },
+      "replaceable": false,
+      "evidence": [
+        {
+          "type": "observed",
+          "frame": 318,
+          "detail": "延续前轮已确认的羽化光罩，冻结取证帧，不接入时间函数。"
+        }
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

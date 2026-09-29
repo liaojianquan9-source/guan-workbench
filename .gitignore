@@ -1,0 +1,38 @@
+# ── 系统与杂物 ──────────────────────────────
+.DS_Store
+:-
+*.log
+__pycache__/
+*.pyc
+
+# ── 可重建的运行环境（安装指南会说明如何恢复）──
+.venv/
+.venv-*/
+node_modules/
+.remotion/
+prototypes/broll-workbench/runtime/
+prototypes/broll-workbench/qa/
+
+# ── 本机数据与个人素材（不公开）──────────────
+prototypes/broll-workbench/data/
+cases/
+inputs/
+demos/
+outputs/
+workspace/
+tmp/
+.paused-progress/
+publications/
+项目归档/
+参考图/
+海报成品/
+
+# 个人视频与封面（示例统一用 README 截图与合成图）
+*.mp4
+*.mov
+*.m4v
+*.webm
+# 例外：产品自带的合成演示片段（文字动效，非个人素材）
+!prototypes/broll-workbench/public/ai-presets/*.mp4
+!prototypes/broll-library/public/media/*.mp4
+小院书屋vlog日常-抖音封面-*.png

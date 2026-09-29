@@ -1,0 +1,149 @@
+[
+  {
+    "id": "SHOT-001",
+    "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/publications/ljq-broll-video-generator/examples/kimi-k3-000-011/media/generated.mp4",
+    "sourceStartFrame": 0,
+    "sourceEndFrameExclusive": 99,
+    "fps": 30,
+    "frames": 99,
+    "durationSeconds": 3.3,
+    "preview": "/media/shot-001.mp4",
+    "metadata": {
+      "width": 1280,
+      "height": 720,
+      "avg_frame_rate": "30/1",
+      "duration": "3.300000",
+      "nb_frames": "99",
+      "nb_read_frames": "99",
+      "side_data_list": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "SHOT-002",
+    "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/publications/ljq-broll-video-generator/examples/kimi-k3-000-011/media/generated.mp4",
+    "sourceStartFrame": 99,
+    "sourceEndFrameExclusive": 172,
+    "fps": 30,
+    "frames": 73,
+    "durationSeconds": 2.433333333333333,
+    "preview": "/media/shot-002.mp4",
+    "metadata": {
+      "width": 1280,
+      "height": 720,
+      "avg_frame_rate": "30/1",
+      "duration": "2.433333",
+      "nb_frames": "73",
+      "nb_read_frames": "73",
+      "side_data_list": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "SHOT-003",
+    "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/publications/ljq-broll-video-generator/examples/kimi-k3-000-011/media/generated.mp4",
+    "sourceStartFrame": 172,
+    "sourceEndFrameExclusive": 300,
+    "fps": 30,
+    "frames": 128,
+    "durationSeconds": 4.266666666666667,
+    "preview": "/media/shot-003.mp4",
+    "metadata": {
+      "width": 1280,
+      "height": 720,
+      "avg_frame_rate": "30/1",
+      "duration": "4.266016",
+      "nb_frames": "128",
+      "nb_read_frames": "128",
+      "side_data_list": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "SHOT-004",
+    "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case-motion/render/final.mp4",
+    "sourceStartFrame": 4,
+    "sourceEndFrameExclusive": 80,
+    "fps": 30,
+    "frames": 76,
+    "durationSeconds": 2.533333333333333,
+    "preview": "/media/shot-004.mp4",
+    "metadata": {
+      "width": 1280,
+      "height": 720,
+      "avg_frame_rate": "30/1",
+      "duration": "2.533333",
+      "nb_frames": "76",
+      "nb_read_frames": "76",
+      "side_data_list": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "SHOT-005",
+    "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case-motion/render/final.mp4",
+    "sourceStartFrame": 80,
+    "sourceEndFrameExclusive": 177,
+    "fps": 30,
+    "frames": 97,
+    "durationSeconds": 3.2333333333333334,
+    "preview": "/media/shot-005.mp4",
+    "metadata": {
+      "width": 1280,
+      "height": 720,
+      "avg_frame_rate": "30/1",
+      "duration": "3.233008",
+      "nb_frames": "97",
+      "nb_read_frames": "97",
+      "side_data_list": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "SHOT-006",
+    "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case-motion/render/final.mp4",
+    "sourceStartFrame": 177,
+    "sourceEndFrameExclusive": 339,
+    "fps": 30,
+    "frames": 162,
+    "durationSeconds": 5.4,
+    "preview": "/media/shot-006.mp4",
+    "metadata": {
+      "width": 1280,
+      "height": 720,
+      "avg_frame_rate": "30/1",
+      "duration": "5.400000",
+      "nb_frames": "162",
+      "nb_read_frames": "162",
+      "side_data_list": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "SHOT-007",
+    "source": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/cases/my-broll-case-motion/render/final.mp4",
+    "sourceStartFrame": 339,
+    "sourceEndFrameExclusive": 428,
+    "fps": 30,
+    "frames": 89,
+    "durationSeconds": 2.966666666666667,
+    "preview": "/media/shot-007.mp4",
+    "metadata": {
+      "width": 1280,
+      "height": 720,
+      "avg_frame_rate": "30/1",
+      "duration": "2.966667",
+      "nb_frames": "89",
+      "nb_read_frames": "89",
+      "side_data_list": [
+        {}
+      ]
+    }
+  }
+]

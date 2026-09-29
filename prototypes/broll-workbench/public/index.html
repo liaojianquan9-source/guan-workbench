@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="color-scheme" content="dark">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; style-src-elem 'self'; style-src-attr 'unsafe-inline'; img-src 'self' https: data:; media-src 'self'; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+ <title>观</title>
+ <link rel="stylesheet" href="workspace.css">
+ <link rel="stylesheet" href="clips.css">
+ <link rel="stylesheet" href="studio.css">
+ <link rel="stylesheet" href="replica.css">
+ <link rel="stylesheet" href="ai_making.css">
+</head>
+<body>
+ <div id="app"></div>
+ <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+ <div id="toast" role="status" aria-live="polite"></div>
+ <input id="video-files" type="file" accept="video/*,.mkv,.mov,.avi,.webm,.mp4" multiple hidden>
+ <input id="folder-files" type="file" webkitdirectory multiple hidden>
+ <input id="music-files" type="file" accept="audio/*,.mp3,.m4a,.wav,.flac" multiple hidden>
+ <input id="restore-files" type="file" webkitdirectory multiple hidden>
+ <audio id="clip-vocals" preload="metadata"></audio>
+ <audio id="clip-background" preload="metadata"></audio>
+ <audio id="audio-player" preload="metadata"></audio>
+ <script src="vendor/lucide-icons.js"></script>
+ <script src="app.js"></script>
+ <script src="interaction.js"></script>
+ <script src="clip_logic.js"></script>
+ <script src="audio_gain.js"></script>
+ <script src="track_logic.js"></script>
+ <script src="clip_mixer.js"></script>
+ <script src="clips.js"></script>
+ <script src="collection_link.js"></script>
+ <script src="clip_timeline.js"></script>
+ <script src="studio.js"></script>
+ <script src="playback_preview.js"></script>
+ <script src="music_sections.js"></script>
+ <script src="subtitle_editor.js"></script>
+ <script src="storage.js"></script>
+ <script src="replica_logic.js"></script>
+ <script src="replica.js"></script>
+ <script src="production_client.js"></script>
+ <script src="production_timeline.js"></script>
+ <script src="ai_making.js"></script>
+ <script src="workspace.js"></script>
+</body>
+</html>

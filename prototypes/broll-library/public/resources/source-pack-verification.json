@@ -1,0 +1,28 @@
+[
+  {
+    "case": "case-001",
+    "zip": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/prototypes/broll-library/public/resources/case-001/source.zip",
+    "files": 11,
+    "bytes": 725284,
+    "sha256": "39634e06db48c23db1946e3b3609129d667b8bd0d9438bbb0d07fe0518880d69",
+    "crcCheck": "passed",
+    "relativeImports": "passed",
+    "sourceByteMatch": "passed",
+    "containsFinishedVideo": false,
+    "containsReferenceVideo": false,
+    "containsNodeModules": false
+  },
+  {
+    "case": "case-002",
+    "zip": "/Users/liaojianquan/Documents/ChatGPT/B-roll 剪辑/prototypes/broll-library/public/resources/case-002/source.zip",
+    "files": 21,
+    "bytes": 1201148,
+    "sha256": "fdf046d03225e86dc11423d503cff0d8745b517ef0827fca3d3dcffdd2506388",
+    "crcCheck": "passed",
+    "relativeImports": "passed",
+    "sourceByteMatch": "passed",
+    "containsFinishedVideo": false,
+    "containsReferenceVideo": false,
+    "containsNodeModules": false
+  }
+]

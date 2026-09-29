@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "changedFiles": [
+    "README.md",
+    "docs/execution-status.md",
+    "examples/kimi-k3-000-011/README.md",
+    "skills/ljq-broll-layout-structure/SKILL.md",
+    "skills/ljq-broll-layout-structure/references/element-taxonomy.md",
+    "skills/ljq-broll-layout-structure/references/static-compositing.md",
+    "skills/ljq-broll-layout-structure/references/visual-grammar.md",
+    "skills/ljq-broll-motion-forensics/SKILL.md",
+    "skills/ljq-broll-motion-forensics/references/implementation-checks.md",
+    "skills/ljq-broll-motion-forensics/references/measurement-guide.md",
+    "README.en.md",
+    "docs/getting-started.en.md",
+    "docs/getting-started.md"
+  ],
+  "localLinks": 103,
+  "anchors": 17,
+  "images": 10,
+  "languageCommands": "identical",
+  "syncedGeneralSkillDocuments": 7,
+  "scope": "Markdown only; no code, install script, video, or new case changes",
+  "verificationLimit": "Documentation and preview checks only; installation and video tests were not executed",
+  "preview": "http://127.0.0.1:50872/",
+  "errors": []
+}

@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/hubooooooo/ai-product-starter-kit",
+  "commit": "955871e830e8ec29abfbdee688fff89992fede40",
+  "license": "MIT",
+  "files": {
+    ".gitignore": "80042d24468940b49962002dc431145ba64ec96b47c4f9b7fb5bb1416b3d8a90",
+    "AGENTS.md": "13895ad362cf5c8839cfbc905cdd4f1725aca3cfbd2fe000a102bac8f58b391c",
+    "CLAUDE.md": "00ef62a753b438e209a1bbbb4d286bcf1323b3465f3b97e1a605dafcb0e522af",
+    "LICENSE": "e7e412ad2bceb0e5b06971e6cec38d7adcb226861909c4af288863bd0ae9d91f",
+    "README.md": "2006508f6c99134e72393622252f6e09608abd14977bd26f4fe6e76aeb17426f",
+    "docs/PRD/PRD模板.md": "974c3e60020fd770956f077aa63f8fa4a67a1a935cf0b8d7f1271d2c53527eac",
+    "docs/手册/AI产品 Vibe Coding 通用上线部署手册.md": "8466c585ec836415cd472f99e0586a6e895ba148bb1a33ee2b1f42f060fd712e",
+    "docs/手册/AI产品Vibe Coding通用前端技术栈手册.md": "19df75dc53075b39b88c09db8efc3591d830967bae1f904714885a21823ce655",
+    "docs/手册/AI产品Vibe Coding通用技术栈手册.md": "d003c53c004f0d0221f240d16c1d994380ebafa693e27affcfbf1875025ab746",
+    "开始看这里.md": "f1f486ec22b3f8fedc278f8be32036ba1fca288259daf4471eaed867ffe12cb4"
+  }
+}

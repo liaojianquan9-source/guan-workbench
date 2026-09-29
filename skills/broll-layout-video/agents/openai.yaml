@@ -1,0 +1,4 @@
+interface:
+  display_name: "B-roll布局视频生成"
+  short_description: "将可编辑Remotion落定构图制作成模块化B-roll视频"
+  default_prompt: "Use $broll-layout-video to animate this editable Remotion settled-layout component into a modular B-roll preview."

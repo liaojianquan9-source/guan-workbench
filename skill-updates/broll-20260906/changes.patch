@@ -1,0 +1,174 @@
+--- before/ljq-broll-replica/SKILL.md
++++ after/ljq-broll-replica/SKILL.md
+@@ -2,7 +2,7 @@
+ name: ljq-broll-replica
+ description: "把用户指定的连续 B-roll 参考片复刻成可编辑、可替换的 Remotion 案例，并完成范围预检、逐场景静帧、逐元素动效、完整渲染和有限 QA 修正。用于直接临摹或高保真复刻；不负责从口播自动选点或推荐模板。"
+ metadata:
+-  version: "1.4.0"
++  version: "1.4.1"
+ ---
+ 
+ # B-roll 高保真复刻总控
+@@ -18,7 +18,7 @@
+ - **复用门**：进入布局或 QA 时阅读 [references/reusability-gates.md](references/reusability-gates.md)。可替换元素、逐场景静帧和字体证据必须能被合同与校验器找到。
+ - **视觉判断**：测量静帧、校准配色/材质、分析蒙版或审阅替换结果前，必须阅读布局 owner 的 [static-compositing.md](../ljq-broll-layout-structure/references/static-compositing.md)；总控与 QA 共用这一套判断规则。
+ - **两轮门**：初版 QA 失败后阅读 [references/quality-loop.md](references/quality-loop.md)，只通过状态脚本开始修正。
+-- **复盘与迁移**：用户要求总结测试、更新判断规则或验证其他模型能否沿用时，阅读 [references/case-kimi-k3.md](references/case-kimi-k3.md)；它是有局限的行为样例，不是新案例参数模板。
++- **复盘与迁移**：用户要求总结测试、更新判断规则或验证其他模型能否沿用时，按范围阅读 [KIMI 0–11秒](references/case-kimi-k3.md) 或 [KIMI 20:04–34:12](references/case-kimi-k3-020-034.md)；它们是有局限的行为样例，不是新案例参数模板。
+ 
+ 把当前 Skill 目录记为 `SKILL_DIR`。先检查现有依赖；缺失或确需更新时才运行 `$SKILL_DIR/scripts/setup-environment.sh`，它会安装依赖。写 Remotion 代码时加载 `remotion:remotion-best-practices`、`remotion:remotion-markup` 和 `remotion:remotion-interactivity`；预览和导出时加载对应的 Studio/Render 能力。
+ 
+--- before/ljq-broll-layout-structure/SKILL.md
++++ after/ljq-broll-layout-structure/SKILL.md
+@@ -2,7 +2,7 @@
+ name: ljq-broll-layout-structure
+ description: "把已预检的 B-roll 案例拆成逐场景、稳定元素 ID 和可编辑 Remotion 落定布局，并用原片/渲染/比较 still 与替换 still 证明静帧和复用性。用于复刻入场完成后的终点画面；不分析完整动线。"
+ metadata:
+-  version: "1.3.0"
++  version: "1.3.2"
+ ---
+ 
+ # B-roll 落定布局
+@@ -19,7 +19,7 @@
+ 
+ ## 工作流
+ 
+-1. **分场景。** 对每个排版状态选择“主要入场已完成、退出尚未开始”的落定帧，写入 `layout.scenes[]`。不选机械中点。
++1. **分场景。** 按 [场景与转场](references/visual-grammar.md#场景与转场) 区分独立排版和过渡状态，再选择“主要入场已完成、退出尚未开始”的落定帧，写入 `layout.scenes[]`。不选机械中点。
+ 2. **拆元素。** 先读取 [references/element-taxonomy.md](references/element-taxonomy.md)，按对象类型与共享/专属属性两轴分析。需要替换、独立定位、裁切、遮挡或运动时才拆层。为元素写入稳定的小写连字号 ID 和 `sceneId`，适用属性与未知项均可追溯。
+ 3. **建立静态终点。** 测量百分比 bounds、anchor、parentId、zIndex、裁切和静态 appearance；按 [静态视觉判断](references/static-compositing.md) 核对实际可见比例、颜色角色和合成关系，并区分观察与推测。
+ 4. **建立可编辑实现。** 文字、数字、参数、线条、框和遮罩使用 live text、SVG、CSS 或可编辑组件。可替换内容暴露为 props。
+@@ -38,7 +38,7 @@
+    ```
+ 
+    此脚本会覆盖replacement文件/条目；动态实现的静态替换props须明确关闭动效。看过结果后再登记通过，不能以命令成功代替观察。
+-8. **交付布局。** 只有所有 `scenes[].status` 和必需 `replacementTests[].status` 为 `passed` 时，才把 `stages.layout` 设为 `passed`并运行主 Skill 校验器。
++8. **交付布局。** 按 [前期静帧审阅](references/static-compositing.md#前期静帧审阅) 展示集中比对入口。只有所有 `scenes[].status` 和必需 `replacementTests[].status` 为 `passed` 时，才把 `stages.layout` 设为 `passed`并运行主 Skill 校验器。
+ 
+ ## 边界
+ 
+--- before/ljq-broll-layout-structure/references/element-taxonomy.md
++++ after/ljq-broll-layout-structure/references/element-taxonomy.md
+@@ -33,10 +33,12 @@
+ - 字距、行距、换行、对齐、基线、字面宽高比和缩放后占位。
+ - 字体候选按中文、数字、拉丁与手写分别比较；Top 3证据和精确识别边界见[字体与可编辑边界](static-compositing.md#字体与可编辑边界)。
+ - “字体颜色”拆为可编辑填充、材质和效果。字内纹理不会让文字变成图片元素。
++- 同一句文字跨不同底图呈现明暗或反相变化时，先以统一字体参数和整句合成层验证混合关系，例如difference（差值）。在相同底图下比较至少两个明暗区域，记录目标底层、作用范围和候选置信度；整句替换still应保持同一文字ID、连续排版和跨区域合成关系。具体模式由证据或用户指定决定。
+ 
+ ## 媒体专属
+ 
+ - 来源/许可、宽高比、有效内容或alpha边界、完整度、裁切来源、object-fit/position。
++- 参考照片铺满画布时，以单个媒体prop保存其取景关系；替换still同时核对画幅覆盖、主体位置与裁切，确认画布内没有新增空白。独立文字和图形仍按自身ID保留，排除区域服从scope。
+ - 抠像/分割是否已经存在、边缘羽化与颜色污染；需要新增抠像且影响范围时单独确认，不把它设为本流程默认新增功能。
+ - 视频再记录源时间映射与静态观察帧；不要仅因格式扩展就自动进入完整视频处理。
+ 
+@@ -46,6 +48,8 @@
+ 
+ 记录实际处理链，例如“纹理定位 → live text遮罩 → 描边 → 阴影”。描边和阴影属于合成效果，不是每个蒙版必带的字段。沿字形辉光通常不需要角度；中心放射光才考虑光源位置与方向，不能只给一个笼统的‘字体发光位置’。
+ 
++多个字内出现连续受光时，先验证父组坐标系中的共享光场，再用live text作为遮罩。代表性still核对光带方向、宽度和羽化渐变能否跨字或跨行连续；替换后字形边界随新内容更新，光场仍保持统一。随时间变化时按motion的[共享扫光](../../ljq-broll-motion-forensics/references/measurement-guide.md#共享扫光)取证。
++
+ “文字里面可见月表纹理”是观察；“由几个月亮叠加产生”只是候选实现。选择能保持替换性且匹配结果的方法，不宣称恢复原始图层。
+ 
+ ## 写入合同
+--- before/ljq-broll-layout-structure/references/visual-grammar.md
++++ after/ljq-broll-layout-structure/references/visual-grammar.md
+@@ -7,6 +7,12 @@
+ ## 选帧
+ 
+ 按顺序判断：主要元素完成入场；阅读关系建立；未开始退出或转场；瞬时模糊和闪光最少；信息最完整。记录准确帧号、时间码、证据类型和置信度。
++
++## 场景与转场
++
++遇到叠页、穿字、擦开或闪光形成的新外观时，先查看边界前后的连续帧：独立内容结构或阅读关系建立时划为scene；只是连接前后状态的交叠、遮罩或变形时，登记为转场取证帧，归入前后场景的可见窗口。同一构图的持续镜头变化保留其元素ID。
++
++分场景完成的证据是每个边界都有前后帧、判定理由和归属；转场中间态有时间窗及来源场景，不强设落定帧。转场方向、时长和曲线交给motion；静态阶段仅记录归属与代表性外观。
+ 
+ ## 坐标与边界
+ 
+--- before/ljq-broll-motion-forensics/SKILL.md
++++ after/ljq-broll-motion-forensics/SKILL.md
+@@ -2,7 +2,7 @@
+ name: ljq-broll-motion-forensics
+ description: "对已通过落定布局的连续 B-roll 做逐元素动效取证，分开场景、镜头、元素和文字内部行为，并输出可验证的连续 motion.json。用于入场、出场、缩放、擦开、叠影和转场取证；不重新排版或猜测原软件参数。"
+ metadata:
+-  version: "1.3.0"
++  version: "1.3.1"
+ ---
+ 
+ # B-roll 动效取证
+--- before/ljq-broll-motion-forensics/references/measurement-guide.md
++++ after/ljq-broll-motion-forensics/references/measurement-guide.md
+@@ -7,7 +7,7 @@
+ 1. **什么在动。** 比较多个有纹理区域。多个元素轨迹一致时优先建父组或 `@camera`，不要逐层复制同一运动。
+ 2. **平移还是旋转。** 同一对象上离轴距离不同的两个纹理块，若远端位移明显更大，才支持绕近端旋转；两端位移接近更像平移。
+ 3. **什么时候出现。** 记录 firstVisible、settledFrame、endFrame。不要把压缩噪声第一次变化当作视觉出现。
+-4. **怎样揭示。** 擦除会出现沿路径移动的清晰边界；淡入会让多数采样点的强度一起增长。只看二值占用容易误判。
++4. **怎样揭示。** 擦除有沿路径移动的前沿，边缘可能清晰或羽化；淡入会让多数采样点的强度一起增长。只看二值占用容易误判。
+ 
+ 先拟合共同镜头，再比较各元素剥离camera后的残差。稳定背景纹理、边缘或框角节点交叉验证同一中心与尺度；入场伸长的整个数字框不宜直接当camera标尺，可换用已收束的单字或固定框角。线条随camera缩小进入画布，可能只是视口裁切，不等于有独立绘制动画。
+ 
+@@ -20,6 +20,14 @@
+ 逐字动画需分别测量：字符顺序、stagger、主字位移、模糊、纵向拉伸、残影层数、残影间距和落定后的收束帧。类似“叠影”的预设名可以帮助命名，但层数和参数必须从原片取证。
+ 
+ 持续存在的顶部受光、描边、金属渐变和基础辉光属于静态材质；只在入场期出现的额外辉光、运动模糊和残影属于动态。两者不能写进同一个最终归零的效果轨。
++
++## 共享扫光
++
++字形位置与轮廓稳定、亮带连续经过多个字或多行时，先检验共享光场；逐字颜色轨只用于证据支持的独立字符变化。静态合成关系按layout的[蒙版关系](../../ljq-broll-layout-structure/references/element-taxonomy.md#蒙版是关系不是另一种素材格式)登记。
++
++1. 按原片可见阶段选帧，跟踪同一亮带跨字/行的位置；记录共同坐标系、方向、宽度、峰值强度、前后缘羽化及时间窗。亮度受字形或底图污染时换采样点，并保留测量误差。
++2. 用连续渐变或有羽化的mask表达观察到的软边，光场路径独立于字符索引。完成证据须能区分软边过渡宽度与光带移动距离；只有原片为清晰边界时才用硬擦除。
++3. 在实际runtime导出光带经过至少两个字或两行的中间帧，并用不同长度文案重验同一时间窗。完成：光场跨字连续、换行处不重启、遮罩来自新文字；末态与参考一致，片段中途截断时保留当时光照状态。
+ 
+ ## 元素分轨
+ 
+--- before/ljq-broll-motion-forensics/references/implementation-checks.md
++++ after/ljq-broll-motion-forensics/references/implementation-checks.md
+@@ -25,6 +25,8 @@
+ 
+ 纹理定位、裁切和字形遮罩分别可追踪；换字后纹理mask必须来自新字形。图片以有效内容边界校准占比，角落物体保留完整资产与viewport裁切。替代素材的轮廓/坑纹不同，运动数值可能需按其可见弧线重新校准；不能把固定屏幕扫描线上的弧边当固定纹理点。
+ 
++文字内部有连续亮带时，执行[共享扫光](measurement-guide.md#共享扫光)的跨字与替换探针；几何连续性分析的pass不覆盖光场或羽化实现。
++
+ ## 逐字替换的结束帧
+ 
+ 先选定有效字符划分方式，并在文案变化时重新计算字符边界与延迟。若保持时间窗`[start,end]`、字符数`n`、最短单字时长`d`，先确认窗口可容纳`d`，再限制`effectiveStagger ≤ (end-start-d)/max(1,n-1)`；单字时长使用剩余窗口。字数太多或组合字形需要更复杂分段时说明限制，不能悄悄延长用户总时长。
+--- before/ljq-broll-layout-structure/references/static-compositing.md
++++ after/ljq-broll-layout-structure/references/static-compositing.md
+@@ -13,6 +13,12 @@
+ 5. 渐变、描边、阴影、辉光、立体厚度和纹理。
+ 
+ 先解决前项的显著偏差，再调整后项。细节丰富不能抵消比例或配色关系错误。每个场景的 observation 写明已核对的关系、证据路径和剩余差异；脚本运行成功或比较图存在，只证明产物生成。
++
++## 前期静帧审阅
++
++静态阶段提供一个可直接打开的集中审阅页，复用已有证据：按场景编号和源时码组织，同一落定帧的原片与复刻等比例相邻展示；比较图、替换still、字体候选和已知差异可从对应场景直接查看，方便用户按场景编号反馈。
++
++交付前实际打开入口，检查各场图片和链接可用、帧号对应、内容为当前版本，再将入口展示给用户。完成：用户可在同一入口逐场比对。
+ 
+ ## 实际可见边界
+ 
+--- before/ljq-broll-replica/references/case-kimi-k3-020-034.md
++++ after/ljq-broll-replica/references/case-kimi-k3-020-034.md
+@@ -0,0 +1,20 @@
++# KIMI 20:04–34:12：合成机制与场景归属
++
++复盘本次案例或回归下列判断分支时读取。通用规则保存在各阶段owner，本文件只保留案例依据；它与[0–11秒案例](case-kimi-k3.md)是两个独立范围。
++
++## 验证范围
++
++案例标识`my-broll-case-motion`，源范围`00:00:20:04–00:00:34:12`，30fps、428帧，即14秒8帧；单路1280×720。用户将“14秒”说明为约数，并授权按参考判断范围。案例内源片本地帧0对应长原片帧604。
++
++用户确认静态修订后授权动效，并于2026-09-06认可最终动态效果；自动保真QA的时变排除区域限制仍单独保留。
++
++## 经验归位
++
++| 本次纠正或结果 | 通用规则及完成标准 |
++| --- | --- |
++| 主标题是一整句话，字号等参数保持统一，颜色变化来自差值合成 | layout的[文字专属](../../ljq-broll-layout-structure/references/element-taxonomy.md#文字专属) |
++| 电脑操作画面是一张相似照片铺满背景 | layout的[媒体专属](../../ljq-broll-layout-structure/references/element-taxonomy.md#媒体专属) |
++| 04是过渡状态 | layout的[场景与转场](../../ljq-broll-layout-structure/references/visual-grammar.md#场景与转场) |
++| 06–07的文字作遮罩，光边缘有渐进羽化 | motion的[共享扫光](../../ljq-broll-motion-forensics/references/measurement-guide.md#共享扫光) |
++
++以上是带条件的判断分支。新参考可能有逐字变色、硬边擦除、独立图片拼贴或真正的新场景，应从新证据判定；本次用户接受的替代背景与排除范围只属于本案。

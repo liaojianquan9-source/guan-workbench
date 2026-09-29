@@ -1,0 +1,593 @@
+{
+  "version": 1,
+  "scopes": {
+    "problem": {
+      "mount": [
+        4,
+        79
+      ]
+    },
+    "article-one": {
+      "mount": [
+        80,
+        176
+      ]
+    },
+    "article-two": {
+      "mount": [
+        127,
+        176
+      ]
+    },
+    "prompt-large": {
+      "mount": [
+        177,
+        206
+      ]
+    },
+    "prompt-small": {
+      "mount": [
+        207,
+        338
+      ]
+    },
+    "comparison": {
+      "mount": [
+        339,
+        427
+      ]
+    }
+  },
+  "motions": {
+    "problem-visibility": {
+      "scope": "problem",
+      "mount": [
+        4,
+        79
+      ]
+    },
+    "article-one-visibility": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ]
+    },
+    "article-two-visibility": {
+      "scope": "article-two",
+      "mount": [
+        127,
+        176
+      ]
+    },
+    "prompt-large-visibility": {
+      "scope": "prompt-large",
+      "mount": [
+        177,
+        206
+      ]
+    },
+    "prompt-small-visibility": {
+      "scope": "prompt-small",
+      "mount": [
+        207,
+        338
+      ]
+    },
+    "comparison-visibility": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ]
+    },
+    "problem-camera": {
+      "scope": "problem",
+      "mount": [
+        4,
+        79
+      ]
+    },
+    "article-one-entrance-camera": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ]
+    },
+    "article-one-highlight-growth": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ]
+    },
+    "article-one-headline-main-characters": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ],
+      "glyph": {
+        "duration": 6,
+        "spacingPx": 0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame"
+      }
+    },
+    "article-one-english-characters": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ],
+      "glyph": {
+        "duration": 5,
+        "spacingPx": 0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame"
+      }
+    },
+    "article-one-body-1-characters": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ],
+      "glyph": {
+        "duration": 3,
+        "spacingPx": 0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame"
+      }
+    },
+    "article-one-body-2-characters": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ],
+      "glyph": {
+        "duration": 3,
+        "spacingPx": 0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame"
+      }
+    },
+    "article-one-body-3-characters": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ],
+      "glyph": {
+        "duration": 3,
+        "spacingPx": 0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame"
+      }
+    },
+    "article-one-body-4-characters": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ],
+      "glyph": {
+        "duration": 3,
+        "spacingPx": 0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame"
+      }
+    },
+    "article-one-body-5-characters": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ],
+      "glyph": {
+        "duration": 3,
+        "spacingPx": 0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame"
+      }
+    },
+    "article-one-body-6-characters": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ],
+      "glyph": {
+        "duration": 3,
+        "spacingPx": 0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame"
+      }
+    },
+    "article-one-outgoing-camera": {
+      "scope": "article-one",
+      "mount": [
+        127,
+        176
+      ]
+    },
+    "article-one-outgoing-optics": {
+      "scope": "article-one",
+      "mount": [
+        127,
+        176
+      ]
+    },
+    "article-two-incoming-camera": {
+      "scope": "article-two",
+      "mount": [
+        127,
+        176
+      ]
+    },
+    "article-two-incoming-optics": {
+      "scope": "article-two",
+      "mount": [
+        127,
+        176
+      ]
+    },
+    "prompt-large-camera": {
+      "scope": "prompt-large",
+      "mount": [
+        177,
+        206
+      ]
+    },
+    "prompt-large-input-characters": {
+      "scope": "prompt-large",
+      "mount": [
+        177,
+        206
+      ],
+      "glyph": {
+        "duration": 5,
+        "spacingPx": 0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame"
+      }
+    },
+    "prompt-large-input-brighten": {
+      "scope": "prompt-large",
+      "mount": [
+        177,
+        206
+      ]
+    },
+    "prompt-large-outline-trim": {
+      "scope": "prompt-large",
+      "mount": [
+        177,
+        206
+      ]
+    },
+    "prompt-small-camera-pan": {
+      "scope": "prompt-small",
+      "mount": [
+        207,
+        338
+      ]
+    },
+    "prompt-small-focus": {
+      "scope": "prompt-small",
+      "mount": [
+        207,
+        338
+      ]
+    },
+    "prompt-before-table-zoom": {
+      "scope": "prompt-small",
+      "mount": [
+        322,
+        338
+      ]
+    },
+    "prompt-card-line-two-characters": {
+      "scope": "prompt-small",
+      "mount": [
+        207,
+        338
+      ],
+      "glyph": {
+        "duration": 5,
+        "spacingPx": 0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame"
+      }
+    },
+    "prompt-card-note-characters": {
+      "scope": "prompt-small",
+      "mount": [
+        207,
+        338
+      ],
+      "glyph": {
+        "duration": 4,
+        "spacingPx": 0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame"
+      }
+    },
+    "prompt-card-outline-trim": {
+      "scope": "prompt-small",
+      "mount": [
+        207,
+        338
+      ]
+    },
+    "prompt-card-light-mask-sweep": {
+      "scope": "prompt-small",
+      "mount": [
+        207,
+        338
+      ]
+    },
+    "prompt-plain-light-mask-sweep": {
+      "scope": "prompt-small",
+      "mount": [
+        207,
+        338
+      ]
+    },
+    "comparison-camera-growth": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        403
+      ]
+    },
+    "comparison-camera-tail": {
+      "scope": "comparison",
+      "mount": [
+        404,
+        427
+      ]
+    },
+    "comparison-label-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 8,
+        "spacingPx": 2.0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-model-kimi-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 8,
+        "spacingPx": 1.2,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-model-claude-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 8,
+        "spacingPx": 0.65,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-platform-label-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 8,
+        "spacingPx": 1.0,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-kimi-platform-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 7,
+        "spacingPx": 0.25,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-claude-platform-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 8,
+        "spacingPx": 0.3,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-score-label-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 8,
+        "spacingPx": 0.8,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-kimi-score-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 8,
+        "spacingPx": 0.8,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-claude-score-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 9,
+        "spacingPx": 0.8,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-rate-label-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 7,
+        "spacingPx": 0.6,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-kimi-rate-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 8,
+        "spacingPx": 0.6,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-claude-rate-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 8,
+        "spacingPx": 0.8,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-note-one-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 8,
+        "spacingPx": 0.2,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-note-two-characters": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ],
+      "glyph": {
+        "duration": 8,
+        "spacingPx": 0.2,
+        "order": "left-to-right",
+        "replacementTiming": "stagger compresses to stay within endFrame",
+        "opacityCurve": "quadratic-in"
+      }
+    },
+    "comparison-kimi-score-arrow-reveal": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ]
+    },
+    "comparison-claude-score-arrow-reveal": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ]
+    },
+    "comparison-kimi-rate-arrow-reveal": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ]
+    },
+    "comparison-claude-rate-arrow-reveal": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ]
+    },
+    "comparison-glow-reveal": {
+      "scope": "comparison",
+      "mount": [
+        339,
+        427
+      ]
+    },
+    "article-one-body-five-opacity": {
+      "scope": "article-one",
+      "mount": [
+        80,
+        176
+      ]
+    }
+  },
+  "note": "Runtime bindings supply scope and mount lifetime, anchor and per-character settings; no source pixels are used. All geometry remains the approved live layout."
+}

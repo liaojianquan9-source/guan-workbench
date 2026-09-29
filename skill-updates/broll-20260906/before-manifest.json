@@ -1,0 +1,42 @@
+[
+  {
+    "path": "ljq-broll-replica/SKILL.md",
+    "sha256": "94f4cc1dbc5806c8864a247f56e1f605d37a093a1c19cb9bb65f65fb09a46a67"
+  },
+  {
+    "path": "ljq-broll-replica/references/execution-playbook.md",
+    "sha256": "3e5055ce19192d2160bd011b1c07dec43d2cde738b2dbadd96072b2378be0abd"
+  },
+  {
+    "path": "ljq-broll-layout-structure/SKILL.md",
+    "sha256": "a6ff03628c20004f9a22b0d96e2956013cc3ad5963c4c98f09e255d0db946052"
+  },
+  {
+    "path": "ljq-broll-layout-structure/references/element-taxonomy.md",
+    "sha256": "65676ddcd2748d1a751e1dcacdbcbeb501aa7d14e294eee4becd5d34208c2967"
+  },
+  {
+    "path": "ljq-broll-layout-structure/references/visual-grammar.md",
+    "sha256": "47b8fc46c5ef10d6978ba30bfb5d4c3cf5e655ca8704ee6cbcb970bb0a01bc1d"
+  },
+  {
+    "path": "ljq-broll-motion-forensics/SKILL.md",
+    "sha256": "48039a935d544e93e7f13509cfa9fd30fc65b726bd0d67e2dd2d3853a7678e01"
+  },
+  {
+    "path": "ljq-broll-motion-forensics/references/measurement-guide.md",
+    "sha256": "23787eae1c625ed6b356e96944fc6da94bd2381c50f6a0fea11e58e6e6c7cc6e"
+  },
+  {
+    "path": "ljq-broll-motion-forensics/references/implementation-checks.md",
+    "sha256": "7a7c3de8d3813333684e573b56bf819b0421ed6c6946406db7085da63520f3d8"
+  },
+  {
+    "path": "ljq-broll-fidelity-qa/SKILL.md",
+    "sha256": "82fa8622d33125093c753ee07995e6b8736558a4d2e18f9c78bab8e3ca3b68d1"
+  },
+  {
+    "path": "ljq-broll-layout-structure/references/static-compositing.md",
+    "sha256": "795d233dc472c93d2ed1e6e213336c5c037afc7e2bb79e4d9ab15b21102c0ceb"
+  }
+]

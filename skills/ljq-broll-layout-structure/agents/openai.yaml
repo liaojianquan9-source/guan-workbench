@@ -1,0 +1,6 @@
+interface:
+  display_name: "LJQ-broll-layout-structure"
+  short_description: "将B-roll关键落定帧复刻为可编辑Remotion排版组件"
+  default_prompt: "使用 $ljq-broll-layout-structure 从参考视频中选择关键落定帧，并复刻为分层、可编辑的 Remotion 最终构图。"
+policy:
+  allow_implicit_invocation: true

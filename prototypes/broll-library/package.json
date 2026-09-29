@@ -1,0 +1,19 @@
+{
+  "name": "broll-case-library",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "start": "node dev.mjs",
+    "build": "node build.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "typescript": "5.9.3"
+  }
+}

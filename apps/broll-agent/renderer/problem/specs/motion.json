@@ -1,0 +1,2159 @@
+{
+  "schemaVersion": "1.2",
+  "caseId": "my-broll-case",
+  "durationInFrames": 428,
+  "motions": [
+    {
+      "id": "problem-visibility",
+      "targetId": "@scene",
+      "phase": "hold",
+      "firstVisible": 4,
+      "settledFrame": 4,
+      "endFrame": 79,
+      "evidence": {
+        "type": "observed",
+        "detail": "Hard cut/mount window from source; article-two overlays article-one127–176; prompt-small stays continuous207–338.",
+        "frames": [
+          4,
+          79
+        ]
+      },
+      "confidence": "high",
+      "reveal": {
+        "mode": "fade",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 4,
+              "value": 1
+            },
+            {
+              "frame": 79,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "article-one-visibility",
+      "targetId": "@scene",
+      "phase": "hold",
+      "firstVisible": 80,
+      "settledFrame": 80,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Hard cut/mount window from source; article-two overlays article-one127–176; prompt-small stays continuous207–338.",
+        "frames": [
+          80,
+          176
+        ]
+      },
+      "confidence": "high",
+      "reveal": {
+        "mode": "fade",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 80,
+              "value": 1
+            },
+            {
+              "frame": 176,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "article-two-visibility",
+      "targetId": "@scene",
+      "phase": "hold",
+      "firstVisible": 127,
+      "settledFrame": 127,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Hard cut/mount window from source; article-two overlays article-one127–176; prompt-small stays continuous207–338.",
+        "frames": [
+          127,
+          176
+        ]
+      },
+      "confidence": "high",
+      "reveal": {
+        "mode": "fade",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 127,
+              "value": 1
+            },
+            {
+              "frame": 176,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "prompt-large-visibility",
+      "targetId": "@scene",
+      "phase": "hold",
+      "firstVisible": 177,
+      "settledFrame": 177,
+      "endFrame": 206,
+      "evidence": {
+        "type": "observed",
+        "detail": "Hard cut/mount window from source; article-two overlays article-one127–176; prompt-small stays continuous207–338.",
+        "frames": [
+          177,
+          206
+        ]
+      },
+      "confidence": "high",
+      "reveal": {
+        "mode": "fade",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 177,
+              "value": 1
+            },
+            {
+              "frame": 206,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "prompt-small-visibility",
+      "targetId": "@scene",
+      "phase": "hold",
+      "firstVisible": 207,
+      "settledFrame": 207,
+      "endFrame": 338,
+      "evidence": {
+        "type": "observed",
+        "detail": "Hard cut/mount window from source; article-two overlays article-one127–176; prompt-small stays continuous207–338.",
+        "frames": [
+          207,
+          338
+        ]
+      },
+      "confidence": "high",
+      "reveal": {
+        "mode": "fade",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 207,
+              "value": 1
+            },
+            {
+              "frame": 338,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "comparison-visibility",
+      "targetId": "@scene",
+      "phase": "hold",
+      "firstVisible": 339,
+      "settledFrame": 339,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Hard cut/mount window from source; article-two overlays article-one127–176; prompt-small stays continuous207–338.",
+        "frames": [
+          339,
+          427
+        ]
+      },
+      "confidence": "high",
+      "reveal": {
+        "mode": "fade",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 339,
+              "value": 1
+            },
+            {
+              "frame": 427,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "problem-camera",
+      "targetId": "@camera",
+      "phase": "camera",
+      "firstVisible": 4,
+      "settledFrame": 20,
+      "endFrame": 79,
+      "evidence": {
+        "type": "observed",
+        "detail": "evidence/motion/articles/trajectory-recommendations.json: approved20; shared title growth707→774px.",
+        "frames": [
+          4,
+          20,
+          79
+        ]
+      },
+      "confidence": "high",
+      "transform": {
+        "scaleX": {
+          "keyframes": [
+            {
+              "frame": 4,
+              "value": 0.9803733
+            },
+            {
+              "frame": 79,
+              "value": 1.0723733
+            }
+          ],
+          "interpolation": "linear"
+        },
+        "scaleY": {
+          "keyframes": [
+            {
+              "frame": 4,
+              "value": 0.9803733
+            },
+            {
+              "frame": 79,
+              "value": 1.0723733
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "article-one-entrance-camera",
+      "targetId": "@camera",
+      "phase": "camera",
+      "firstVisible": 80,
+      "settledFrame": 126,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "evidence/motion/articles/fitted-curves.json: -470→10px, RMS0.81px; baseline126 normalized.",
+        "frames": [
+          80,
+          126,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "transform": {
+        "x": {
+          "keyframes": [
+            {
+              "frame": 80,
+              "value": -468.95012
+            },
+            {
+              "frame": 136,
+              "value": 11.04988
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.13837402340253538,
+            0.7526125958587927,
+            0.6052853366718237,
+            0.9815212968319317
+          ]
+        }
+      }
+    },
+    {
+      "id": "article-one-highlight-growth",
+      "targetId": "article-one-headline-highlight",
+      "phase": "entrance",
+      "firstVisible": 80,
+      "settledFrame": 96,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Bottom edge y244 anchored; thin line grows upward80–94. evidence/motion/articles/trajectory-recommendations.json Probe correction: fit against observed80/84/88/90/92/94 scale samples; normalized RMS .0493.",
+        "frames": [
+          80,
+          96,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "transform": {
+        "scaleY": {
+          "keyframes": [
+            {
+              "frame": 80,
+              "value": 0.015
+            },
+            {
+              "frame": 94,
+              "value": 1
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            1,
+            0,
+            0.6109273347533092,
+            0.6796605926335241
+          ]
+        },
+        "opacity": {
+          "keyframes": [
+            {
+              "frame": 80,
+              "value": 0.1
+            },
+            {
+              "frame": 88,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "article-one-headline-main-characters",
+      "targetId": "article-one-headline-main",
+      "phase": "entrance",
+      "firstVisible": 83,
+      "settledFrame": 109,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Headline characters rise from below; no detached ghosts. evidence/motion/articles/headline-entrance-contact.jpg",
+        "frames": [
+          83,
+          109,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 82,
+        "endFrame": 109,
+        "seed": 17,
+        "staggerFrames": 1,
+        "distancePx": 35,
+        "blurPx": 2.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "article-one-english-characters",
+      "targetId": "article-one-english",
+      "phase": "entrance",
+      "firstVisible": 105,
+      "settledFrame": 128,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "English starts later than headline, sequential character entrance. evidence/motion/articles/body-entrance-contact.jpg",
+        "frames": [
+          105,
+          128,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 104,
+        "endFrame": 128,
+        "seed": 17,
+        "staggerFrames": 0.30158730158730157,
+        "distancePx": 28,
+        "blurPx": 1.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "article-one-body-1-characters",
+      "targetId": "article-one-body-1",
+      "phase": "entrance",
+      "firstVisible": 99,
+      "settledFrame": 111,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Staggered rows, left-to-right character reveal. evidence/motion/articles/body-entrance-contact.jpg",
+        "frames": [
+          99,
+          111,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 98,
+        "endFrame": 111,
+        "seed": 17,
+        "staggerFrames": 0.24390243902439024,
+        "distancePx": 7,
+        "blurPx": 2,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "article-one-body-2-characters",
+      "targetId": "article-one-body-2",
+      "phase": "entrance",
+      "firstVisible": 105,
+      "settledFrame": 117,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Staggered rows, left-to-right character reveal. evidence/motion/articles/body-entrance-contact.jpg",
+        "frames": [
+          105,
+          117,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 104,
+        "endFrame": 117,
+        "seed": 17,
+        "staggerFrames": 0.2564102564102564,
+        "distancePx": 7,
+        "blurPx": 2,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "article-one-body-3-characters",
+      "targetId": "article-one-body-3",
+      "phase": "entrance",
+      "firstVisible": 110,
+      "settledFrame": 122,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Staggered rows, left-to-right character reveal. evidence/motion/articles/body-entrance-contact.jpg",
+        "frames": [
+          110,
+          122,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 109,
+        "endFrame": 122,
+        "seed": 17,
+        "staggerFrames": 0.25,
+        "distancePx": 7,
+        "blurPx": 2,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "article-one-body-4-characters",
+      "targetId": "article-one-body-4",
+      "phase": "entrance",
+      "firstVisible": 117,
+      "settledFrame": 129,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Staggered rows, left-to-right character reveal. evidence/motion/articles/body-entrance-contact.jpg",
+        "frames": [
+          117,
+          129,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 116,
+        "endFrame": 129,
+        "seed": 17,
+        "staggerFrames": 0.29411764705882354,
+        "distancePx": 7,
+        "blurPx": 2,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "article-one-body-5-characters",
+      "targetId": "article-one-body-5",
+      "phase": "entrance",
+      "firstVisible": 123,
+      "settledFrame": 135,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Staggered rows, left-to-right character reveal. evidence/motion/articles/body-entrance-contact.jpg",
+        "frames": [
+          123,
+          135,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 122,
+        "endFrame": 135,
+        "seed": 17,
+        "staggerFrames": 0.2631578947368421,
+        "distancePx": 7,
+        "blurPx": 2,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "article-one-body-6-characters",
+      "targetId": "article-one-body-6",
+      "phase": "entrance",
+      "firstVisible": 129,
+      "settledFrame": 141,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Staggered rows, left-to-right character reveal. evidence/motion/articles/body-entrance-contact.jpg",
+        "frames": [
+          129,
+          141,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 128,
+        "endFrame": 141,
+        "seed": 17,
+        "staggerFrames": 0.25,
+        "distancePx": 7,
+        "blurPx": 2,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "article-one-outgoing-camera",
+      "targetId": "@camera",
+      "phase": "transition",
+      "firstVisible": 127,
+      "settledFrame": 176,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Same live page shrinks to central residual; fitted RMSscale .00537. evidence/motion/articles/fitted-curves.json",
+        "frames": [
+          127,
+          176
+        ]
+      },
+      "confidence": "high",
+      "transform": {
+        "scaleX": {
+          "keyframes": [
+            {
+              "frame": 127,
+              "value": 1
+            },
+            {
+              "frame": 176,
+              "value": 0.47
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.950625,
+            0.0096875,
+            0.28468750000000004,
+            1
+          ]
+        },
+        "scaleY": {
+          "keyframes": [
+            {
+              "frame": 127,
+              "value": 1
+            },
+            {
+              "frame": 176,
+              "value": 0.47
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.950625,
+            0.0096875,
+            0.28468750000000004,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "article-one-outgoing-optics",
+      "targetId": "@camera",
+      "phase": "exit",
+      "firstVisible": 127,
+      "settledFrame": 176,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Outgoing page opacity/blur observed; independent from incoming article. evidence/motion/articles/article-cross-contact.jpg",
+        "frames": [
+          127,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "transform": {
+        "opacity": {
+          "keyframes": [
+            {
+              "frame": 127,
+              "value": 1
+            },
+            {
+              "frame": 176,
+              "value": 0.12
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.65,
+            0.15,
+            0.35,
+            1
+          ]
+        },
+        "blurPx": {
+          "keyframes": [
+            {
+              "frame": 127,
+              "value": 0
+            },
+            {
+              "frame": 176,
+              "value": 4
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "article-two-incoming-camera",
+      "targetId": "@camera",
+      "phase": "transition",
+      "firstVisible": 127,
+      "settledFrame": 176,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Whole article pulls back around640,334; fitted RMSscale .00893. evidence/motion/articles/fitted-curves.json",
+        "frames": [
+          127,
+          176
+        ]
+      },
+      "confidence": "high",
+      "transform": {
+        "scaleX": {
+          "keyframes": [
+            {
+              "frame": 127,
+              "value": 1.67
+            },
+            {
+              "frame": 176,
+              "value": 1
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.9878125000000001,
+            0,
+            0.26937500000000003,
+            0.9903125
+          ]
+        },
+        "scaleY": {
+          "keyframes": [
+            {
+              "frame": 127,
+              "value": 1.67
+            },
+            {
+              "frame": 176,
+              "value": 1
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.9878125000000001,
+            0,
+            0.26937500000000003,
+            0.9903125
+          ]
+        }
+      }
+    },
+    {
+      "id": "article-two-incoming-optics",
+      "targetId": "@camera",
+      "phase": "entrance",
+      "firstVisible": 127,
+      "settledFrame": 176,
+      "endFrame": 176,
+      "evidence": {
+        "type": "observed",
+        "detail": "Whole article already typeset at first overlap; opacity and focus return to static base. evidence/motion/articles/article-cross-contact.jpg",
+        "frames": [
+          127,
+          176
+        ]
+      },
+      "confidence": "medium",
+      "transform": {
+        "opacity": {
+          "keyframes": [
+            {
+              "frame": 127,
+              "value": 0.1
+            },
+            {
+              "frame": 166,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        },
+        "blurPx": {
+          "keyframes": [
+            {
+              "frame": 127,
+              "value": 7
+            },
+            {
+              "frame": 176,
+              "value": 0
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "prompt-large-camera",
+      "targetId": "@camera",
+      "phase": "camera",
+      "firstVisible": 177,
+      "settledFrame": 206,
+      "endFrame": 206,
+      "evidence": {
+        "type": "observed",
+        "detail": "Left outline730→230px; stable y and radius, so accelerating pan. evidence/motion/prompt/prompt-motion-evidence.json",
+        "frames": [
+          177,
+          206
+        ]
+      },
+      "confidence": "high",
+      "transform": {
+        "x": {
+          "keyframes": [
+            {
+              "frame": 177,
+              "value": 500
+            },
+            {
+              "frame": 206,
+              "value": 0
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.898,
+            0.0432,
+            0.9883,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "prompt-large-input-characters",
+      "targetId": "prompt-large-input",
+      "phase": "entrance",
+      "firstVisible": 177,
+      "settledFrame": 206,
+      "endFrame": 206,
+      "evidence": {
+        "type": "observed",
+        "detail": "Visible prefixes177..206; later glyph entry timing partly censored by camera crop. evidence/motion/prompt/typing-large.jpg",
+        "frames": [
+          177,
+          206
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "typewriter",
+        "startFrame": 176,
+        "endFrame": 206,
+        "seed": 17,
+        "staggerFrames": 1.8,
+        "distancePx": 50,
+        "blurPx": 2,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "prompt-large-input-brighten",
+      "targetId": "prompt-large-input",
+      "phase": "entrance",
+      "firstVisible": 177,
+      "settledFrame": 206,
+      "endFrame": 206,
+      "evidence": {
+        "type": "observed",
+        "detail": "Faint first glyphs grow brighter through206; no detached ghosts.",
+        "frames": [
+          177,
+          206
+        ]
+      },
+      "confidence": "medium",
+      "transform": {
+        "opacity": {
+          "keyframes": [
+            {
+              "frame": 177,
+              "value": 0.04
+            },
+            {
+              "frame": 206,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "prompt-large-outline-trim",
+      "targetId": "prompt-large-outline",
+      "phase": "entrance",
+      "firstVisible": 177,
+      "settledFrame": 206,
+      "endFrame": 206,
+      "evidence": {
+        "type": "observed",
+        "detail": "Outline top endpoint and left/bottom gaps advance independently of camera; source182 and206. evidence/motion/prompt/prompt-motion-evidence.json",
+        "frames": [
+          177,
+          206
+        ]
+      },
+      "confidence": "medium",
+      "transform": {
+        "opacity": {
+          "keyframes": [
+            {
+              "frame": 177,
+              "value": 0.05
+            },
+            {
+              "frame": 206,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      },
+      "reveal": {
+        "mode": "wipe",
+        "direction": "left-to-right",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 177,
+              "value": 0
+            },
+            {
+              "frame": 206,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "prompt-small-camera-pan",
+      "targetId": "@camera",
+      "phase": "camera",
+      "firstVisible": 207,
+      "settledFrame": 318,
+      "endFrame": 338,
+      "evidence": {
+        "type": "observed",
+        "detail": "Full207–318 camera fit relative to approved plain x224/w856. Translation fitted to112 source frames, RMS0.51px, max1.40px; f252 gives x267.04,w889. See evidence/motion/prompt/full-window-fit.json.",
+        "frames": [
+          207,
+          318,
+          338
+        ]
+      },
+      "confidence": "medium",
+      "transform": {
+        "x": {
+          "keyframes": [
+            {
+              "frame": 207,
+              "value": 316.9719626
+            },
+            {
+              "frame": 318,
+              "value": 0
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.0062,
+            0.2067,
+            0.1482,
+            0.9855
+          ]
+        },
+        "scaleX": {
+          "keyframes": [
+            {
+              "frame": 207,
+              "value": 1.0648364486
+            },
+            {
+              "frame": 318,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        },
+        "scaleY": {
+          "keyframes": [
+            {
+              "frame": 207,
+              "value": 1.0648364486
+            },
+            {
+              "frame": 318,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "prompt-small-focus",
+      "targetId": "@camera",
+      "phase": "entrance",
+      "firstVisible": 207,
+      "settledFrame": 252,
+      "endFrame": 338,
+      "evidence": {
+        "type": "observed",
+        "detail": "Small prompt starts defocused; extra blur returns to approved base by252. evidence/motion/prompt/prompt-motion-evidence.json",
+        "frames": [
+          207,
+          252,
+          338
+        ]
+      },
+      "confidence": "medium",
+      "transform": {
+        "blurPx": {
+          "keyframes": [
+            {
+              "frame": 207,
+              "value": 3.8
+            },
+            {
+              "frame": 252,
+              "value": 0
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.22,
+            1,
+            0.36,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "prompt-before-table-zoom",
+      "targetId": "@camera",
+      "phase": "camera",
+      "firstVisible": 322,
+      "settledFrame": 338,
+      "endFrame": 338,
+      "evidence": {
+        "type": "observed",
+        "detail": "Distinct acceleration322–338, bounds225..1050→137..1138. evidence/motion/prompt/prompt-motion-evidence.json",
+        "frames": [
+          322,
+          338
+        ]
+      },
+      "confidence": "high",
+      "transform": {
+        "scaleX": {
+          "keyframes": [
+            {
+              "frame": 322,
+              "value": 1
+            },
+            {
+              "frame": 338,
+              "value": 1.21333
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.3092,
+            0,
+            0.8241,
+            0.2106
+          ]
+        },
+        "scaleY": {
+          "keyframes": [
+            {
+              "frame": 322,
+              "value": 1
+            },
+            {
+              "frame": 338,
+              "value": 1.21333
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.3092,
+            0,
+            0.8241,
+            0.2106
+          ]
+        }
+      }
+    },
+    {
+      "id": "prompt-card-line-two-characters",
+      "targetId": "prompt-card-line-two",
+      "phase": "entrance",
+      "firstVisible": 209,
+      "settledFrame": 231,
+      "endFrame": 338,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured per-glyph starts209,211,212,214,216,217,219,221,223,224,226 ±1frame. evidence/motion/prompt/typing-line-two.jpg",
+        "frames": [
+          209,
+          231,
+          338
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "typewriter",
+        "startFrame": 208,
+        "endFrame": 231,
+        "seed": 17,
+        "staggerFrames": 1.7,
+        "distancePx": 18,
+        "blurPx": 3,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "prompt-card-note-characters",
+      "targetId": "prompt-card-note",
+      "phase": "entrance",
+      "firstVisible": 227,
+      "settledFrame": 244,
+      "endFrame": 338,
+      "evidence": {
+        "type": "observed",
+        "detail": "Note227 first,240 last character,244 settled; no detached ghost.",
+        "frames": [
+          227,
+          244,
+          338
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "typewriter",
+        "startFrame": 226,
+        "endFrame": 244,
+        "seed": 17,
+        "staggerFrames": 1,
+        "distancePx": 5,
+        "blurPx": 1.2,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "prompt-card-outline-trim",
+      "targetId": "prompt-card-outline",
+      "phase": "exit",
+      "firstVisible": 207,
+      "settledFrame": 289,
+      "endFrame": 338,
+      "evidence": {
+        "type": "observed",
+        "detail": "Independent perimeter erosion:252 upperstart550 lowerstart758;288 residual arc; absent289. Runtime uses two calibrated polynomial path distances driven by this single progress. evidence/motion/prompt/prompt-motion-evidence.json",
+        "frames": [
+          207,
+          289,
+          338
+        ]
+      },
+      "confidence": "high",
+      "reveal": {
+        "mode": "wipe",
+        "direction": "left-to-right",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 207,
+              "value": 0
+            },
+            {
+              "frame": 289,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "prompt-card-light-mask-sweep",
+      "targetId": "prompt-card-light-mask",
+      "phase": "emphasis",
+      "firstVisible": 207,
+      "settledFrame": 318,
+      "endFrame": 338,
+      "evidence": {
+        "type": "observed",
+        "detail": "Shared feathered 2D mask travels with camera; only small residual center motion from approved252/318. No invented offscreen sweep.",
+        "frames": [
+          207,
+          318,
+          338
+        ]
+      },
+      "confidence": "medium",
+      "transform": {
+        "x": {
+          "keyframes": [
+            {
+              "frame": 207,
+              "value": -31
+            },
+            {
+              "frame": 318,
+              "value": 0
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "prompt-plain-light-mask-sweep",
+      "targetId": "prompt-plain-light-mask",
+      "phase": "emphasis",
+      "firstVisible": 207,
+      "settledFrame": 318,
+      "endFrame": 338,
+      "evidence": {
+        "type": "observed",
+        "detail": "Shared feathered 2D mask travels with camera; only small residual center motion from approved252/318. No invented offscreen sweep.",
+        "frames": [
+          207,
+          318,
+          338
+        ]
+      },
+      "confidence": "medium",
+      "transform": {
+        "x": {
+          "keyframes": [
+            {
+              "frame": 207,
+              "value": -31
+            },
+            {
+              "frame": 318,
+              "value": 0
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "comparison-camera-growth",
+      "targetId": "@camera",
+      "phase": "camera",
+      "firstVisible": 339,
+      "settledFrame": 403,
+      "endFrame": 403,
+      "evidence": {
+        "type": "observed",
+        "detail": "Shared camera fit from aligned header projections; approved410 normalization. evidence/motion/table/camera-projection-fit.json",
+        "frames": [
+          339,
+          403
+        ]
+      },
+      "confidence": "high",
+      "transform": {
+        "scaleX": {
+          "keyframes": [
+            {
+              "frame": 339,
+              "value": 0.9055222815241761
+            },
+            {
+              "frame": 403,
+              "value": 1.0005019608769157
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.3333333333333333,
+            0.8337,
+            0.6666666666666666,
+            1
+          ]
+        },
+        "scaleY": {
+          "keyframes": [
+            {
+              "frame": 339,
+              "value": 0.9055222815241761
+            },
+            {
+              "frame": 403,
+              "value": 1.0005019608769157
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.3333333333333333,
+            0.8337,
+            0.6666666666666666,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "comparison-camera-tail",
+      "targetId": "@camera",
+      "phase": "camera",
+      "firstVisible": 404,
+      "settledFrame": 427,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Observed weak peak403 then actual smooth回缩 through427. Two semantic windows preserve one change of direction. evidence/motion/table/camera-projection-fit.json",
+        "frames": [
+          404,
+          427
+        ]
+      },
+      "confidence": "high",
+      "transform": {
+        "scaleX": {
+          "keyframes": [
+            {
+              "frame": 403,
+              "value": 1.0005019608769157
+            },
+            {
+              "frame": 427,
+              "value": 0.9946013595482734
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.3333333333333333,
+            0,
+            0.6666666666666666,
+            0.3333333333333333
+          ]
+        },
+        "scaleY": {
+          "keyframes": [
+            {
+              "frame": 403,
+              "value": 1.0005019608769157
+            },
+            {
+              "frame": 427,
+              "value": 0.9946013595482734
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.3333333333333333,
+            0,
+            0.6666666666666666,
+            0.3333333333333333
+          ]
+        }
+      }
+    },
+    {
+      "id": "comparison-label-characters",
+      "targetId": "comparison-label",
+      "phase": "entrance",
+      "firstVisible": 341,
+      "settledFrame": 351,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          341,
+          351,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 340,
+        "endFrame": 351,
+        "seed": 17,
+        "staggerFrames": 1,
+        "distancePx": 5,
+        "blurPx": 4,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-model-kimi-characters",
+      "targetId": "comparison-model-kimi",
+      "phase": "entrance",
+      "firstVisible": 343,
+      "settledFrame": 355,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          343,
+          355,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 342,
+        "endFrame": 355,
+        "seed": 17,
+        "staggerFrames": 0.6666666666666666,
+        "distancePx": 4,
+        "blurPx": 2.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-model-claude-characters",
+      "targetId": "comparison-model-claude",
+      "phase": "entrance",
+      "firstVisible": 345,
+      "settledFrame": 357,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          345,
+          357,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 344,
+        "endFrame": 357,
+        "seed": 17,
+        "staggerFrames": 0.3076923076923077,
+        "distancePx": 4,
+        "blurPx": 2.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-platform-label-characters",
+      "targetId": "comparison-platform-label",
+      "phase": "entrance",
+      "firstVisible": 349,
+      "settledFrame": 361,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          349,
+          361,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 348,
+        "endFrame": 361,
+        "seed": 17,
+        "staggerFrames": 1.3333333333333333,
+        "distancePx": 3,
+        "blurPx": 4,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-kimi-platform-characters",
+      "targetId": "comparison-kimi-platform",
+      "phase": "entrance",
+      "firstVisible": 351,
+      "settledFrame": 361,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          351,
+          361,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 350,
+        "endFrame": 361,
+        "seed": 17,
+        "staggerFrames": 0.16666666666666666,
+        "distancePx": 3,
+        "blurPx": 2.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-claude-platform-characters",
+      "targetId": "comparison-claude-platform",
+      "phase": "entrance",
+      "firstVisible": 353,
+      "settledFrame": 365,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          353,
+          365,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 352,
+        "endFrame": 365,
+        "seed": 17,
+        "staggerFrames": 0.2222222222222222,
+        "distancePx": 3,
+        "blurPx": 2.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-score-label-characters",
+      "targetId": "comparison-score-label",
+      "phase": "entrance",
+      "firstVisible": 355,
+      "settledFrame": 367,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          355,
+          367,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 354,
+        "endFrame": 367,
+        "seed": 17,
+        "staggerFrames": 1,
+        "distancePx": 4,
+        "blurPx": 4,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-kimi-score-characters",
+      "targetId": "comparison-kimi-score",
+      "phase": "entrance",
+      "firstVisible": 357,
+      "settledFrame": 369,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          357,
+          369,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 356,
+        "endFrame": 369,
+        "seed": 17,
+        "staggerFrames": 0.8,
+        "distancePx": 3,
+        "blurPx": 2.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-claude-score-characters",
+      "targetId": "comparison-claude-score",
+      "phase": "entrance",
+      "firstVisible": 359,
+      "settledFrame": 373,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          359,
+          373,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 358,
+        "endFrame": 373,
+        "seed": 17,
+        "staggerFrames": 1,
+        "distancePx": 3,
+        "blurPx": 2.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-rate-label-characters",
+      "targetId": "comparison-rate-label",
+      "phase": "entrance",
+      "firstVisible": 361,
+      "settledFrame": 371,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          361,
+          371,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 360,
+        "endFrame": 371,
+        "seed": 17,
+        "staggerFrames": 0.75,
+        "distancePx": 3,
+        "blurPx": 4,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-kimi-rate-characters",
+      "targetId": "comparison-kimi-rate",
+      "phase": "entrance",
+      "firstVisible": 363,
+      "settledFrame": 373,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          363,
+          373,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 362,
+        "endFrame": 373,
+        "seed": 17,
+        "staggerFrames": 1,
+        "distancePx": 3,
+        "blurPx": 2.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-claude-rate-characters",
+      "targetId": "comparison-claude-rate",
+      "phase": "entrance",
+      "firstVisible": 365,
+      "settledFrame": 377,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          365,
+          377,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 364,
+        "endFrame": 377,
+        "seed": 17,
+        "staggerFrames": 2,
+        "distancePx": 3,
+        "blurPx": 2.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-note-one-characters",
+      "targetId": "comparison-note-one",
+      "phase": "entrance",
+      "firstVisible": 367,
+      "settledFrame": 382,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          367,
+          382,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 366,
+        "endFrame": 382,
+        "seed": 17,
+        "staggerFrames": 0.1111111111111111,
+        "distancePx": 2,
+        "blurPx": 2.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-note-two-characters",
+      "targetId": "comparison-note-two",
+      "phase": "entrance",
+      "firstVisible": 373,
+      "settledFrame": 387,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Measured staggered onset, no detached ghosts/count-up; residual blur/y/spacing approximated. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          373,
+          387,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "textAnimation": {
+        "preset": "scatter-in",
+        "startFrame": 372,
+        "endFrame": 387,
+        "seed": 17,
+        "staggerFrames": 0.12244897959183673,
+        "distancePx": 2,
+        "blurPx": 2.5,
+        "direction": "bottom-to-top"
+      }
+    },
+    {
+      "id": "comparison-kimi-score-arrow-reveal",
+      "targetId": "comparison-kimi-score-arrow",
+      "phase": "entrance",
+      "firstVisible": 357,
+      "settledFrame": 367,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Arrow fades with associated number; no stroke drawing/flying/count-up. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          357,
+          367,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "reveal": {
+        "mode": "fade",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 356,
+              "value": 0
+            },
+            {
+              "frame": 367,
+              "value": 1
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.22,
+            0.3,
+            0.36,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "comparison-claude-score-arrow-reveal",
+      "targetId": "comparison-claude-score-arrow",
+      "phase": "entrance",
+      "firstVisible": 361,
+      "settledFrame": 373,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Arrow fades with associated number; no stroke drawing/flying/count-up. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          361,
+          373,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "reveal": {
+        "mode": "fade",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 360,
+              "value": 0
+            },
+            {
+              "frame": 373,
+              "value": 1
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.22,
+            0.3,
+            0.36,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "comparison-kimi-rate-arrow-reveal",
+      "targetId": "comparison-kimi-rate-arrow",
+      "phase": "entrance",
+      "firstVisible": 363,
+      "settledFrame": 373,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Arrow fades with associated number; no stroke drawing/flying/count-up. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          363,
+          373,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "reveal": {
+        "mode": "fade",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 362,
+              "value": 0
+            },
+            {
+              "frame": 373,
+              "value": 1
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.22,
+            0.3,
+            0.36,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "comparison-claude-rate-arrow-reveal",
+      "targetId": "comparison-claude-rate-arrow",
+      "phase": "entrance",
+      "firstVisible": 365,
+      "settledFrame": 379,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Arrow fades with associated number; no stroke drawing/flying/count-up. evidence/motion/table/table-motion-report.json",
+        "frames": [
+          365,
+          379,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "reveal": {
+        "mode": "fade",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 364,
+              "value": 0
+            },
+            {
+              "frame": 379,
+              "value": 1
+            }
+          ],
+          "interpolation": "bezier",
+          "bezier": [
+            0.22,
+            0.3,
+            0.36,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "comparison-glow-reveal",
+      "targetId": "comparison-heading-glow",
+      "phase": "entrance",
+      "firstVisible": 341,
+      "settledFrame": 357,
+      "endFrame": 427,
+      "evidence": {
+        "type": "observed",
+        "detail": "Base glow grows with headings, no separate spatial flight.",
+        "frames": [
+          341,
+          357,
+          427
+        ]
+      },
+      "confidence": "medium",
+      "reveal": {
+        "mode": "fade",
+        "progress": {
+          "keyframes": [
+            {
+              "frame": 340,
+              "value": 0
+            },
+            {
+              "frame": 357,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    },
+    {
+      "id": "article-one-body-five-opacity",
+      "targetId": "article-one-body-5",
+      "phase": "entrance",
+      "firstVisible": 123,
+      "settledFrame": 137,
+      "endFrame": 176,
+      "evidence": {
+        "type": "inferred",
+        "detail": "Source126 lower fifth line is dim while its first characters have entered. Add row-level opacity growth independently of per-character reveal.",
+        "frames": [
+          123,
+          126,
+          137
+        ]
+      },
+      "confidence": "medium",
+      "transform": {
+        "opacity": {
+          "keyframes": [
+            {
+              "frame": 122,
+              "value": 0.05
+            },
+            {
+              "frame": 137,
+              "value": 1
+            }
+          ],
+          "interpolation": "linear"
+        }
+      }
+    }
+  ],
+  "continuity": {
+    "status": "passed",
+    "evidence": "evidence/motion/continuity.json",
+    "windows": [
+      {
+        "targetId": "@camera",
+        "property": "scaleX",
+        "startFrame": 4,
+        "endFrame": 79,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleY",
+        "startFrame": 4,
+        "endFrame": 79,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0
+      },
+      {
+        "targetId": "@camera",
+        "property": "x",
+        "startFrame": 80,
+        "endFrame": 136,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.177026
+      },
+      {
+        "targetId": "article-one-headline-highlight",
+        "property": "scaleY",
+        "startFrame": 80,
+        "endFrame": 94,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.48075
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleX",
+        "startFrame": 127,
+        "endFrame": 176,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.26673
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleY",
+        "startFrame": 127,
+        "endFrame": 176,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.26673
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleX",
+        "startFrame": 127,
+        "endFrame": 176,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.299061
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleY",
+        "startFrame": 127,
+        "endFrame": 176,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.299061
+      },
+      {
+        "targetId": "@camera",
+        "property": "x",
+        "startFrame": 177,
+        "endFrame": 206,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.239896
+      },
+      {
+        "targetId": "@camera",
+        "property": "x",
+        "startFrame": 207,
+        "endFrame": 318,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.443437
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleX",
+        "startFrame": 207,
+        "endFrame": 318,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleY",
+        "startFrame": 207,
+        "endFrame": 318,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleX",
+        "startFrame": 322,
+        "endFrame": 338,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.306976
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleY",
+        "startFrame": 322,
+        "endFrame": 338,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.306976
+      },
+      {
+        "targetId": "prompt-card-light-mask",
+        "property": "x",
+        "startFrame": 207,
+        "endFrame": 318,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0
+      },
+      {
+        "targetId": "prompt-plain-light-mask",
+        "property": "x",
+        "startFrame": 207,
+        "endFrame": 318,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleX",
+        "startFrame": 339,
+        "endFrame": 403,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.025033
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleY",
+        "startFrame": 339,
+        "endFrame": 403,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.025033
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleX",
+        "startFrame": 403,
+        "endFrame": 427,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.042554
+      },
+      {
+        "targetId": "@camera",
+        "property": "scaleY",
+        "startFrame": 403,
+        "endFrame": 427,
+        "duplicateFrames": 0,
+        "unexpectedReversals": 0,
+        "maxVelocityJump": 0.042554
+      }
+    ]
+  }
+}

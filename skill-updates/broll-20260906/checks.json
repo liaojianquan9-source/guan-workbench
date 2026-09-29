@@ -1,0 +1,20 @@
+{
+  "changedFiles": [
+    "ljq-broll-replica/SKILL.md",
+    "ljq-broll-layout-structure/SKILL.md",
+    "ljq-broll-layout-structure/references/element-taxonomy.md",
+    "ljq-broll-layout-structure/references/visual-grammar.md",
+    "ljq-broll-motion-forensics/SKILL.md",
+    "ljq-broll-motion-forensics/references/measurement-guide.md",
+    "ljq-broll-motion-forensics/references/implementation-checks.md",
+    "ljq-broll-layout-structure/references/static-compositing.md",
+    "ljq-broll-replica/references/case-kimi-k3-020-034.md"
+  ],
+  "linksAndAnchors": "passed",
+  "frontmatter": "passed",
+  "removedComparisonBranch": "passed",
+  "scope": "skill documentation only",
+  "validationLimit": "文档路径与规则审查；没有重新制作案例或重跑保真 QA",
+  "staticReviewEntry": "passed: scene/frame/current-version visibility is defined before passed-state registration",
+  "checkedLinks": 40
+}

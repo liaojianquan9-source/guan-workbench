@@ -1,0 +1,288 @@
+{
+  "scope": "4182 深色 AI工作台 / AI制作 原生入口修正",
+  "original_project": {
+    "id": "23db4d3f88134c4fb51d0fd54d346698",
+    "revision": 9,
+    "statuses": {
+      "c001": "rejected",
+      "c002": "draft",
+      "c003": "draft",
+      "c004": "draft",
+      "c005": "draft",
+      "c006": "draft",
+      "c007": "draft",
+      "c008": "draft"
+    }
+  },
+  "acceptance_copy": {
+    "id": "b54892bebd9946aea6f08ef9e31df7f2",
+    "revision": 16,
+    "name": "AI制作界面验收副本 · 2026-09-21",
+    "review_actor_note": "本轮 UI 验证只批准命名验收副本，不是用户审批"
+  },
+  "preview": {
+    "id": "c004",
+    "start": 23.5,
+    "end": 27.7,
+    "crop_mode": "contain",
+    "transition": "dissolve",
+    "preview_url": "/api/files/b54892bebd9946aea6f08ef9e31df7f2/3024d85b1088434da74ecf8c4bb93a04.mp4",
+    "render_report": {
+      "status": "passed",
+      "renderer_id": "kimi-moon-v1",
+      "style": {
+        "asset_id": "style-kimi-moon-v1",
+        "revision": 1
+      },
+      "fields": {
+        "title": "睡好觉",
+        "subtitle": "用好AI",
+        "texture_text": "好好休息"
+      },
+      "props": {
+        "motionEnabled": true,
+        "kimiTitle": "睡好觉",
+        "k3Title": "用好AI",
+        "moonTitle": "好好休息"
+      },
+      "native_frames": [
+        172,
+        299
+      ],
+      "media": {
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "duration": 4.2,
+        "frames": 126,
+        "has_audio": false
+      },
+      "checks": {
+        "dimensions": true,
+        "fps": true,
+        "frames": true,
+        "audio": true,
+        "duration": true
+      },
+      "full_decode": true,
+      "video_sha256": "0499941920ac2692460e0bfb51fb94083c27d3af5d5b834dbe204f19a8f0ccd1",
+      "source_manifest_sha256": "3e1d1de36f5df5853c049d2c16d70a503c9a4dc7a8bf1430f92c3b395e8ae36e",
+      "source_origin": "immutable_asset_package",
+      "package_hash": "81d1cf14ebc8649aa926dfa5d3cb4335ebe1f421e8217e87cae79db663ac803c",
+      "adapter_contract_sha256": "c45a19f4ae41d43eb2e0f39d05e510c926478ad4d6b501532ee3c2ee0705c1a3",
+      "fonts": {
+        "status": "loaded",
+        "method": "Chrome CSS.getPlatformFontsForNode，实际文字逐字段检查",
+        "fields": [
+          {
+            "field": "title",
+            "family": "Helvetica Neue",
+            "text": "睡好觉",
+            "weight": 700,
+            "expected": [
+              "Helvetica Neue"
+            ],
+            "fonts": [
+              {
+                "familyName": "PingFang SC",
+                "postScriptName": "PingFangSC-Semibold",
+                "isCustomFont": false,
+                "glyphCount": 3
+              }
+            ],
+            "fallback_detected": true
+          },
+          {
+            "field": "subtitle",
+            "family": "Helvetica Neue",
+            "text": "用好AI",
+            "weight": 700,
+            "expected": [
+              "Helvetica Neue"
+            ],
+            "fonts": [
+              {
+                "familyName": "PingFang SC",
+                "postScriptName": "PingFangSC-Semibold",
+                "isCustomFont": false,
+                "glyphCount": 2
+              },
+              {
+                "familyName": "Helvetica Neue",
+                "postScriptName": "HelveticaNeue-Bold",
+                "isCustomFont": false,
+                "glyphCount": 2
+              }
+            ],
+            "fallback_detected": true
+          },
+          {
+            "field": "texture_text",
+            "family": "Songti SC",
+            "text": "好好休息",
+            "weight": 900,
+            "expected": [
+              "Songti SC",
+              "宋体-简"
+            ],
+            "fonts": [
+              {
+                "familyName": "Songti SC",
+                "postScriptName": "STSongti-SC-Black",
+                "isCustomFont": false,
+                "glyphCount": 4
+              }
+            ],
+            "fallback_detected": false
+          }
+        ],
+        "warnings": [
+          {
+            "field": "title",
+            "requested": "Helvetica Neue",
+            "actual": [
+              "PingFang SC"
+            ],
+            "message": "浏览器实际使用了回退字体；字形与参考可能不同，需要查看当前预览"
+          },
+          {
+            "field": "subtitle",
+            "requested": "Helvetica Neue",
+            "actual": [
+              "PingFang SC",
+              "Helvetica Neue"
+            ],
+            "message": "浏览器实际使用了回退字体；字形与参考可能不同，需要查看当前预览"
+          }
+        ],
+        "visual_review_required": true,
+        "subset_note": "问题页 BrollDisplay 仅包含原案例有限汉字，不承诺任意中文仍使用优设字形。"
+      },
+      "layout": {
+        "status": "passed",
+        "issues": [],
+        "scope": "已知固定框的保守可读性门；通过不代替用户视觉审看。"
+      },
+      "adapter_sha256": "c2b2f34263300a68549a028604b58e09f6115b1077e28582f84638cb7e78131f",
+      "fidelity_status": "needs_review",
+      "note": "技术通过表示参数真实进入 Remotion 且媒体可解码；不等于参考保真或任意文案视觉验收。",
+      "review_context": {
+        "source": {
+          "asset_id": "37ee83e1-c8af-4ab2-ae70-449ceac4c4fd",
+          "revision": 1
+        },
+        "range": [
+          23.5,
+          27.7
+        ],
+        "report": {
+          "status": "passed",
+          "checks": {
+            "dimensions": true,
+            "duration": true,
+            "audio": true,
+            "fps": true
+          },
+          "source": {
+            "width": 1080,
+            "height": 1920,
+            "fps": 30.0,
+            "duration": 4.2,
+            "frames": 126,
+            "has_audio": true
+          },
+          "media": {
+            "width": 1080,
+            "height": 1920,
+            "fps": 30.0,
+            "duration": 4.2,
+            "frames": 126,
+            "has_audio": true
+          },
+          "full_decode": true,
+          "audio_method": "原口播音轨直接复制",
+          "card_ids": [
+            "c004"
+          ],
+          "video_sha256": "2aa289ca0417c68d65b489b4364440c7ba13196fbf70e9be83275b1880aaff8e",
+          "layout": "逐片段按画幅选项合成",
+          "effects": [
+            {
+              "card_id": "c004",
+              "crop_mode": "contain",
+              "transition": "dissolve"
+            }
+          ]
+        },
+        "review_only": true,
+        "message": "此预览已放入口播原画幅与声音，仅供审看，不代表用户批准。"
+      }
+    }
+  },
+  "delivery": {
+    "url": "/api/files/b54892bebd9946aea6f08ef9e31df7f2/final-6323b7ee97754ee0b4004524bcfd7c0c.mp4",
+    "project_revision": 15,
+    "created_at": "2026-09-21T10:20:51.525+00:00",
+    "cards": [
+      {
+        "id": "c004",
+        "fingerprint": "56de3ce1da4dbeb49cb350451a384215505e4b3700b4b418ba643ad39aca5e23",
+        "style": {
+          "asset_id": "style-kimi-moon-v1",
+          "revision": 1
+        }
+      }
+    ],
+    "report": {
+      "status": "passed",
+      "checks": {
+        "dimensions": true,
+        "duration": true,
+        "audio": true,
+        "fps": true
+      },
+      "source": {
+        "width": 1080,
+        "height": 1920,
+        "fps": 30.0,
+        "duration": 53.033333,
+        "frames": 1591,
+        "has_audio": true
+      },
+      "media": {
+        "width": 1080,
+        "height": 1920,
+        "fps": 30.0,
+        "duration": 53.033008,
+        "frames": 1591,
+        "has_audio": true
+      },
+      "full_decode": true,
+      "audio_method": "原口播音轨直接复制",
+      "card_ids": [
+        "c004"
+      ],
+      "video_sha256": "f41222ddedff6c7fe51a26a320a483aef7fb1d25f1eeabbcc2134040983ad96a",
+      "layout": "逐片段按画幅选项合成",
+      "effects": [
+        {
+          "card_id": "c004",
+          "crop_mode": "contain",
+          "transition": "dissolve"
+        }
+      ]
+    }
+  },
+  "checks": {
+    "existing_rail_visible": true,
+    "operations_remain_on_ai_making": true,
+    "viewport_390_scroll_width": 390,
+    "frame_step_seconds": 0.03333333333333333,
+    "browser_console_errors": 0,
+    "original_revision_unchanged": true,
+    "workbench_python": 102,
+    "workbench_node": 124,
+    "engine_python": 76,
+    "engine_node": 20
+  }
+}

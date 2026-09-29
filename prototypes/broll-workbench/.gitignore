@@ -1,0 +1,16 @@
+.venv/
+.venv-asr/
+.venv-separation/
+.venv-music/
+data/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+.DS_Store
+:memory:.ses
+.workbench.lock
+*.tmp
+*.part
+runtime/
+qa/**/packages/

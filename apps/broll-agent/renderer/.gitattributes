@@ -1,0 +1,3 @@
+# Preserve audited upstream bytes, including license text and source hashes.
+kimi/** whitespace=-blank-at-eol
+problem/** whitespace=-blank-at-eol

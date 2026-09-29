@@ -1,0 +1,452 @@
+diff --git a/README.md b/README.md
+index d0bbb78..6753f2c 100644
+--- a/README.md
++++ b/README.md
+@@ -1,164 +1,75 @@
+ # LJQ B-roll Replica
+ 
+-一个公开的“参考视频 → 可编辑 Remotion 高保真复刻”Skill 项目。一个案例对应用户指定的连续时间范围，范围内的切点和排版变化分别拆成场景；不是文字生成视频，也不是把参考截图铺在成片上。
++**简体中文** | [English](README.en.md)
+ 
+-当前执行框架已接通：精确范围预检、逐场景静帧落定、可替换元素验证、逐元素动效取证、连续曲线检测、Remotion 完整渲染、QA 和最多两轮定向修正。新增 KIMI 0–11 秒真实案例，静态与动态整体效果已获用户认可；其自动保真 QA 仍受时变排除蒙版能力限制，未宣称全部机器门通过。
++把参考视频中的一段 B-roll，复刻成**可编辑、可替换的 Remotion 案例**。
+ 
+-## 最新案例：GPT-6 Astra + Remotion
++提供视频和时间范围，先逐场查看静帧比对、反馈修改，确认后再制作动效。文字、数字、图片和主题色保留为可修改内容，便于后续调整。
+ 
+-使用模型：**GPT-6 Astra**。参考范围：`00:00:00.000–00:00:11.000`，1280×720、30fps、330帧。
++[开始使用](docs/getting-started.md) · [了解实现](#了解实现)
+ 
+-下方预览始终上下同步：上方「原视频效果」，下方「生成的复刻效果」，并标注「GPT-6 Astra + Remotion」。人物/A-roll按用户要求在复刻中留白；对比展示中的参考画面不进入Remotion生产组件。
++## 看看实际效果
+ 
+-![上方原视频效果，下方GPT-6 Astra加Remotion生成的复刻效果](examples/kimi-k3-000-011/media/comparison-preview.gif)
++**KIMI 0–11 秒案例** · GPT-6 Astra + Remotion · 1280×720 · 30fps
+ 
+-动图仅供快速预览，降低了分辨率与帧率；检查真实节奏请看[完整30fps上下对照视频](examples/kimi-k3-000-011/media/top-bottom-comparison.mp4)。[案例说明、四场景静态对照与源码](examples/kimi-k3-000-011/README.md) · [纯Remotion成片](examples/kimi-k3-000-011/media/generated.mp4)。
++上方为参考原片，下方为复刻。人物与口播画面按本案例要求留白。
+ 
+-本次经验按`writing-for-agents`整理为“主流程＋按需参考＋重复操作脚本”：比例优先、主色角色、对象/属性分类、蒙版关系、真实动效入口、批准基准保护和工具副作用。没有新增第五个Skill。较低成本模型尚未进行同条件视觉制作测试。
++![上方原片，下方 Remotion 复刻](examples/kimi-k3-000-011/media/comparison-preview.gif)
+ 
+-## 核心流程
++[完整 30fps 对照视频](examples/kimi-k3-000-011/media/top-bottom-comparison.mp4) · [纯复刻成片](examples/kimi-k3-000-011/media/generated.mp4) · [案例说明与源码](examples/kimi-k3-000-011/README.md)
+ 
+-```mermaid
+-flowchart TD
+-    A[输入时码与纳入/排除范围] --> B[生成精确裁切源片和范围合同]
+-    B --> C[逐场景选落定帧]
+-    C --> D[拆元素并校准几何/字体/静态材质]
+-    D --> E[逐场景 still 与替换 still 通过]
+-    E --> F[逐元素测量并拟合连续曲线]
+-    F --> G[完整 Remotion 渲染]
+-    G --> H[范围/live 元素/排除区域/完整视频 QA]
+-    H --> I{视觉通过?}
+-    I -->|是| J[保存可复用案例包]
+-    I -->|否且少于两轮| K[只修最高影响根因]
+-    K --> G
+-    I -->|两轮仍失败| L[记录已知差异并停止]
+-```
++动图降低了分辨率和帧率，仅供快速预览。
+ 
+-主 Skill 是同一个调度大脑；三个子 Skill 是按阶段加载的专业手册。阶段之间使用同一个案例目录、稳定元素 ID 和 JSON Schema 交接，不依赖聊天记忆。
++- **视觉效果**：用户已认可静态与动态整体效果，仍有字体、纹理等近似。
++- **自动 QA**：时变人物排除区域仍待审，未通过全部自动验收。
++- **公开示例**：提供展示媒体和可运行源码，不包含全部本地取证文件与完整校验归档。
+ 
+-| Skill | 责任 |
+-| --- | --- |
+-| [`ljq-broll-replica`](skills/ljq-broll-replica/SKILL.md) | 初始化、路由、状态、Remotion 渲染、修正上限和交付 |
+-| [`ljq-broll-layout-structure`](skills/ljq-broll-layout-structure/SKILL.md) | 逐场景落定，拆元素，校准静态画面，生成比较与替换 still |
+-| [`ljq-broll-motion-forensics`](skills/ljq-broll-motion-forensics/SKILL.md) | 逐元素测量时间、方向、缩放、揭示、文字特效和连续曲线 |
+-| [`ljq-broll-fidelity-qa`](skills/ljq-broll-fidelity-qa/SKILL.md) | 核对范围、live 元素、排除区域、完整视频并归因差异 |
+-
+-新版不生成黑白灰格式图，不用 AI 生成参考图片，也不会仅凭像素指标自动宣布高保真通过。落定帧来自原视频；Remotion 代码和组件层级就是可编辑结构。
+-
+-## 安装
+-
+-需要 Node.js 20+、Python 3、FFmpeg、ffprobe，以及用于Remotion的Chrome/Chromium。克隆仓库后运行：
+-
+-```bash
+-git clone https://github.com/liaojianquan9-source/ljq-broll-video-generator.git
+-cd ljq-broll-video-generator
+-./scripts/install-local-skills.sh
+-```
+-
+-脚本会安装四个 Skill 到 Codex skills 目录，旧版本先移动到带时间戳的可恢复备份，再安装锁定依赖；本机存在官方Skill校验器时会运行它。需要网络下载依赖，不是只读检查。重新打开任务后调用主Skill；不会自动切换模型，请在客户端模型选择器中选择自己可用的模型。
+-
+-## 使用
+-
+-### 第一步：先做静帧，确认后再继续
++### 先比对静帧，再继续动效
+ 
+-复制下方提示词，把两个绝对路径和时间范围换成自己的。使用本案例的同款模型时，在客户端选择 **GPT-6 Astra**；提示词里的模型名称本身不会切换模型。
++首次交付提供一个集中审阅页，按场景展示原片与复刻，并可查看替换效果、字体候选和已知差异。你可以直接按场景编号反馈，例如“02 的背景需要铺满”。
+ 
+-```text
+-使用 $ljq-broll-replica 做一个可编辑的 B-roll 高保真复刻案例。
++<img src="examples/kimi-k3-000-011/media/comparison-frame-164.png" width="480" alt="参数页静帧比对：上方原片，下方复刻">
+ 
+-参考视频：/absolute/path/to/reference.mp4
+-精确范围：00:00:00.000–00:00:11.000，共11秒。
+-案例目录：/absolute/path/to/workspace/cases/my-broll-case
++图示取自已公开案例的最终对照视频第 164 帧（5.467 秒），用于说明同帧比对方式。新案例会在制作动效前先交付静态布局供确认。
+ 
+-只复刻参考里实际出现的画面，不二创、不重新设计。
+-纳入文字、数字、参数、线条、图标、容器、背景装饰、贴图和静态效果。
+-排除人物和A-roll；人物所在区域用纯白表示，不生成或补画人物。
++## 你会拿到什么
+ 
+-原视频帧、截图和Contact Sheet只能取证，不能作为最终画面覆盖层。
+-普通文字、数字、参数、线条必须使用live text、SVG、CSS或可编辑组件。
+-按全部排版变化拆场景，每场选择正确落定帧，每个独立元素建立稳定ID。
+-优先匹配视觉比例、占屏、留白、层级和参考主色关系，再处理微小纹理差异。
+-字体不确定时给Top 3候选、对比证据和置信度。
+-可替换文字、数字、图片和主题色暴露为props，并用替换still验证。
+-
+-本轮只完成预检、场景与元素拆分、Remotion静态布局。
+-展示每场source/render/comparison静帧、替换still、字体候选与已知差异。
+-不要开始动效，不完整渲染视频；等我确认静帧后再继续。
+-```
+-
+-上述白底是可修改的范围选择，不是所有视频的固定风格。一个连续区间内有多个切点时仍保留一个案例，分别拆scene；不连续区间或用户明确要求时才分案例。
+-
+-### 第二步：静帧确认后，继续动效
+-
+-```text
+-我已确认当前案例的静帧布局，请继续使用 $ljq-broll-replica。
+-案例目录：/absolute/path/to/workspace/cases/my-broll-case
+-
+-先保存批准的静帧、源码、props和帧号，再逐元素取证入场、退出、
+-转场、缩放、文字效果与图片效果。区分场景、镜头、元素和文字内部行为。
+-保留已确认的比例、配色、材质、稳定ID和可替换props。
+-先导出独立的静态回归与动态关键帧，检查长文案替换的终帧，
+-再完整渲染指定范围，完成技术、live元素、连续性与视觉检查。
+-最多两轮定向修正，保留证据和已知差异；工具未支持的QA项如实待审。
+-最终给出原片在上、复刻在下的同步对照，清楚标注实际模型与Remotion。
+-```
++| 产物 | 用途 |
++| --- | --- |
++| 逐场景静帧审阅页 | 比对原片、复刻和差异，集中反馈修改 |
++| Remotion 源码与可替换参数（props） | 修改文字、数字、图片、字体和主题色 |
++| 替换验证图 | 检查换内容后是否有旧内容残留、溢出或排版变化 |
++| 最终 MP4 与检查记录 | 确认静帧并完成动效阶段后，获得成片及已知差异说明 |
+ 
+-### 第三步：只做回归，不覆盖批准结果
++普通文字和图形使用可编辑组件重建。一个连续片段保留为一个案例，内部可以包含多个场景。
+ 
+-```text
+-使用 $ljq-broll-replica 检查当前案例的静态回归与替换能力。
+-案例目录：/absolute/path/to/workspace/cases/my-broll-case
+-当前已接入动效，请确认实际入口能够关闭动效，再导出每场批准帧。
+-替换文字：填写新文案；替换图片：填写已授权图片路径。
+-所有测试输出到新目录，不覆盖批准静帧，不修改原QA状态，不整片重渲染。
+-分别报告替换机制是否生效、布局是否适配，以及剩余差异。
+-```
++## 开始使用
+ 
+-安全探针工具为`render-review-stills.mjs`，先读其`--help`。它要求真实消费`motionEnabled`；通用新模板并未默认具备此入口。默认浏览器路径针对macOS，其他平台需传`--browser-executable`。本案例依赖的macOS字体不随仓库分发，跨机复刻需重验字体与比例。
++面向视频创作者：**[打开入门指南](docs/getting-started.md)**，按“安装 → 静帧审阅 → 确认后继续”的顺序完成第一个案例。
+ 
+-## 已验证的执行链路
++准备参考视频的本地路径、起止时间、案例输出目录，以及需要保留或排除的内容。指南提供可直接复制的简短提示词；默认先交付静帧。
+ 
+-- 实际 JSON Schema 2020-12 校验，包括 1.2 范围、场景、替换、连续性和 QA gates；
+-- 按用户时码精确裁切案例内源片，解码误差不超一帧；
+-- 案例内源文件存在性、大小和 SHA-256 一致性；
+-- 布局元素 ID、父子循环、素材路径与动效目标引用；
+-- 真实 Remotion 打包与 H.264 完整视频渲染；
+-- 逐场景 source/render/comparison still 和可替换元素 still 门；
+-- 连续 bezier 曲线、斜向擦开和叠影文字 runtime；
+-- 画幅、fps、解码帧数、音频、live 元素和排除区域门；
+-- 全帧 RGB 指标和原片/渲染/差异比较图；
+-- 未经视觉查看只能是 pending；
+-- 第三次修正被状态机拒绝；
+-- 最终案例必须通过 `validate-case.mjs --complete`。
++当前安装脚本面向 **Codex**，已公开案例在 **macOS** 环境完成。需要预先安装 Node.js 20+、npm、Python 3、FFmpeg／ffprobe、Chrome／Chromium，以及 Git、Bash 和 rsync。安装脚本准备四个 Skill 及项目依赖，不安装这些基础软件，也不切换模型。其他模型尚未做同条件案例验证。
+ 
+-运行全部当前回归：
++另需在 Codex 中准备 Remotion 官方 Skills；入门指南列出了所需技能及安装步骤。
+ 
+-```bash
+-./tests/contracts/run-contract-tests.sh
+-./tests/preflight/run-preflight-tests.sh
+-./tests/motion/run-motion-tests.sh
+-./tests/runtime/run-runtime-tests.sh
+-./tests/qa/run-qa-tests.sh
+-./tests/workflows/run-loop-tests.sh
+-./tests/e2e/run-e2e-smoke.sh
+-```
++## 了解实现
+ 
+-具体“已能执行 / 需要 AI 判断 / 尚未建设”的边界见 [执行状态](docs/execution-status.md)，数据接口见 [案例交接合同](docs/contracts/broll-case-contract.md)，产品方向与后续知识库入口见 [主 Skill 实施计划](docs/plans/2026-09-03-broll-replica-master-skill-implementation-plan.md)。
++面向开发者与 Skill 作者：
+ 
+-## 案例与证据边界
++- [架构、执行状态与测试入口](docs/execution-status.md)：四个 Skill 的分工、可执行工具、人工判断与自动检查的边界。
++- [案例交接合同](docs/contracts/broll-case-contract.md)：范围、布局、动效、稳定元素 ID 和证据之间的关系。
++- [运行与修改公开案例](examples/kimi-k3-000-011/README.md#实际实现与可替换内容)：实际组件、props、素材与渲染命令。
++- [案例索引](examples/README.md)：当前案例与历史研究基线。
+ 
+-| 案例 | 现有内容 | 证据边界 |
+-| --- | --- | --- |
+-| [KIMI 0–11秒 · GPT-6 Astra + Remotion](examples/kimi-k3-000-011/README.md) | 四场景、42元素、26条motion、11秒成片、上下对照、可编辑源码 | 用户已认可整体效果；自动QA时变排除门仍待审 |
+-| [KIMI K3 关键视觉](examples/kimi-k3-key-visual/README.md) | 参考图、旧版 Scene JSON、生成视频 | 动效主要为推断，未按新版逐帧验收 |
+-| [Kimi K3 标题动效](examples/kimi-k3-title-motion/README.md) | 旧版 Scene JSON、生成视频、上下对比视频 | 有时序证据，但字体、特效、位置和运动仍有明显差异 |
++## 能力边界
+ 
+-后两个旧案例保留为历史研究基线，不代表新版验收结果。新案例展示包不包含全部本地取证中间文件；它不是可直接运行完整case validator的归档。原始完整case继续保留在本地工作区，发布检查见[本次发布记录](docs/qa/2026-09-05-kimi-publication-review.md)。
++适合已有参考视频、需要复刻标题、参数页、图文排版及相应动效的工作。布局、字体和运动机制仍需要 AI 视觉判断与人的反馈；复杂遮挡、未知素材和字体可能只能近似。
+ 
+-## 当前不做
++目前没有口播自动选点、跨案例检索或用新内容自动套用案例的完整流程，也不保证恢复原软件、字体或插件参数。跨系统使用需确认浏览器路径与字体；示例字体不随仓库分发。
+ 
+-多案例知识库、口播自动选点、手法检索和新内容自动调用明确延后。等至少两个不同类型的真实复刻案例通过后，再单独建设下一阶段。
++中英文覆盖首页和入门指南，深入技术文档与案例说明暂为中文。
+ 
+ ## 许可
+ 
+-项目原创代码、文档和配置使用 [MIT License](LICENSE)。群内协作脚本经贡献者允许纳入公开项目，来源历史记录在 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。案例中的第三方原素材不随 MIT 重新授权。
++原创代码、文档与配置使用 [MIT License](LICENSE)。第三方参考画面、素材与字体的使用条件见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)，不随本项目重新授权。
+diff --git a/docs/execution-status.md b/docs/execution-status.md
+index 7e292a4..f131527 100644
+--- a/docs/execution-status.md
++++ b/docs/execution-status.md
+@@ -1,12 +1,43 @@
+-# 新版复刻流程执行状态
++# 架构、执行状态与测试
+ 
+-更新日期：2026-09-05
++更新日期：2026-09-06
++
++[项目首页](../README.md) · [入门指南](getting-started.md)
++
++## 架构与阶段交接
++
++一个总控 Skill 按阶段加载三个专业 Skill，围绕同一案例目录工作。阶段间以稳定元素 ID、JSON Schema 和证据文件交接。
++
++| Skill | 责任 |
++| --- | --- |
++| [ljq-broll-replica](../skills/ljq-broll-replica/SKILL.md) | 范围预检、路由、状态、完整渲染、最多两轮定向修正和交付 |
++| [ljq-broll-layout-structure](../skills/ljq-broll-layout-structure/SKILL.md) | 场景归属、落定帧、可编辑元素、字体、集中静帧审阅与替换验证 |
++| [ljq-broll-motion-forensics](../skills/ljq-broll-motion-forensics/SKILL.md) | 时间、方向、镜头、揭示、文字效果和连续曲线的取证 |
++| [ljq-broll-fidelity-qa](../skills/ljq-broll-fidelity-qa/SKILL.md) | 范围、可编辑性、排除区域、完整视频检查和差异归因 |
++
++```mermaid
++flowchart TD
++    A[输入连续范围与纳入/排除项] --> B[精确裁切与预检]
++    B --> C[逐场选帧、拆元素、完成静态布局]
++    C --> D[展示集中审阅页与替换结果]
++    D --> E{静帧确认?}
++    E -->|需要修改| C
++    E -->|确认并授权继续| F[逐元素动效取证与实现]
++    F --> G[完整 Remotion 渲染与 QA]
++    G --> H{验收结果}
++    H -->|全部必需门通过| I[完整交付]
++    H -->|有可修正差异且少于两轮| J[按最高影响根因退回责任阶段]
++    J --> G
++    H -->|达到修正上限或工具能力限制| K[交付已有产物并保留差异及待审状态]
++```
++
++静帧阶段交付后等待用户确认；定向修正由总控退回具体 owner 完成。数据结构见[案例交接合同](contracts/broll-case-contract.md)，修正状态见[质量循环](../skills/ljq-broll-replica/references/quality-loop.md)。
+ 
+ ## 已能直接执行
+ 
+ | 能力 | 入口 | 输出 |
+ | --- | --- | --- |
+-| 安装环境 | `skills/ljq-broll-replica/scripts/setup-environment.sh` | 锁定版本的 Python、Schema 校验和 Remotion 依赖 |
++| 安装环境 | `skills/ljq-broll-replica/scripts/setup-environment.sh` | 基于系统 Python 3 的虚拟环境、锁定的 Python 包与 Schema／Remotion 依赖；不安装或锁定 Python 解释器 |
+ | 初始化案例与预检 | `inspect-clip.py <video> <case-dir> --start-seconds ... --end-seconds ...` | 按范围精确裁切的案例内源片、纳入/排除合同、哈希、元信息、关键帧和 Contact Sheet |
+ | 合同校验 | `validate-case.mjs <case-dir> [--complete]` | Schema、范围、文件、哈希、场景 still、替换 still、稳定 ID、连续性和 QA gates |
+ | 逐场景静帧 | layout Skill 的 `render-layout-scene.sh` | 原片/Remotion/比较 still 与场景状态 |
+@@ -22,6 +53,26 @@
+ 
+ 这些工具已用合成视频走通精确裁切、合同校验、静帧/替换 still、连续曲线、斜向擦开、叠影文字、完整 Remotion 渲染、逐帧 QA、最终 `--complete` 校验和第三轮拒绝测试。
+ 
++安装脚本检查基础命令并准备依赖，没有检查 Chrome 可执行路径或实际渲染结果。安装成功与首个案例成功渲染是两个检查点。
++
++## 已验证链路与回归入口
++
++现有回归覆盖 JSON Schema 2020-12、来源文件与 SHA-256、范围和解码帧数、元素 ID／父子关系／目标引用、逐场静帧和替换证据、空间曲线、斜向擦开和叠影 runtime，以及 Remotion H.264 渲染。QA 覆盖媒体硬门、live 元素、排除区域、逐帧 RGB 指标和可追溯的视觉结论。
++
++在仓库根目录按需运行以下回归。它们可能生成测试产物或进行视频渲染，耗时与纯文档检查不同；本次双语文档整理没有重跑这些视频测试。
++
++```bash
++./tests/contracts/run-contract-tests.sh
++./tests/preflight/run-preflight-tests.sh
++./tests/motion/run-motion-tests.sh
++./tests/runtime/run-runtime-tests.sh
++./tests/qa/run-qa-tests.sh
++./tests/workflows/run-loop-tests.sh
++./tests/e2e/run-e2e-smoke.sh
++```
++
++主 Skill 的 `validate-case.mjs --complete` 校验完整案例的必需门。使用普通校验查看阶段产物；没有视觉结论时保留待审，达到第三次修正请求时状态机会拒绝。公开精选示例的证据范围见下文，不能以不完整展示包验证整套机器合同。
++
+ ## 能执行，但需要 AI 视觉判断
+ 
+ 以下不是“不能运行”，而是不能靠通用脚本可靠地自动决定：
+@@ -53,3 +104,5 @@
+ - 两个不同类型真实案例的新版流程验收。
+ 
+ 前五项是明确延后的下一阶段；最后一项仍未达到。新KIMI案例的人工认可不冒充两个不同类型案例的完整自动验收，两个旧案例继续保留为研究基线。
++
++设计背景与后续方向见[主 Skill 实施计划](plans/2026-09-03-broll-replica-master-skill-implementation-plan.md)；历史计划不代表已交付能力。
+diff --git a/examples/kimi-k3-000-011/README.md b/examples/kimi-k3-000-011/README.md
+index 4cacd8d..9221455 100644
+--- a/examples/kimi-k3-000-011/README.md
++++ b/examples/kimi-k3-000-011/README.md
+@@ -61,7 +61,7 @@
+ - [元素摘要](elements.json)：42个元素的场景、父组、类型和可替换标记。摘要不是完整case合同。
+ - [独立月面素材与署名](remotion/public/moon/SOURCES.md)：素材不是原视频裁图；纹理经live文字mask显示。
+ 
+-若只想使用Skill处理自己的视频，直接复制[仓库首页的三段调用提示词](../../README.md#使用)。先确认静帧，再接动效；不要把本片配色、位置或时码套到新片。
++若只想使用Skill处理自己的视频，按[入门指南](../../docs/getting-started.md)操作；另有[英文入门指南](../../docs/getting-started.en.md)。先确认静帧，再接动效；不要把本片配色、位置或时码套到新片。
+ 
+ 如需运行本例源码，先确保本机有对应字体和Chrome/Chromium，在本目录执行：
+ 
+diff --git a/skills/ljq-broll-layout-structure/SKILL.md b/skills/ljq-broll-layout-structure/SKILL.md
+index d8be80a..baabf5a 100644
+--- a/skills/ljq-broll-layout-structure/SKILL.md
++++ b/skills/ljq-broll-layout-structure/SKILL.md
+@@ -2,7 +2,7 @@
+ name: ljq-broll-layout-structure
+ description: "把已预检的 B-roll 案例拆成逐场景、稳定元素 ID 和可编辑 Remotion 落定布局，并用原片/渲染/比较 still 与替换 still 证明静帧和复用性。用于复刻入场完成后的终点画面；不分析完整动线。"
+ metadata:
+-  version: "1.3.0"
++  version: "1.3.2"
+ ---
+ 
+ # B-roll 落定布局
+@@ -19,7 +19,7 @@ metadata:
+ 
+ ## 工作流
+ 
+-1. **分场景。** 对每个排版状态选择“主要入场已完成、退出尚未开始”的落定帧，写入 `layout.scenes[]`。不选机械中点。
++1. **分场景。** 按 [场景与转场](references/visual-grammar.md#场景与转场) 区分独立排版和过渡状态，再选择“主要入场已完成、退出尚未开始”的落定帧，写入 `layout.scenes[]`。不选机械中点。
+ 2. **拆元素。** 先读取 [references/element-taxonomy.md](references/element-taxonomy.md)，按对象类型与共享/专属属性两轴分析。需要替换、独立定位、裁切、遮挡或运动时才拆层。为元素写入稳定的小写连字号 ID 和 `sceneId`，适用属性与未知项均可追溯。
+ 3. **建立静态终点。** 测量百分比 bounds、anchor、parentId、zIndex、裁切和静态 appearance；按 [静态视觉判断](references/static-compositing.md) 核对实际可见比例、颜色角色和合成关系，并区分观察与推测。
+ 4. **建立可编辑实现。** 文字、数字、参数、线条、框和遮罩使用 live text、SVG、CSS 或可编辑组件。可替换内容暴露为 props。
+@@ -38,7 +38,7 @@ metadata:
+    ```
+ 
+    此脚本会覆盖replacement文件/条目；动态实现的静态替换props须明确关闭动效。看过结果后再登记通过，不能以命令成功代替观察。
+-8. **交付布局。** 只有所有 `scenes[].status` 和必需 `replacementTests[].status` 为 `passed` 时，才把 `stages.layout` 设为 `passed`并运行主 Skill 校验器。
++8. **交付布局。** 按 [前期静帧审阅](references/static-compositing.md#前期静帧审阅) 展示集中比对入口。只有所有 `scenes[].status` 和必需 `replacementTests[].status` 为 `passed` 时，才把 `stages.layout` 设为 `passed`并运行主 Skill 校验器。
+ 
+ ## 边界
+ 
+diff --git a/skills/ljq-broll-layout-structure/references/element-taxonomy.md b/skills/ljq-broll-layout-structure/references/element-taxonomy.md
+index ede0b8e..0d7ec12 100644
+--- a/skills/ljq-broll-layout-structure/references/element-taxonomy.md
++++ b/skills/ljq-broll-layout-structure/references/element-taxonomy.md
+@@ -33,10 +33,12 @@
+ - 字距、行距、换行、对齐、基线、字面宽高比和缩放后占位。
+ - 字体候选按中文、数字、拉丁与手写分别比较；Top 3证据和精确识别边界见[字体与可编辑边界](static-compositing.md#字体与可编辑边界)。
+ - “字体颜色”拆为可编辑填充、材质和效果。字内纹理不会让文字变成图片元素。
++- 同一句文字跨不同底图呈现明暗或反相变化时，先以统一字体参数和整句合成层验证混合关系，例如difference（差值）。在相同底图下比较至少两个明暗区域，记录目标底层、作用范围和候选置信度；整句替换still应保持同一文字ID、连续排版和跨区域合成关系。具体模式由证据或用户指定决定。
+ 
+ ## 媒体专属
+ 
+ - 来源/许可、宽高比、有效内容或alpha边界、完整度、裁切来源、object-fit/position。
++- 参考照片铺满画布时，以单个媒体prop保存其取景关系；替换still同时核对画幅覆盖、主体位置与裁切，确认画布内没有新增空白。独立文字和图形仍按自身ID保留，排除区域服从scope。
+ - 抠像/分割是否已经存在、边缘羽化与颜色污染；需要新增抠像且影响范围时单独确认，不把它设为本流程默认新增功能。
+ - 视频再记录源时间映射与静态观察帧；不要仅因格式扩展就自动进入完整视频处理。
+ 
+@@ -46,6 +48,8 @@
+ 
+ 记录实际处理链，例如“纹理定位 → live text遮罩 → 描边 → 阴影”。描边和阴影属于合成效果，不是每个蒙版必带的字段。沿字形辉光通常不需要角度；中心放射光才考虑光源位置与方向，不能只给一个笼统的‘字体发光位置’。
+ 
++多个字内出现连续受光时，先验证父组坐标系中的共享光场，再用live text作为遮罩。代表性still核对光带方向、宽度和羽化渐变能否跨字或跨行连续；替换后字形边界随新内容更新，光场仍保持统一。随时间变化时按motion的[共享扫光](../../ljq-broll-motion-forensics/references/measurement-guide.md#共享扫光)取证。
++
+ “文字里面可见月表纹理”是观察；“由几个月亮叠加产生”只是候选实现。选择能保持替换性且匹配结果的方法，不宣称恢复原始图层。
+ 
+ ## 写入合同
+diff --git a/skills/ljq-broll-layout-structure/references/static-compositing.md b/skills/ljq-broll-layout-structure/references/static-compositing.md
+index 1eca823..1e0be88 100644
+--- a/skills/ljq-broll-layout-structure/references/static-compositing.md
++++ b/skills/ljq-broll-layout-structure/references/static-compositing.md
+@@ -14,6 +14,12 @@
+ 
+ 先解决前项的显著偏差，再调整后项。细节丰富不能抵消比例或配色关系错误。每个场景的 observation 写明已核对的关系、证据路径和剩余差异；脚本运行成功或比较图存在，只证明产物生成。
+ 
++## 前期静帧审阅
++
++静态阶段提供一个可直接打开的集中审阅页，复用已有证据：按场景编号和源时码组织，同一落定帧的原片与复刻等比例相邻展示；比较图、替换still、字体候选和已知差异可从对应场景直接查看，方便用户按场景编号反馈。
++
++交付前实际打开入口，检查各场图片和链接可用、帧号对应、内容为当前版本，再将入口展示给用户。完成：用户可在同一入口逐场比对。
++
+ ## 实际可见边界
+ 
+ - 同时区分布局容器、主体实际像素边界（文字为 ink bounds）和阴影/辉光延伸边界。容器的 width/height、字号或图片文件尺寸不能代替主体边界。
+diff --git a/skills/ljq-broll-layout-structure/references/visual-grammar.md b/skills/ljq-broll-layout-structure/references/visual-grammar.md
+index 18fa765..dd92d74 100644
+--- a/skills/ljq-broll-layout-structure/references/visual-grammar.md
++++ b/skills/ljq-broll-layout-structure/references/visual-grammar.md
+@@ -8,6 +8,12 @@
+ 
+ 按顺序判断：主要元素完成入场；阅读关系建立；未开始退出或转场；瞬时模糊和闪光最少；信息最完整。记录准确帧号、时间码、证据类型和置信度。
+ 
++## 场景与转场
++
++遇到叠页、穿字、擦开或闪光形成的新外观时，先查看边界前后的连续帧：独立内容结构或阅读关系建立时划为scene；只是连接前后状态的交叠、遮罩或变形时，登记为转场取证帧，归入前后场景的可见窗口。同一构图的持续镜头变化保留其元素ID。
++
++分场景完成的证据是每个边界都有前后帧、判定理由和归属；转场中间态有时间窗及来源场景，不强设落定帧。转场方向、时长和曲线交给motion；静态阶段仅记录归属与代表性外观。
++
+ ## 坐标与边界
+ 
+ - 继承源宽高、方向和 fps，不强制套 16:9。
+diff --git a/skills/ljq-broll-motion-forensics/SKILL.md b/skills/ljq-broll-motion-forensics/SKILL.md
+index bf74e4c..bbd0d2f 100644
+--- a/skills/ljq-broll-motion-forensics/SKILL.md
++++ b/skills/ljq-broll-motion-forensics/SKILL.md
+@@ -2,7 +2,7 @@
+ name: ljq-broll-motion-forensics
+ description: "对已通过落定布局的连续 B-roll 做逐元素动效取证，分开场景、镜头、元素和文字内部行为，并输出可验证的连续 motion.json。用于入场、出场、缩放、擦开、叠影和转场取证；不重新排版或猜测原软件参数。"
+ metadata:
+-  version: "1.3.0"
++  version: "1.3.1"
+ ---
+ 
+ # B-roll 动效取证
+diff --git a/skills/ljq-broll-motion-forensics/references/implementation-checks.md b/skills/ljq-broll-motion-forensics/references/implementation-checks.md
+index 7595160..3c2055f 100644
+--- a/skills/ljq-broll-motion-forensics/references/implementation-checks.md
++++ b/skills/ljq-broll-motion-forensics/references/implementation-checks.md
+@@ -25,6 +25,8 @@
+ 
+ 纹理定位、裁切和字形遮罩分别可追踪；换字后纹理mask必须来自新字形。图片以有效内容边界校准占比，角落物体保留完整资产与viewport裁切。替代素材的轮廓/坑纹不同，运动数值可能需按其可见弧线重新校准；不能把固定屏幕扫描线上的弧边当固定纹理点。
+ 
++文字内部有连续亮带时，执行[共享扫光](measurement-guide.md#共享扫光)的跨字与替换探针；几何连续性分析的pass不覆盖光场或羽化实现。
++
+ ## 逐字替换的结束帧
+ 
+ 先选定有效字符划分方式，并在文案变化时重新计算字符边界与延迟。若保持时间窗`[start,end]`、字符数`n`、最短单字时长`d`，先确认窗口可容纳`d`，再限制`effectiveStagger ≤ (end-start-d)/max(1,n-1)`；单字时长使用剩余窗口。字数太多或组合字形需要更复杂分段时说明限制，不能悄悄延长用户总时长。
+diff --git a/skills/ljq-broll-motion-forensics/references/measurement-guide.md b/skills/ljq-broll-motion-forensics/references/measurement-guide.md
+index 21294e1..f9f9825 100644
+--- a/skills/ljq-broll-motion-forensics/references/measurement-guide.md
++++ b/skills/ljq-broll-motion-forensics/references/measurement-guide.md
+@@ -7,7 +7,7 @@
+ 1. **什么在动。** 比较多个有纹理区域。多个元素轨迹一致时优先建父组或 `@camera`，不要逐层复制同一运动。
+ 2. **平移还是旋转。** 同一对象上离轴距离不同的两个纹理块，若远端位移明显更大，才支持绕近端旋转；两端位移接近更像平移。
+ 3. **什么时候出现。** 记录 firstVisible、settledFrame、endFrame。不要把压缩噪声第一次变化当作视觉出现。
+-4. **怎样揭示。** 擦除会出现沿路径移动的清晰边界；淡入会让多数采样点的强度一起增长。只看二值占用容易误判。
++4. **怎样揭示。** 擦除有沿路径移动的前沿，边缘可能清晰或羽化；淡入会让多数采样点的强度一起增长。只看二值占用容易误判。
+ 
+ 先拟合共同镜头，再比较各元素剥离camera后的残差。稳定背景纹理、边缘或框角节点交叉验证同一中心与尺度；入场伸长的整个数字框不宜直接当camera标尺，可换用已收束的单字或固定框角。线条随camera缩小进入画布，可能只是视口裁切，不等于有独立绘制动画。
+ 
+@@ -21,6 +21,14 @@
+ 
+ 持续存在的顶部受光、描边、金属渐变和基础辉光属于静态材质；只在入场期出现的额外辉光、运动模糊和残影属于动态。两者不能写进同一个最终归零的效果轨。
+ 
++## 共享扫光
++
++字形位置与轮廓稳定、亮带连续经过多个字或多行时，先检验共享光场；逐字颜色轨只用于证据支持的独立字符变化。静态合成关系按layout的[蒙版关系](../../ljq-broll-layout-structure/references/element-taxonomy.md#蒙版是关系不是另一种素材格式)登记。
++
++1. 按原片可见阶段选帧，跟踪同一亮带跨字/行的位置；记录共同坐标系、方向、宽度、峰值强度、前后缘羽化及时间窗。亮度受字形或底图污染时换采样点，并保留测量误差。
++2. 用连续渐变或有羽化的mask表达观察到的软边，光场路径独立于字符索引。完成证据须能区分软边过渡宽度与光带移动距离；只有原片为清晰边界时才用硬擦除。
++3. 在实际runtime导出光带经过至少两个字或两行的中间帧，并用不同长度文案重验同一时间窗。完成：光场跨字连续、换行处不重启、遮罩来自新文字；末态与参考一致，片段中途截断时保留当时光照状态。
++
+ ## 元素分轨
+ 
+ 在 motion JSON 前先写逐元素行为表。对每个 ID 独立回答：
