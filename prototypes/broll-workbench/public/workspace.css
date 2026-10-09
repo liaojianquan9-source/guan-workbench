@@ -26,3 +26,9 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,[role=separator]
  dialog{padding:17px}.dialog-actions .button{min-height:44px}dialog>.icon-btn{width:44px;height:44px}.tag-editor input{min-width:0}.board-grid{gap:12px 8px}.scene-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.scene-card .scene-meta{font-size:9px;flex-wrap:wrap}.audio-bar{flex-wrap:wrap}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.work-head:has(.view-switch){height:auto;min-height:57px}
+.board .catalog-section-title{margin-top:22px}
+.board .catalog-section-title:first-child{margin-top:4px}
+.asset-style-card .scene-image{position:relative}
+.asset-style-fallback{position:absolute;inset:0;display:grid;place-items:center;color:#9aa0a6}
+@media(max-width:760px){.work-head .view-switch{width:100%}.work-head .view-switch button{flex:1;min-height:44px}}
