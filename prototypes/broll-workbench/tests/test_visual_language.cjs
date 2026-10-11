@@ -58,7 +58,7 @@ test('shell navigation and primary actions use light capsules', () => {
   assert.match(css, /outline:\s*2px solid var\(--focus-ring\)/);
 });
 
-test('navigation is a top capsule bar and AI制作 has no header blurb', () => {
+test('navigation is a top capsule bar and AI制作 has no in-page title header', () => {
   const workspace = fs.readFileSync(path.join(root, 'public/workspace.js'), 'utf8');
   const ai = fs.readFileSync(path.join(root, 'public/ai_making.js'), 'utf8');
   assert.match(workspace, /capsule-nav/);
@@ -66,6 +66,8 @@ test('navigation is a top capsule bar and AI制作 has no header blurb', () => {
   assert.match(workspace, /function slideCapsule/);
   assert.match(workspace, /\['ai-making','AI制作','scan'\]/);
   assert.match(workspace, /<header class="titlebar">[\s\S]*<nav class="rail capsule-nav"/);
-  assert.match(ai, /<h1>AI制作<\/h1>/);
+  assert.doesNotMatch(ai, /class="ai-header"/);
+  assert.doesNotMatch(ai, /<h1>AI制作<\/h1>/);
+  assert.doesNotMatch(ai, /个已确认/);
   assert.doesNotMatch(ai, /让 Agent 判断哪里值得加画面/);
 });
