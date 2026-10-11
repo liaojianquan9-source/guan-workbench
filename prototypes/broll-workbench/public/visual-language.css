@@ -1,0 +1,782 @@
+/* Visual language for 观.
+   Values follow docs/Designs.md (TO-DO Panel product tokens).
+   This layer only restyles the existing 4182 shell, tiles, pills and type.
+   It does not add todo, clipboard or vault behavior, and it does not load the demo shell. */
+
+:root {
+  --bg-base: #000000;
+  --surface-1: #111111;
+  --surface-2: #191919;
+  --surface-3: #252525;
+  --hairline: rgba(255, 255, 255, 0.08);
+  --hairline-soft: rgba(255, 255, 255, 0.06);
+  --highlight-top: rgba(255, 255, 255, 0.07);
+  --tile-highlight: rgba(255, 255, 255, 0.05);
+  --squircle-highlight: rgba(255, 255, 255, 0.16);
+  --text-1: #F5F5F5;
+  --text-2: #A1A1A1;
+  --text-3: #707070;
+  --text-4: #4A4A4A;
+  --focus-ring: #6EA8FF;
+  --scrollbar-thumb: rgba(255, 255, 255, 0.08);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.20);
+  --tooltip-bg: rgba(0, 0, 0, 0.92);
+  --item-hover: rgba(255, 255, 255, 0.04);
+  --panel-shadow: rgba(0, 0, 0, 0.42);
+  --cta: #F5F5F5;
+  --cta-ink: #111111;
+
+  --accent-green: #30D978;
+  --accent-orange: #FF9352;
+  --accent-blue: #438CFF;
+  --p0: #FF5F57;
+  --p1: var(--accent-orange);
+  --p2: var(--accent-green);
+  --p3: var(--accent-blue);
+
+  --r-notch: 10px;
+  --r-panel: 16px;
+  --r-tile: 18px;
+  --r-squircle: 12px;
+  --r-input: 10px;
+  --r-list-item: 12px;
+  --r-popover: 18px;
+  --r-pill: 999px;
+
+  --hairline-w: 1px;
+  --scrollbar-w: 3px;
+  --s-half: 2px;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "SF Pro Display", "SF Pro Text", "PingFang SC", sans-serif;
+  --font-mono: "SF Mono", ui-monospace, monospace;
+  --fs-micro: 9px;
+  --fs-caption: 10.5px;
+  --fs-small: 11px;
+  --fs-code: 11.5px;
+  --fs-ui: 12px;
+  --fs-body: 13px;
+  --fs-body-lg: 13.5px;
+  --fs-heading-3: 15px;
+  --fs-heading-2: 17px;
+  --fs-heading-1: 19px;
+
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.1, 0.4, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --d-micro: 100ms;
+  --d-1: 90ms;
+  --d-fast: 140ms;
+  --d-base: 180ms;
+  --d-slow: 260ms;
+  --d-grand: 340ms;
+
+  /* Existing workbench names now point at the shared language. */
+  --bg: var(--bg-base);
+  --panel: var(--surface-1);
+  --line: var(--hairline);
+  --muted: var(--text-2);
+  --text: var(--text-1);
+  --accent: var(--cta);
+  --surface-raised: var(--surface-2);
+  --radius: var(--r-tile);
+
+  color-scheme: dark;
+  font: var(--fs-body) / 1.5 var(--font);
+  color: var(--text-1);
+  background: var(--bg-base);
+}
+
+::selection {
+  color: var(--cta-ink);
+  background: var(--cta);
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text-1);
+}
+
+button,
+.chip,
+.rail button,
+.media-card,
+.research-card,
+.music-card,
+.ai-line-card,
+.replica-task-card,
+.visual-media-card,
+.view-switch button {
+  transition:
+    background-color var(--d-fast) var(--ease),
+    color var(--d-fast) var(--ease),
+    border-color var(--d-fast) var(--ease),
+    box-shadow var(--d-base) var(--ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button,
+  .chip,
+  .rail button,
+  .media-card,
+  .research-card,
+  .music-card,
+  .ai-line-card,
+  .replica-task-card,
+  .visual-media-card,
+  .view-switch button {
+    transition: none;
+  }
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+.decision:focus-visible,
+.track-control:focus-visible,
+.track-tool:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+button,
+input,
+textarea {
+  caret-color: var(--text-1);
+}
+
+/* Shell: one dark field, hairline chrome, capsule navigation. */
+.titlebar,
+.rail,
+.work-head,
+.main-pane,
+.catalog,
+.board,
+.work-area {
+  background: var(--bg-base);
+}
+
+.titlebar {
+  border-bottom: var(--hairline-w) solid var(--hairline);
+  box-shadow: inset 0 1px 0 var(--highlight-top);
+  color: var(--text-3);
+  font-size: var(--fs-small);
+  font-weight: 400;
+}
+
+.titlebar strong {
+  color: var(--text-1);
+  font-size: var(--fs-ui);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.titlebar .title,
+.local-state {
+  color: var(--text-3);
+  font-weight: 400;
+}
+
+.brand-mark {
+  background: var(--cta);
+  color: var(--cta-ink);
+  border-radius: var(--r-squircle);
+  box-shadow: inset 0 1px 0 var(--squircle-highlight);
+}
+
+.rail {
+  border-right: var(--hairline-w) solid var(--hairline);
+  gap: var(--s-2);
+}
+
+.rail button {
+  border-radius: var(--r-pill);
+  color: var(--text-2);
+  font-size: var(--fs-caption);
+  font-weight: 500;
+}
+
+.rail button svg {
+  color: inherit;
+}
+
+.rail button:hover:not(.active) {
+  background: var(--item-hover);
+  color: var(--text-1);
+}
+
+.rail button.active {
+  background: var(--cta);
+  color: var(--cta-ink);
+  box-shadow: inset 0 1px 0 var(--squircle-highlight);
+}
+
+.rail button.active svg {
+  color: var(--cta-ink);
+}
+
+.work-head {
+  border-bottom: var(--hairline-w) solid var(--hairline);
+  box-shadow: inset 0 1px 0 var(--highlight-top);
+}
+
+.work-head h1,
+.catalog-heading h2,
+.ai-header h1,
+.replica-topbar h1 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text-1);
+}
+
+.catalog-heading h2,
+.ai-header h1 {
+  font-size: var(--fs-heading-1);
+}
+
+.work-head h1,
+.replica-topbar h1 {
+  font-size: var(--fs-heading-3);
+}
+
+.catalog-heading p,
+.work-head .count,
+.replica-topbar p,
+.ai-header p {
+  color: var(--text-2);
+  font-weight: 400;
+}
+
+time,
+output,
+.clock,
+.ai-time,
+.ai-line-number,
+.ai-header-stat strong,
+.replica-summary-counts strong,
+.replica-task-number {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Pills: inactive stays quiet, active and primary actions are light capsules. */
+.button {
+  border-radius: var(--r-pill);
+  border: var(--hairline-w) solid var(--hairline);
+  background: var(--surface-3);
+  color: var(--text-1);
+  font-size: var(--fs-ui);
+  font-weight: 500;
+}
+
+.button:hover {
+  background: var(--surface-2);
+  color: var(--text-1);
+}
+
+.button.quiet {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-2);
+}
+
+.button.quiet:hover {
+  background: var(--item-hover);
+  color: var(--text-1);
+}
+
+.button.primary,
+.button.warm,
+.ai-import .ai-video-upload {
+  background: var(--cta);
+  border-color: var(--cta);
+  color: var(--cta-ink);
+}
+
+.button.primary:hover,
+.button.warm:hover,
+.ai-import .ai-video-upload:hover {
+  background: #E8E8E8;
+  border-color: #E8E8E8;
+  color: var(--cta-ink);
+}
+
+.button.active,
+.icon-btn.active {
+  background: var(--cta);
+  border-color: transparent;
+  color: var(--cta-ink);
+}
+
+.icon-btn {
+  border-radius: var(--r-squircle);
+  color: var(--text-2);
+}
+
+.icon-btn:hover {
+  background: var(--item-hover);
+  color: var(--text-1);
+}
+
+.chip {
+  border-radius: var(--r-pill);
+  border: var(--hairline-w) solid var(--hairline);
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.chip.active {
+  background: var(--cta);
+  border-color: transparent;
+  color: var(--cta-ink);
+}
+
+.work-head .view-switch,
+.view-switch {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  gap: var(--s-1);
+  border-radius: var(--r-pill);
+}
+
+.view-switch button {
+  border-radius: var(--r-pill);
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+.view-switch button.active {
+  background: var(--cta);
+  color: var(--cta-ink);
+}
+
+.collect-tabs {
+  border-bottom-color: var(--hairline);
+}
+
+.collect-tabs button {
+  border-radius: var(--r-pill);
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+.collect-tabs button.active {
+  background: var(--cta);
+  color: var(--cta-ink);
+}
+
+.collect-tabs button.active svg {
+  color: var(--cta-ink);
+}
+
+.ai-segment-control button {
+  border-radius: var(--r-pill);
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+.ai-segment-control button.active {
+  background: var(--cta);
+  color: var(--cta-ink);
+}
+
+.replica-view-button {
+  border-radius: var(--r-pill);
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+.replica-view-button.active {
+  background: var(--cta);
+  color: var(--cta-ink);
+}
+
+/* Inputs */
+.search,
+input:not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  background: var(--surface-1);
+  border: var(--hairline-w) solid var(--hairline);
+  color: var(--text-1);
+}
+
+.search {
+  border-radius: var(--r-pill);
+}
+
+input:not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  border-radius: var(--r-input);
+}
+
+input::placeholder,
+textarea::placeholder,
+.search input::placeholder {
+  color: var(--text-4);
+}
+
+.search:focus-within,
+input:not([type="range"]):not([type="checkbox"]):not([type="radio"]):focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
+  background: var(--surface-3);
+  border-color: transparent;
+}
+
+small,
+.muted {
+  color: var(--text-2);
+}
+
+.catalog,
+.board,
+.collect-list,
+.ai-card-list,
+.ai-inspector-scroll,
+.replica-batch-scroll,
+.replica-matrix-scroll {
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+/* Tiles. Track lanes keep their own sound colors. */
+.work-area > .preview-area,
+.work-area > .collection,
+.work-area > .collection.open,
+.work-area > .timeline,
+.work-area > .timeline.clip-timeline,
+.media-card,
+.research-card,
+.music-card,
+.music-table,
+dialog,
+.ai-input,
+.ai-board,
+.ai-inspector,
+.ai-cut,
+.replica-matrix-panel,
+.replica-summary,
+.replica-queue,
+.replica-viewer,
+.replica-inspector,
+.replica-batch {
+  background: var(--surface-1);
+  border: var(--hairline-w) solid var(--hairline);
+  box-shadow: inset 0 1px 0 var(--tile-highlight);
+}
+
+.media-card,
+.research-card,
+.music-card,
+.music-table,
+.ai-input,
+.ai-board,
+.ai-inspector,
+.ai-cut,
+.replica-matrix-panel,
+.replica-summary,
+.replica-queue,
+.replica-viewer,
+.replica-inspector,
+.replica-batch {
+  border-radius: var(--r-tile);
+}
+
+.media-card:hover,
+.research-card:hover,
+.music-card:hover {
+  background: var(--surface-2);
+}
+
+.media-card-foot,
+.catalog-section-title,
+.settings h2 {
+  border-color: var(--hairline);
+}
+
+.visual-media-card {
+  background: var(--surface-3);
+  border-radius: var(--r-tile);
+  box-shadow: inset 0 1px 0 var(--tile-highlight);
+}
+
+.research-card.visual-media-card:hover {
+  background: #2C2C2C;
+}
+
+.scene-card.visual-media-card.active {
+  background: var(--cta);
+}
+
+.visual-media-card:focus-within {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.visual-media-card .card-more {
+  border-radius: var(--r-pill);
+  background: rgba(0, 0, 0, 0.72);
+  color: var(--text-1);
+}
+
+.visual-media-card .card-more:hover {
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.scene-card.active .scene-image,
+.study-scenes .scene-card.active .scene-image {
+  border-color: var(--cta);
+  outline-color: var(--cta);
+}
+
+.scene-card .saved-dot {
+  background: var(--cta);
+  color: var(--cta-ink);
+}
+
+.catalog-drop {
+  border-color: var(--hairline);
+  border-radius: var(--r-tile);
+  color: var(--text-3);
+}
+
+.player-stage {
+  background: var(--bg-base);
+}
+
+dialog {
+  border-radius: var(--r-popover);
+  color: var(--text-1);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 var(--highlight-top);
+}
+
+dialog p,
+dialog h2 {
+  color: var(--text-1);
+}
+
+dialog p {
+  color: var(--text-2);
+  font-weight: 400;
+}
+
+dialog h2 {
+  font-size: var(--fs-heading-2);
+  font-weight: 500;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.player-more-menu,
+.media-card-menu,
+.quality-menu {
+  background: var(--surface-2);
+  border: var(--hairline-w) solid var(--hairline);
+  border-radius: var(--r-popover);
+  color: var(--text-1);
+  box-shadow: 0 16px 40px var(--panel-shadow), inset 0 1px 0 var(--highlight-top);
+}
+
+.media-card-menu button:hover,
+.media-card-menu button:focus-visible,
+.media-card-menu a:hover,
+.media-card-menu a:focus-visible,
+.player-more-menu button:hover,
+.player-more-menu button:focus-visible {
+  background: var(--item-hover);
+  outline-color: var(--focus-ring);
+}
+
+.quality-menu button[aria-checked="true"] {
+  background: var(--surface-3);
+  color: var(--text-1);
+}
+
+.clip-playback-range {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* AI制作 shares the shell. Gold page chrome folds into the monochrome tiles. */
+.ai-making {
+  background: var(--bg-base);
+  color: var(--text-1);
+}
+
+.ai-header {
+  border-bottom-color: var(--hairline);
+}
+
+.ai-header-stat,
+.ai-header-stat span {
+  color: var(--text-3);
+}
+
+.ai-header-stat strong {
+  color: var(--text-1);
+  font-weight: 500;
+}
+
+.ai-step,
+.ai-line-number,
+.ai-inspector-head span,
+.ai-spoken span,
+.ai-card-foot button,
+.ai-evidence summary,
+.ai-input-top > span:last-child,
+.ai-agent-events > summary,
+.ai-delivery,
+.ai-missing,
+.ai-evidence > p,
+.ai-kicker,
+.ai-job-status {
+  color: var(--text-2);
+}
+
+.ai-line-card,
+.ai-choice {
+  background: var(--surface-2);
+  border: var(--hairline-w) solid var(--hairline);
+  border-radius: var(--r-list-item);
+  box-shadow: inset 0 1px 0 var(--tile-highlight);
+}
+
+.ai-line-card:hover,
+.ai-choice:hover {
+  background: var(--surface-3);
+}
+
+.ai-line-card.selected,
+.ai-line-card.batch-selected,
+.ai-choice.active {
+  background: var(--surface-3);
+  border-color: rgba(255, 255, 255, 0.42);
+  box-shadow: inset 0 1px 0 var(--highlight-top);
+}
+
+.ai-script textarea,
+.ai-edit input,
+.ai-edit textarea,
+.ai-making pre,
+.ai-image-field > img,
+.ai-source-view,
+.ai-time-lane {
+  background: var(--bg-base);
+  border-color: var(--hairline);
+  color: var(--text-1);
+}
+
+.ai-job-status {
+  background: var(--surface-3);
+}
+
+/* AI复刻: same tile material, status dots stay small color. */
+.replica-shell {
+  --replica-panel: var(--surface-1);
+  --replica-panel-2: var(--surface-2);
+  --replica-line: var(--hairline);
+  --replica-success: var(--accent-green);
+  --replica-warning: var(--accent-orange);
+  --replica-danger: var(--p0);
+  background: var(--bg-base);
+  color: var(--text-1);
+}
+
+.replica-shell button:focus-visible,
+.replica-shell select:focus-visible,
+.replica-shell textarea:focus-visible,
+.replica-shell input:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.replica-topbar,
+.replica-workspace-toolbar,
+.replica-review-title {
+  background: var(--bg-base);
+  border-bottom: var(--hairline-w) solid var(--hairline);
+  box-shadow: inset 0 1px 0 var(--highlight-top);
+  color: var(--text-2);
+}
+
+.replica-task-card,
+.replica-scene-tile,
+.replica-queue-item,
+.replica-batch-cell,
+.replica-version-strip button,
+.replica-summary-counts div,
+.replica-summary-note,
+.replica-inspection li {
+  background: var(--surface-2);
+  border: var(--hairline-w) solid var(--hairline);
+  border-radius: var(--r-list-item);
+  box-shadow: inset 0 1px 0 var(--tile-highlight);
+}
+
+.replica-task-card:hover,
+.replica-scene-tile:hover,
+.replica-queue-item:hover:not(:disabled) {
+  background: var(--surface-3);
+}
+
+.replica-queue-item.active,
+.replica-task-card.active,
+.replica-batch-task.active,
+.replica-scene-tile.active,
+.replica-batch-cell.active,
+.replica-version-strip button.active,
+.replica-round-head.current,
+.replica-batch-round.current {
+  background: var(--surface-3);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+  color: var(--text-1);
+}
+
+.replica-status.review i,
+.replica-batch-cell.review > i,
+.replica-scene-tile > i {
+  background: var(--text-2);
+}
+
+.replica-status.review {
+  color: var(--text-2);
+}
+
+.replica-scene-tile.approved > i,
+.replica-batch-cell.approved > i {
+  background: var(--accent-green);
+}
+
+.replica-scene-tile.changes > i,
+.replica-batch-cell.changes > i {
+  background: var(--p0);
+}
+
+.replica-scene-tile.generating > i {
+  background: var(--accent-orange);
+}
+
+.replica-comment textarea,
+.replica-project-select select,
+.replica-workspace-toolbar select,
+.replica-case-import select {
+  background: var(--bg-base);
+  border-color: var(--hairline);
+  border-radius: var(--r-input);
+  color: var(--text-1);
+}
