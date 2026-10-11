@@ -611,6 +611,100 @@ dialog::backdrop {
   border-color: rgba(255, 255, 255, 0.18);
 }
 
+#toast {
+  background: var(--tooltip-bg);
+  color: var(--text-1);
+  border: var(--hairline-w) solid var(--hairline);
+  border-radius: var(--r-pill);
+  box-shadow: 0 16px 40px var(--panel-shadow), inset 0 1px 0 var(--highlight-top);
+}
+
+#toast .undo-button {
+  background: var(--cta);
+  border-color: var(--cta);
+  color: var(--cta-ink);
+  border-radius: var(--r-pill);
+}
+
+.empty,
+.empty.large p,
+.visual-empty {
+  color: var(--text-2);
+}
+
+.empty.large h2 {
+  font-size: var(--fs-heading-2);
+  font-weight: 500;
+  color: var(--text-1);
+}
+
+.empty svg,
+.empty.large svg,
+.visual-empty > svg,
+.ai-board-empty svg,
+.ai-inspector-empty svg,
+.replica-missing svg {
+  color: var(--text-3);
+}
+
+.ready {
+  color: var(--accent-green);
+}
+
+.error,
+.dialog-error {
+  color: var(--p0);
+}
+
+.ai-section-head h2,
+.catalog-section-title h3,
+.settings h2 {
+  font-weight: 500;
+  color: var(--text-1);
+}
+
+.environment-list,
+.storage-card,
+.keyboard-guide,
+.statusbox {
+  background: var(--surface-1);
+  border: var(--hairline-w) solid var(--hairline);
+  border-radius: var(--r-tile);
+  box-shadow: inset 0 1px 0 var(--tile-highlight);
+}
+
+.environment-row,
+.setting-row {
+  border-color: var(--hairline);
+}
+
+.environment-icon,
+.storage-card > svg,
+.shortcut-list .setting-row > svg {
+  color: var(--text-2);
+}
+
+kbd,
+.keyboard-guide kbd {
+  background: var(--surface-3);
+  border-color: var(--hairline);
+  border-bottom-width: var(--hairline-w);
+  color: var(--text-1);
+  border-radius: var(--r-notch);
+  font-family: var(--font-mono);
+}
+
+.setting-row .status {
+  background: transparent;
+  color: var(--accent-green);
+  border-radius: var(--r-pill);
+}
+
+.setting-row .status.error {
+  background: transparent;
+  color: var(--p0);
+}
+
 /* AI制作 shares the shell. Gold page chrome folds into the monochrome tiles. */
 .ai-making {
   background: var(--bg-base);
