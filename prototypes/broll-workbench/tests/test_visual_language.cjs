@@ -48,8 +48,24 @@ test('shared tokens follow the monochrome product palette', () => {
 });
 
 test('shell navigation and primary actions use light capsules', () => {
-  assert.match(css, /\.rail button\.active\s*\{[^}]*background:\s*var\(--cta\)/);
+  assert.match(css, /--ease-island:\s*cubic-bezier\(0\.22,\s*1,\s*0\.36,\s*1\)/);
+  assert.match(css, /\.capsule-indicator\s*\{[^}]*background:\s*var\(--cta\)/);
+  assert.match(css, /transform var\(--d-grand\) var\(--ease-island\)/);
+  assert.match(css, /\.rail button\.active,\s*\.rail button\.active:hover\s*\{[^}]*background:\s*transparent/);
+  assert.match(css, /\.rail button\.active,\s*\.rail button\.active:hover\s*\{[^}]*color:\s*var\(--cta-ink\)/);
   assert.match(css, /\.button\.primary[\s\S]*color:\s*var\(--cta-ink\)/);
   assert.match(css, /\.chip\.active\s*\{[^}]*background:\s*var\(--cta\)/);
   assert.match(css, /outline:\s*2px solid var\(--focus-ring\)/);
+});
+
+test('navigation is a top capsule bar and AI制作 has no header blurb', () => {
+  const workspace = fs.readFileSync(path.join(root, 'public/workspace.js'), 'utf8');
+  const ai = fs.readFileSync(path.join(root, 'public/ai_making.js'), 'utf8');
+  assert.match(workspace, /capsule-nav/);
+  assert.match(workspace, /capsule-indicator/);
+  assert.match(workspace, /function slideCapsule/);
+  assert.match(workspace, /\['ai-making','AI制作','scan'\]/);
+  assert.match(workspace, /<header class="titlebar">[\s\S]*<nav class="rail capsule-nav"/);
+  assert.match(ai, /<h1>AI制作<\/h1>/);
+  assert.doesNotMatch(ai, /让 Agent 判断哪里值得加画面/);
 });
