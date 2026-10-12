@@ -582,7 +582,7 @@ small,
   scrollbar-color: var(--scrollbar-thumb) transparent;
 }
 
-/* Tiles. Track lanes keep their own sound colors. */
+/* Tiles. 拉片 track colors are restated below as monochrome glass. */
 .work-area > .preview-area,
 .work-area > .collection,
 .work-area > .collection.open,
@@ -1029,4 +1029,346 @@ kbd,
   border-color: var(--hairline);
   border-radius: var(--r-input);
   color: var(--text-1);
+}
+
+/* 拉片: player, timeline and research panel share the shell's glass and capsules.
+   Functional status stays a small color. Lane fills do not. */
+.work-area {
+  gap: 12px;
+}
+
+.work-area > .preview-area,
+.work-area > .timeline,
+.work-area > .timeline.clip-timeline,
+.work-area > .collection,
+.work-area > .collection.open {
+  border-radius: var(--r-tile);
+}
+
+.work-area .player-top-title {
+  color: var(--text-1);
+  font-size: var(--fs-ui);
+  font-weight: 500;
+}
+
+.work-area #preview-scale {
+  height: 28px;
+  padding: 0 12px;
+  border-radius: var(--r-pill);
+  border: var(--hairline-w) solid var(--hairline);
+  background: var(--surface-2);
+  color: var(--text-2);
+}
+
+.work-area .player-stage {
+  border-radius: var(--r-tile);
+  background: var(--bg-base);
+  box-shadow: inset 0 0 0 var(--hairline-w) var(--hairline);
+}
+
+.work-area .player-label {
+  border-radius: var(--r-pill);
+  border: var(--hairline-w) solid var(--hairline);
+  background: rgba(0, 0, 0, 0.72);
+  color: var(--text-1);
+}
+
+.work-area .play {
+  border-radius: var(--r-pill);
+  background: var(--cta);
+  color: var(--cta-ink);
+  box-shadow: inset 0 1px 0 var(--squircle-highlight);
+}
+
+.work-area .play:hover {
+  background: #E8E8E8;
+  color: var(--cta-ink);
+}
+
+.work-area .player-controls .icon-btn,
+.work-area .player-topbar .icon-btn {
+  border-radius: var(--r-squircle);
+  color: var(--text-2);
+}
+
+.work-area .player-controls .clock,
+.work-area .clock-label,
+.work-area .source-clock {
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.work-area .timeline-story {
+  color: var(--text-1);
+  font-weight: 500;
+}
+
+.work-area .timeline-story small,
+.work-area .clip-tracks-foot,
+.work-area .clip-tracks-head small {
+  color: var(--text-3);
+}
+
+.work-area .clip-tracks-foot button {
+  color: var(--text-1);
+}
+
+.work-area .analysis-tools {
+  gap: 2px;
+  margin-left: 4px;
+  padding: 3px;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 var(--hairline-w) var(--hairline);
+}
+
+.work-area .analysis-tool {
+  min-height: 26px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--text-3);
+  font-size: var(--fs-small);
+  font-weight: 500;
+}
+
+.work-area .analysis-tool.done {
+  background: var(--surface-3);
+  color: var(--text-1);
+}
+
+.work-area .analysis-tool.failed {
+  background: transparent;
+  color: var(--p0);
+  box-shadow: inset 0 0 0 var(--hairline-w) rgba(255, 95, 87, 0.4);
+}
+
+.work-area .analysis-tool:focus-visible,
+.work-area .track-tool:focus-visible,
+.work-area .track-control:focus-visible,
+.work-area .source-text-block:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.work-area .track-tool,
+.work-area .track-control {
+  border-radius: var(--r-squircle);
+  color: var(--text-3);
+}
+
+.work-area .track-tool:hover,
+.work-area .track-control:hover {
+  background: var(--item-hover);
+  color: var(--text-1);
+}
+
+.work-area .track-tool.active,
+.work-area .track-control.active,
+.work-area .track-control[data-control="solo"].active {
+  background: var(--cta);
+  color: var(--cta-ink);
+}
+
+.work-area .track-control[data-control="muted"].active {
+  background: transparent;
+  color: var(--p0);
+}
+
+.work-area .track-control[data-control="hidden"].active {
+  background: transparent;
+  color: var(--text-4);
+}
+
+.work-area .clip-track-grid {
+  border: var(--hairline-w) solid var(--hairline);
+  border-radius: var(--r-squircle);
+  background: var(--bg-base);
+  box-shadow: inset 0 1px 0 var(--tile-highlight);
+}
+
+.work-area .clip-track-labels,
+.work-area .clip-track-content {
+  background: var(--surface-1);
+}
+
+.work-area .clip-track-labels {
+  border-right-color: var(--hairline);
+}
+
+.work-area .clip-ruler-label,
+.work-area .clip-track-label,
+.work-area .clip-track-ruler {
+  border-color: var(--hairline);
+  color: var(--text-3);
+}
+
+.work-area .clip-track-ruler {
+  font-family: var(--font-mono);
+}
+
+.work-area .clip-track-ruler span {
+  border-left-color: var(--hairline);
+}
+
+.work-area .clip-track-label strong,
+.work-area .text-track-title,
+.work-area .track-type {
+  color: var(--text-2);
+}
+
+.work-area .clip-track-label.selected {
+  background: var(--surface-3);
+}
+
+.work-area .clip-track-lane,
+.work-area .clip-track-lane.text,
+.work-area .clip-track-lane.original,
+.work-area .clip-track-lane.background,
+.work-area .clip-track-lane.vocals {
+  background: var(--surface-2);
+  color: rgba(245, 245, 245, 0.72);
+  border-bottom-color: var(--hairline);
+}
+
+.work-area .clip-track-lane.original {
+  background: var(--surface-3);
+}
+
+.work-area .clip-track-lane.text {
+  background: var(--bg-base);
+}
+
+.work-area .clip-track-lane.selected {
+  box-shadow: inset 0 0 0 var(--hairline-w) rgba(255, 255, 255, 0.28);
+}
+
+.work-area .clip-track-lane:focus-within {
+  outline-color: var(--focus-ring);
+}
+
+.work-area .clip-track-wave path {
+  opacity: 0.72;
+}
+
+.work-area .clip-film-frame {
+  background: var(--surface-1);
+  border-right-color: rgba(0, 0, 0, 0.55);
+}
+
+.work-area .clip-playhead {
+  background: var(--cta);
+}
+
+.work-area .clip-playhead::before {
+  border-top-color: var(--cta);
+}
+
+.work-area .playhead-marker path {
+  fill: var(--cta);
+  stroke: var(--cta-ink);
+}
+
+.work-area .clip-playhead span {
+  background: var(--cta);
+  color: var(--cta-ink);
+  border-radius: var(--r-pill);
+}
+
+.work-area .source-text-block {
+  background: var(--surface-3);
+  color: var(--text-1);
+  border-radius: var(--r-pill);
+  box-shadow: inset 0 1px 0 var(--tile-highlight);
+}
+
+.work-area .source-text-block:hover,
+.work-area .source-text-block.active {
+  background: var(--cta);
+  color: var(--cta-ink);
+}
+
+.work-area .background .music-section-label {
+  background: var(--surface-3);
+  color: var(--text-1);
+  border-radius: var(--r-pill);
+  box-shadow: inset 0 1px 0 var(--tile-highlight);
+}
+
+.work-area .background .music-section-label.active {
+  background: var(--cta);
+  color: var(--cta-ink);
+}
+
+.work-area .clip-playback-range {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.work-area .collect-head strong,
+.work-area .source-transcript-head strong,
+.work-area .music-sections-head > strong {
+  color: var(--text-1);
+  font-size: var(--fs-ui);
+  font-weight: 500;
+}
+
+.work-area .collect-head small {
+  color: var(--text-3);
+}
+
+.work-area .subtitle-row,
+.work-area .music-section-row,
+.work-area .collect-list > .research-card {
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  border: var(--hairline-w) solid var(--hairline);
+  border-radius: var(--r-list-item);
+  box-shadow: inset 0 1px 0 var(--tile-highlight);
+  color: var(--text-1);
+}
+
+.work-area .subtitle-row time,
+.work-area .music-section-row small,
+.work-area .music-section-detail p {
+  color: var(--text-2);
+}
+
+.work-area .subtitle-row.active,
+.work-area .music-section-row.active {
+  background: var(--surface-3);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: inset 0 1px 0 var(--highlight-top);
+}
+
+.work-area .music-section-row > .section-symbol {
+  background: var(--surface-3);
+  color: var(--text-1);
+}
+
+.work-area .music-section-detail {
+  background: var(--surface-2);
+  border: var(--hairline-w) solid var(--hairline);
+  border-radius: var(--r-tile);
+  box-shadow: inset 0 1px 0 var(--tile-highlight);
+  color: var(--text-1);
+}
+
+.work-area .empty,
+.work-area .statusbox,
+.work-area .clip-intro,
+.work-area .text-track-empty,
+.work-area .clip-track-empty {
+  color: var(--text-2);
+}
+
+.work-area .statusbox.error {
+  color: var(--text-1);
+  border-color: rgba(255, 95, 87, 0.4);
+}
+
+.work-area .statusbox .progress > i {
+  background: var(--cta);
 }

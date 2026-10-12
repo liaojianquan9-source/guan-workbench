@@ -72,6 +72,16 @@ test('navigation is a top capsule bar and AI制作 has no in-page title header',
   assert.doesNotMatch(ai, /让 Agent 判断哪里值得加画面/);
 });
 
+test('拉片 player, timeline and research panel use monochrome glass capsules', () => {
+  assert.match(css, /\.work-area \.play\s*\{[^}]*background:\s*var\(--cta\)/);
+  assert.match(css, /\.work-area \.analysis-tool\s*\{[^}]*border-radius:\s*var\(--r-pill\)/);
+  assert.match(css, /\.work-area \.clip-track-lane\.original\s*\{[^}]*background:\s*var\(--surface-3\)/);
+  assert.match(css, /\.work-area \.clip-playhead\s*\{[^}]*background:\s*var\(--cta\)/);
+  assert.match(css, /\.work-area \.background \.music-section-label\s*\{[^}]*background:\s*var\(--surface-3\)/);
+  assert.match(css, /\.work-area \.statusbox\.error\s*\{[^}]*color:\s*var\(--text-1\)/);
+  assert.doesNotMatch(css, /#183637|#b3dae3|#ffdfab|#dcece3|#203930/);
+});
+
 test('首页 drops the title blurb and keeps import beside the list tools', () => {
   const studio = fs.readFileSync(path.join(root, 'public/studio.js'), 'utf8');
   const page = studio.slice(studio.indexOf('function libraryPage'), studio.indexOf('function paintCatalog'));
