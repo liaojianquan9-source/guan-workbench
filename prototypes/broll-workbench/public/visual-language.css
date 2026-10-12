@@ -1144,6 +1144,41 @@ kbd,
   box-shadow: inset 0 0 0 var(--hairline-w) rgba(255, 95, 87, 0.4);
 }
 
+.work-area.study-segment-shell .segment-track-lane {
+  background: var(--surface-3);
+  box-shadow: inset 0 0 0 var(--hairline-w) var(--hairline);
+}
+
+.work-area.study-segment-shell .segment-track-lane.is-empty {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(255, 255, 255, 0.03) 6px,
+    rgba(255, 255, 255, 0.03) 12px
+  );
+}
+
+.work-area.study-segment-shell .segment-block {
+  background: var(--surface-2);
+  box-shadow: inset 0 0 0 var(--hairline-w) var(--hairline);
+  color: var(--text-1);
+}
+
+.work-area.study-segment-shell .segment-block.active,
+.work-area.study-segment-shell .segment-block[aria-current='true'] {
+  box-shadow: inset 0 0 0 2px var(--cta);
+}
+
+.work-area.study-segment-shell .segment-playhead {
+  background: var(--cta);
+}
+
+.work-area.study-segment-shell .segment-detail {
+  background: var(--surface-1);
+  border-color: var(--hairline);
+}
+
 .work-area .analysis-tool:focus-visible,
 .work-area .track-tool:focus-visible,
 .work-area .track-control:focus-visible,

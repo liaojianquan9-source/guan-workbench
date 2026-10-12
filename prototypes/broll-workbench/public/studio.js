@@ -27,7 +27,7 @@ const Studio=(()=>{
   $('#preview-scale').addEventListener('change',event=>{const stage=$('.player-stage'),scale=Number(event.target.value);stage.style.setProperty('--preview-scale',scale);});
  }
  document.addEventListener('keydown',event=>{const menu=$('#player-more-menu:popover-open')||$('#player-quality-menu:popover-open')||$('.media-card-menu:popover-open');if(event.key==='Escape'&&menu){event.preventDefault();event.stopImmediatePropagation();menu.hidePopover();(menu.classList.contains('media-card-menu')?document.querySelector(`[popovertarget="${menu.id}"]`):$(menu.id==='player-quality-menu'?'#player-quality':'#player-more'))?.focus();}},true);
- function syncPanels(){const area=$('.work-area');if(!area)return;area.classList.toggle('inspector-hidden',!S.collectionOpen);$('[data-collection-toggle]')?.setAttribute('aria-pressed',String(S.collectionOpen));}
+ function syncPanels(){const area=$('.work-area');if(!area)return;area.classList.toggle('inspector-hidden',!S.collectionOpen);$('[data-collection-toggle]')?.setAttribute('aria-pressed',String(S.collectionOpen));if(area.classList.contains('study-segment-shell')&&S.collectionOpen)StudySegmentShell?.renderDetail?.();}
  function revealPanel(){S.collection='shots';S.collectionOpen=true;$('.collection')?.classList.add('open');syncPanels();}
  function clockPaint(){const c=Clips.active(),label=$('#clock-context'),secondary=$('#source-clock'),total=$('#clock-duration');if(label)label.textContent='原片';if($('#time'))$('#time').textContent=clock(S.position);if(total)total.textContent=clock(S.p.duration);if(secondary)secondary.textContent=c&&ClipLogic.inside(c,S.position)?'分镜内 '+clock(S.position-c.start):Number(S.p.fps).toFixed(2)+' fps';}
  function toolbar(){return '';}
