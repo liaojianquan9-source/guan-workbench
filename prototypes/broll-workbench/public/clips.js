@@ -17,7 +17,7 @@ const Clips=(()=>{
  function isAuditioning(){return !!audition;}
  function limit(time){return time;}
  function toolbar(){return Studio.toolbar();}
- function paintToolbar(){const el=$('#clip-toolbar');if(el)el.innerHTML=toolbar();const label=$('.player-label');if(label)label.textContent='原片';ClipTimeline.paint();}
+ function paintToolbar(){const el=$('#clip-toolbar');if(el)el.innerHTML=toolbar();const label=$('.player-label');if(label)label.textContent='原片';if($('#timeline')?.classList.contains('study-segment-timeline'))StudySegmentShell.paint();else ClipTimeline.paint();}
  function choose(id){browsing=false;audition=null;activeId=id;projectId=S.p.id;const c=active();if(!c)return;S.collection='shots';S.collectionOpen=true;$('.collection')?.classList.add('open');Studio.syncPanels();persist();seek(c.start);ClipMixer.activate();renderTracks();renderCollection();paintToolbar();}
  function browse(){browsing=true;audition=null;activeId=null;loop=false;persist();S.collection='shots';renderCollection();renderTracks();}
  function chooseShot(shot){audition=null;activeId=null;loop=false;persist();seek(shot.start);renderTracks();}
