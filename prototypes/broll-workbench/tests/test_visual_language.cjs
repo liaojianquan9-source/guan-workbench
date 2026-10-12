@@ -71,3 +71,11 @@ test('navigation is a top capsule bar and AI制作 has no in-page title header',
   assert.doesNotMatch(ai, /个已确认/);
   assert.doesNotMatch(ai, /让 Agent 判断哪里值得加画面/);
 });
+
+test('首页 drops the title blurb and keeps import beside the list tools', () => {
+  const studio = fs.readFileSync(path.join(root, 'public/studio.js'), 'utf8');
+  const page = studio.slice(studio.indexOf('function libraryPage'), studio.indexOf('function paintCatalog'));
+  assert.doesNotMatch(page, /你的素材，值得细看|从一段参考，开始一次研究|catalog-heading/);
+  assert.match(page, /data-action="filters"[\s\S]*data-action="import"[\s\S]*id="library-count"/);
+  assert.match(page, /导入视频/);
+});

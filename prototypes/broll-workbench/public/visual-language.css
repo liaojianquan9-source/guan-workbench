@@ -635,6 +635,10 @@ dialog,
   padding: 18px 22px 28px;
 }
 
+.catalog-tools .button.primary {
+  flex-shrink: 0;
+}
+
 .catalog-grid,
 .research-grid {
   gap: var(--s-3);
